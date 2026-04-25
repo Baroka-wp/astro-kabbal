@@ -4,6 +4,7 @@ import { StyleSheet } from '@react-pdf/renderer';
 export const FAMILY_BODY = 'Cormorant Garamond';
 export const FAMILY_DISPLAY = 'Cinzel';
 export const FAMILY_SYMBOL = 'Noto Sans Symbols';
+export const FAMILY_HEBREW = 'Noto Serif Hebrew';
 
 /**
  * Palette sobre : lecture « livre », pas d'encarts colorés (la page de garde garde son fond dédié).
@@ -148,6 +149,17 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     letterSpacing: 2,
     fontFamily: FAMILY_DISPLAY,
+  },
+
+  coverPageNumber: {
+    position: 'absolute',
+    bottom: 24,
+    left: 56,
+    right: 56,
+    textAlign: 'center',
+    fontSize: 8,
+    fontFamily: FAMILY_BODY,
+    color: '#fbbf24',
   },
 
   // ——— Titres de chapitre (lecture verticale) ———
@@ -307,6 +319,12 @@ export const styles = StyleSheet.create({
     lineHeight: 1.2,
   },
 
+  hebrewInline: {
+    fontFamily: FAMILY_HEBREW,
+    fontSize: 12,
+    lineHeight: 1.1,
+  },
+
   imageBox: {
     borderWidth: 0.5,
     borderColor: COLORS.rule,
@@ -358,5 +376,33 @@ export const styles = StyleSheet.create({
 
   rowStats: {
     marginBottom: 4,
+  },
+
+  tocList: {
+    marginTop: 8,
+  },
+
+  tocRow: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    borderBottomWidth: 0.5,
+    borderBottomColor: COLORS.rule,
+    paddingVertical: 5,
+  },
+
+  tocLabel: {
+    fontSize: 11,
+    color: COLORS.text,
+    flex: 1,
+    paddingRight: 8,
+  },
+
+  tocPage: {
+    fontSize: 11,
+    color: COLORS.textMuted,
+    minWidth: 18,
+    textAlign: 'right',
   },
 });

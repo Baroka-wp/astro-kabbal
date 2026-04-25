@@ -144,6 +144,11 @@ const CoverPage = ({ profile, generatedAt }) => (
     </View>
 
     <Text style={styles.coverFooter}>Généré le {formatDate(generatedAt)}</Text>
+    <Text
+      style={styles.coverPageNumber}
+      render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`}
+      fixed
+    />
   </Page>
 );
 
@@ -163,6 +168,21 @@ const ReportPage = ({ children, profile }) => (
       fixed
     />
   </Page>
+);
+
+const TocPage = ({ profile, entries }) => (
+  <ReportPage profile={profile}>
+    <Text style={styles.partLabel}>Table des matières</Text>
+    <Text style={styles.h1}>Sommaire</Text>
+    <View style={styles.tocList}>
+      {entries.map((entry) => (
+        <View key={entry.id} style={styles.tocRow}>
+          <Text style={styles.tocLabel}>{entry.label}</Text>
+          <Text style={styles.tocPage}>{entry.page}</Text>
+        </View>
+      ))}
+    </View>
+  </ReportPage>
 );
 
 // =========================
@@ -677,9 +697,17 @@ const SephirahPage = ({ sephirah, score, planet, paths, profile }) => {
           {connectedPaths.map((path) => (
             <Text key={path.id} style={styles.paragraph}>
               <Text style={styles.bold}>
-                {path.letter?.transliteration} ({path.letter?.hebrew})
+                {path.letter?.transliteration}
+                {' ('}
+                <Text style={styles.hebrewInline}>{path.letter?.hebrew || ''}</Text>
+                {')'}
               </Text>
-              {` — ${path.connections?.from} → ${path.connections?.to}`}
+              {' — '}
+              {path.connections?.from}
+              {' '}
+              <Text style={styles.symbolInline}>→</Text>
+              {' '}
+              {path.connections?.to}
               {path.angel?.name ? ` — Ange ${path.angel.name}` : ''}
             </Text>
           ))}
@@ -795,6 +823,31 @@ const PdfReport = ({
     return sb - sa;
   });
 
+  const tocEntries = [];
+  let currentPage = 3; // 1: couverture, 2: sommaire
+
+  tocEntries.push({ id: 'synthesis', label: 'Aperçu Astro-Kabbalistique', page: currentPage++ });
+
+  if (chartImage) {
+    tocEntries.push({ id: 'chart', label: 'Thème astral natal', page: currentPage++ });
+  }
+
+  if (treeImage) {
+    tocEntries.push({ id: 'tree', label: "Projection sur l'Arbre de Vie", page: currentPage++ });
+  }
+
+  if (aspectFlows?.length > 0) {
+    tocEntries.push({ id: 'aspects', label: 'Aspects difficiles', page: currentPage++ });
+  }
+
+  sortedSephiroth.forEach((sephirah) => {
+    tocEntries.push({
+      id: `sephirah-${sephirah.id}`,
+      label: `Sephirah ${sephirah.id} — ${sephirah.name}`,
+      page: currentPage++,
+    });
+  });
+
   return (
     <Document
       author="22 Sentiers"
@@ -802,6 +855,7 @@ const PdfReport = ({
       subject="Carte natale projetée sur l'Arbre de Vie"
     >
       <CoverPage profile={profile} generatedAt={generatedAt} />
+      <TocPage profile={profile} entries={tocEntries} />
       <SynthesisPage analysis={analysis} profile={profile} />
       {chartImage && <ChartPage chartImage={chartImage} profile={profile} />}
       {treeImage && <TreePage treeImage={treeImage} profile={profile} />}

@@ -12,6 +12,7 @@
   "dependencies": {
     "@fontsource/cinzel": "^5.2.8",
     "@fontsource/cormorant-garamond": "^5.2.11",
+    "@fontsource/noto-sans-symbols": "^5.2.11",
     "@react-pdf/renderer": "^4.5.1",
     "buffer": "^6.0.3",
     "file-saver": "^2.0.5",

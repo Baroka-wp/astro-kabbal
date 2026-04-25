@@ -3,6 +3,7 @@ import { StyleSheet } from '@react-pdf/renderer';
 /** Correspond aux familles enregistrées dans ./registerFonts.js */
 export const FAMILY_BODY = 'Cormorant Garamond';
 export const FAMILY_DISPLAY = 'Cinzel';
+export const FAMILY_SYMBOL = 'Noto Sans Symbols';
 
 /**
  * Palette sobre : lecture « livre », pas d'encarts colorés (la page de garde garde son fond dédié).
@@ -298,6 +299,12 @@ export const styles = StyleSheet.create({
     fontSize: 10,
     color: COLORS.text,
     minWidth: 0,
+  },
+
+  symbolInline: {
+    fontFamily: FAMILY_SYMBOL,
+    fontSize: 11,
+    lineHeight: 1.2,
   },
 
   imageBox: {

@@ -220,7 +220,7 @@ const SynthesisPage = ({ analysis, profile }) => {
                 <Text
                   style={[styles.tableCell, { fontSize: 11, marginBottom: 1, lineHeight: 1.4 }]}
                 >
-                  {s.planet_symbol}
+                  <Text style={styles.symbolInline}>{s.planet_symbol}</Text>
                 </Text>
               ) : null}
               <Text style={[styles.tableCell, { lineHeight: 1.45 }]}>
@@ -365,7 +365,8 @@ const SephirahPage = ({ sephirah, score, planet, paths, profile }) => {
         <View style={styles.textBlock}>
           <Text style={styles.paragraph}>
             <Text style={styles.bold}>Planète principale : </Text>
-            {score.planet_symbol ? `${score.planet_symbol} ` : ''}
+            {score.planet_symbol ? <Text style={styles.symbolInline}>{score.planet_symbol}</Text> : ''}
+            {score.planet_symbol ? ' ' : ''}
             {score.primary_planet}
             {score.secondary_planet ? ` / ${score.secondary_planet}` : ''}
             {'. '}

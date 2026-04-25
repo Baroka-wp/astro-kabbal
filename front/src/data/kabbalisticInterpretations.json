@@ -1,0 +1,258 @@
+{
+  "version": "2.0",
+  "description": "Interpretations astro-kabalistiques pour Sephirah bloquees par aspects difficiles",
+  "aspects": {
+    "opposition": { "code": "☍", "severity": 3, "nature": "polarisation_consciente_inconsciente" },
+    "square": { "code": "□", "severity": 3, "nature": "tension_action_blocage" },
+    "inconjunct": { "code": "⚻", "severity": 2, "nature": "desajustement_oblique" }
+  },
+  "planets_meanings": {
+    "Soleil": "volonte_essence",
+    "Lune": "emotions_instinct",
+    "Mercure": "mental_communication",
+    "Venus": "harmonie_desir",
+    "Mars": "action_conflit",
+    "Jupiter": "expansion_protection",
+    "Saturne": "structure_limitation",
+    "Uranus": "rupture_liberation",
+    "Neptune": "dissolution_illusion",
+    "Pluton": "transformation_pouvoir",
+    "Chiron": "blessure_guidance",
+    "Lilith_True": "ombre_rejetee",
+    "Mean_Lilith": "ombre_rejetee",
+    "Ascendant": "masque_incarnation",
+    "Medium_Coeli": "destinee_autorite",
+    "Imum_Coeli": "racines_enfance",
+    "Descendant": "miroir_relation",
+    "True_North_Lunar_Node": "direction_evolutive",
+    "True_South_Lunar_Node": "karma_acquis",
+    "Part_Fortune": "joie_fluidite",
+    "Vertex": "rendez_vous_destin"
+  },
+  "sephirah_blocked_interpretation": {
+    "Kether": "Perte de sens global, impression d'etre deconnecte de son etoile",
+    "Chokmah": "Blocage de l'inspiration soudaine, peur de l'innovation",
+    "Binah": "Comprehension tronquee, melancolie cyclique impossible a nommer",
+    "Chesed": "Impossible de recevoir, don contraint ou tyrannique",
+    "Geburah": "Colere retournee contre soi, jugement sans discernement",
+    "Tiphareth": "Vide interieur, beau dehors mais plus de coeur",
+    "Netzach": "Desir etouffe, plaisir coupable ou inaccessible",
+    "Hod": "Mental en boucle, rituel vide, pensee sans ancrage",
+    "Yesod": "Angoisse flottante, intuition brouillee, cauchemars",
+    "Malkuth": "Rien ne se concretise, fatigue chronique, eparpillement"
+  },
+  "dynamic_mapping_logic": {
+    "Soleil": "Tiphareth",
+    "Lune": "Yesod",
+    "Mercure": "Hod",
+    "Venus": "Netzach",
+    "Mars": "Geburah",
+    "Jupiter": "Chesed",
+    "Saturne": "Binah",
+    "Uranus": "Kether",
+    "Neptune": "Kether/Yesod",
+    "Pluton": "Geburah",
+    "Chiron": "Hod",
+    "Lilith": "Binah",
+    "Lilith_True": "Binah",
+    "Mean_Lilith": "Binah",
+    "Ascendant": "Yesod/Malkuth",
+    "Medium_Coeli": "Tiphareth",
+    "Imum_Coeli": "Yesod",
+    "True_North_Lunar_Node": "Tiphareth",
+    "True_South_Lunar_Node": "Yesod",
+    "Part_Fortune": "Chokmah",
+    "Vertex": "Malkuth"
+  },
+  "sephiroth": {
+    "Kether": {
+      "signification": "Kether = **Couronne**, le point de contact entre l'infini divin et la creation. C'est le siege de l'**unite pure**, de la **volonte originelle**, du **but supreme de l'ame** et du **lien avec le divin impersonnel**.\n\nQuand Kether est bloque :\n- Perte de sens global, impression de deconnexion de son etoile\n- Sentiment que rien n'a de raison d'etre\n- Incapacite a voir le tableau d'ensemble\n- Depression spirituelle ou nihilisme",
+      "aspects": {
+        "opposition": {
+          "Saturne": {
+            "titre": "Opposition Kether - Saturne (☍)",
+            "probleme": "L'infini (Kether) **contre** le temps, la limite, la mort (Saturne).",
+            "resultat_kabalistique": "La conscience de l'absolu est coupee de l'incarnation concrete -> sentiment que l'eternite n'existe pas, que tout est futile.",
+            "symptomes": "Angoisse du temps qui passe sans accomplissement sacre, cynisme spirituel, rejet de toute transcendance.",
+            "pathologie": "Depression existentielle, perte de la capacite d'emerveillement."
+          }
+        },
+        "square": {
+          "Neptune": {
+            "titre": "Carre Kether - Neptune (□)",
+            "probleme": "L'unite absolue (Kether) **en conflit** avec la dissolution des frontieres (Neptune).",
+            "resultat_kabalistique": "On ne sait plus ou finit le divin et ou commence l'illusion -> perte du discernement spirituel.",
+            "symptomes": "Fausses illuminations, gourous interieurs, confusion entre intuition et fantasme.",
+            "pathologie": "Psychose mystique, derealisation."
+          }
+        }
+      }
+    },
+    "Chokmah": {
+      "signification": "Chokmah = **Sagesse**, l'etincelle creatrice masculine, le jaillissement pur, l'inspiration soudaine. C'est le siege de l'**innovation**, de la **force vitale expansive** et du **principe actif**.\n\nQuand Chokmah est bloque :\n- Blocage de l'inspiration, peur de l'innovation\n- Impression que toutes les bonnes idees sont deja prises\n- Creativite entravee par l'autocritique\n- Impossibilite de commencer quoi que ce soit de neuf",
+      "aspects": {
+        "square": {
+          "Saturne": {
+            "titre": "Carre Chokmah - Saturne (□)",
+            "probleme": "L'etincelle creatrice (Chokmah) **bloquee** par la peur de l'echec (Saturne).",
+            "resultat_kabalistique": "L'inspiration meurt avant de naitre -> auto-censure systematique.",
+            "symptomes": "Attendre la 'bonne idee parfaite', ne jamais se lancer.",
+            "pathologie": "Inhibition creative chronique."
+          }
+        }
+      }
+    },
+    "Binah": {
+      "signification": "Binah = **Comprehension**, le receptacle feminin, la forme, la limite, la matrice. C'est le siege de la **structure**, de la **memoire profonde**, de la **capacite a donner du sens**.\n\nQuand Binah est bloque :\n- Comprehension tronquee, melancolie cyclique inexpliquee\n- Tendance a tout intellectualiser sans jamais 'sentir' le sens\n- Rituels vides, forme sans fond\n- Peur des formes figees ou au contraire peur de tout cadre",
+      "aspects": {
+        "inconjunct": {
+          "Uranus": {
+            "titre": "Quinconce Binah - Uranus (⚻)",
+            "probleme": "La forme (Binah) **desajustee** a la rupture (Uranus).",
+            "resultat_kabalistique": "Les cadres interieurs ne tiennent plus face a l'imprevu -> angoisse de la surprise.",
+            "symptomes": "Panique quand un rituel est interrompu, besoin maladif de previsibilite.",
+            "pathologie": "Trouble anxieux generalise avec intolerance a l'incertitude."
+          }
+        }
+      }
+    },
+    "Chesed": {
+      "signification": "Chesed = **Misericorde**, l'expansion sans limite, la generosite, l'abondance. C'est le siege de la **capacite a recevoir et a donner librement**.\n\nQuand Chesed est bloque :\n- Incapacite a recevoir (cadeaux, amour, aide)\n- Don contraint ou tyrannique ('je donne mais j'attends en retour')\n- Peur de l'abondance, sentiment secret de ne pas meriter",
+      "aspects": {
+        "opposition": {
+          "Mars": {
+            "titre": "Opposition Chesed - Mars (☍)",
+            "probleme": "L'expansion bienveillante (Chesed) **contre** l'action agressive (Mars).",
+            "resultat_kabalistique": "On donne par devoir agressif, ou on detruit ce qu'on donne -> generosite toxique.",
+            "symptomes": "Sentiment de s'epuiser pour les autres, puis colere rentree.",
+            "pathologie": "Epuisement du 'sauveur', burnout altruiste."
+          }
+        }
+      }
+    },
+    "Geburah": {
+      "signification": "Geburah = **Rigueur**, le jugement, la force, la coupure necessaire. C'est le siege de la **colere juste**, de la **discipline**, de la **limitation salutaire**.\n\nQuand Geburah est bloque :\n- Colere retournee contre soi\n- Jugement sans discernement\n- Incapacite a dire non correctement\n- Violence passive ou explosive",
+      "aspects": {
+        "square": {
+          "Venus": {
+            "titre": "Carre Geburah - Venus (□)",
+            "probleme": "L'action brutale (Geburah) **en conflit** avec l'harmonie douce (Venus).",
+            "resultat_kabalistique": "Toute affirmation de soi semble agressive -> auto-sabotage relationnel.",
+            "symptomes": "Plutot se taire que risquer un conflit, puis explosion differee.",
+            "pathologie": "Passivite agressive, migraine chronique."
+          }
+        }
+      }
+    },
+    "Tiphareth": {
+      "signification": "Tiphareth = **Beaute**, le coeur, l'equilibre, le Soi superieur. C'est le siege de l'**authenticite**, de la **compassion**, du **centre integrateur**.\n\nQuand Tiphareth est bloque :\n- Vide interieur, beau dehors mais plus de coeur\n- Sentiment d'etre 'un acteur' meme dans ses propres emotions\n- Incapacite a ressentir de la joie profonde\n- Detachement froid ou sentimentalisme mou",
+      "aspects": {
+        "opposition": {
+          "Saturne": {
+            "titre": "Opposition Tiphareth - Saturne (☍)",
+            "probleme": "Le coeur (Tiphareth) **contre** la durete du monde (Saturne).",
+            "resultat_kabalistique": "On cesse de croire en la beaute de l'existence -> cynisme defensif.",
+            "symptomes": "Moquerie de toute sincerite, impossibilite d'etre vulnerable.",
+            "pathologie": "Depression masquee par l'humour noir."
+          }
+        }
+      }
+    },
+    "Netzach": {
+      "signification": "Netzach = **Victoire**, le desir, l'elan, l'art, l'emotion durable. C'est le siege de la **passion**, de la **perseverance emotionnelle**, du **plaisir**.\n\nQuand Netzach est bloque :\n- Desir etouffe, plaisir coupable ou inaccessible\n- Tendance a tout intellectualiser (fuite de Netzach vers Hod)\n- Relations sans saveur, ennui chronique\n- Culpabilite a vouloir ce qu'on veut",
+      "aspects": {
+        "opposition": {
+          "Saturne": {
+            "titre": "Opposition Netzach - Saturne (☍)",
+            "probleme": "Le desir (Netzach) **contre** la restriction (Saturne).",
+            "resultat_kabalistique": "Plaisir toujours differe, jamais autorise maintenant.",
+            "symptomes": "Se faire plaisir 'apres avoir tout fini' -> jamais.",
+            "pathologie": "Anhedonie, syndrome de l'eternel report."
+          }
+        }
+      }
+    },
+    "Hod": {
+      "signification": "Hod = **Splendeur**, le mental, l'analyse, la communication, les rituels precis. C'est le siege de la **raison**, de la **logique**, de la **capacite a nommer**.\n\nQuand Hod est bloque :\n- Mental en boucle, rituel vide\n- Pensee sans ancrage corporel\n- Parler pour ne rien dire ou intellectualiser les emotions\n- TOC de pensee, rumination",
+      "aspects": {
+        "square": {
+          "Lune": {
+            "titre": "Carre Hod - Lune (□)",
+            "probleme": "Le mental (Hod) **en conflit** avec l'emotion fluide (Lune -> Yesod).",
+            "resultat_kabalistique": "Analyse sans resolution -> tourner en rond.",
+            "symptomes": "Se raconter la meme histoire emotionnelle sans jamais la traverser.",
+            "pathologie": "Rumination anxieuse, insomnie mentale."
+          }
+        }
+      }
+    },
+    "Yesod": {
+      "signification": "Yesod = **Fondation**, le filtre entre l'inconscient collectif (Nephesh) et le monde manifeste. C'est le siege des **emotions brutes**, des **reves**, de **l'instinct**, de la **memoire corporelle** et du **lien avec le collectif inconscient**.\n\nQuand Yesod est bloque :\n- Difficulte a ressentir son intuition de facon fiable\n- Peurs irrationnelles, angoisses flottantes\n- Problemes de confiance dans l'autre ou dans la vie\n- Cauchemars ou trop de projection mentale sur les emotions",
+      "aspects": {
+        "opposition": {
+          "Mercure": {
+            "titre": "Opposition Yesod - Mercure (☍)",
+            "probleme": "Mental (Mercure) **contre** emotions/instinct (Yesod).",
+            "resultat_kabalistique": "La pensee coupee du ressenti corporel -> decisions basees sur des raisonnements secs, puis regrets emotionnels.",
+            "symptomes": "Parler trop vite ce qu'on ressent mal, ou intellectualiser ses peurs au lieu de les traverser.",
+            "pathologie": "Insomnie par boucle mentale, anxiete generalisee sans objet."
+          },
+          "Ascendant": {
+            "titre": "Opposition Yesod - Ascendant (☍)",
+            "probleme": "Le moi public (Asc) **contre** le fond emotionnel reel (Yesod).",
+            "resultat_kabalistique": "Le masque social exige une chose, l'inconscient emotionnel exige le contraire.",
+            "symptomes": "Impression d'etre un acteur qui ne ressent rien, ou de ressentir trop sans pouvoir l'exprimer socialement.",
+            "pathologie": "Epuisement par le masque social, burn-out emotionnel."
+          }
+        },
+        "square": {
+          "True_North_Lunar_Node": {
+            "titre": "Carre Yesod - Noeud Nord (□)",
+            "probleme": "Direction evolutive (Noeud Nord) **en conflit** avec securite emotionnelle (Yesod).",
+            "resultat_kabalistique": "Tu pressens la direction juste mais Yesod panique et te ramene a des habitudes regressives.",
+            "symptomes": "Tu sais ce qu'il faudrait faire mais tu repetes les memes peurs.",
+            "pathologie": "Blocage evolutif, repetition karmique."
+          },
+          "Medium_Coeli": {
+            "titre": "Carre Yesod - Medium Coeli (□ MC)",
+            "probleme": "Destinee visible (MC) **en conflit** avec l'inconscient emotionnel (Yesod).",
+            "resultat_kabalistique": "Ce que tu construis dans le monde ne nourrit pas Yesod, ou Yesod sabote la carriere.",
+            "symptomes": "Reussite exterieure mais vide interieur, ou peur de reussir.",
+            "pathologie": "Saboteur interieur, syndrome de l'imposteur masquant un vide emotionnel."
+          },
+          "Imum_Coeli": {
+            "titre": "Carre Yesod - Imum Coeli (□ IC)",
+            "probleme": "Racines, enfance (IC) **cristallisent** le blocage emotionnel (Yesod).",
+            "resultat_kabalistique": "Impossible de 'laisser couler' une emotion -> elle revient en boucle.",
+            "symptomes": "Tout evenement mineur reactive un pattern tres ancien.",
+            "pathologie": "Trouble de stress post-traumatique complexe, reactivite emotionnelle archaique."
+          },
+          "True_South_Lunar_Node": {
+            "titre": "Carre Yesod - Noeud Sud (□)",
+            "probleme": "Karma acquis (Noeud Sud) **bloque activement** Yesod.",
+            "resultat_kabalistique": "Tu sais que tu repetes des peurs passees, mais tu ne peux pas t'arreter.",
+            "symptomes": "Sentiment que ces vieilles peurs protegent encore.",
+            "pathologie": "Addiction aux patterns familiers meme douloureux."
+          }
+        }
+      }
+    },
+    "Malkuth": {
+      "signification": "Malkuth = **Royaume**, le monde physique, le corps, la concretisation. C'est le siege de l'**incarnation**, de la **matiere**, du **resultat final**.\n\nQuand Malkuth est bloque :\n- Rien ne se concretise\n- Fatigue chronique, eparpillement\n- Projets qui echouent toujours au dernier moment\n- Sentiment de ne 'pas avoir de place' dans le monde",
+      "aspects": {
+        "square": {
+          "Pluton": {
+            "titre": "Carre Malkuth - Pluton (□)",
+            "probleme": "La manifestation (Malkuth) **en conflit** avec la destruction/transformation (Pluton).",
+            "resultat_kabalistique": "Tout ce que tu construis est detruit avant de naitre, ou tu detruis toi-meme pour ne pas subir.",
+            "symptomes": "Peur du changement reel, auto-sabotage final.",
+            "pathologie": "Impuissance apprise, syndrome de l'eternel recommencement sans fin."
+          }
+        }
+      }
+    }
+  },
+  "synthese_template": "**Synthese pour {sephirah} bloque(e) avec ces aspects**\n\n> {sephirah} recoit : {liste_des_conflits}\n\n**Image kabalistique** : {image_kabalistique}\n\n**Consequence sur l'Arbre** : {consequence_arbre}",
+  "remediation_template": "## Remediation astro-kabalistique\n\n1. **Travailler d'abord {aspect_prioritaire}** :\n   - {remediation1}\n   - Rituel : {rituel1}\n\n2. **Pour {aspect_secondaire}** :\n   - {remediation2}\n   - Kabbalistiquement : {kabbalistique2}\n\n3. **Pour les aspects restants ({aspects_restants})** :\n   - {remediation3}",
+  "conclusion_template": "**Conclusion pratique immediate** :\nAvec un tel blocage sur {sephirah}, {conclusion_personnalisee}"
+}

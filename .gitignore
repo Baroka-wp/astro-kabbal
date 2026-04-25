@@ -1,0 +1,31 @@
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+backend/.venv/
+
+# Node / Vite
+node_modules/
+front/node_modules/
+front/.vite/
+.vite/
+npm-debug.log*
+
+# Build outputs
+dist/
+front/dist/
+
+# Environment files
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+front/.env
+front/.env.*
+!front/.env.example

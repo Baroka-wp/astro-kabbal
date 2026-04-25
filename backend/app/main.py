@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime, timezone
 from uuid import uuid4
+import os
 
 from .astro_engine import build_natal_payload
 from .mapping import PLANET_SYMBOLS, SEPHIROTH_PLANET_MAPPING
@@ -9,9 +10,17 @@ from .schemas import NatalAnalyzeRequest, NatalAnalyzeResponse, PlanetScore, Sep
 from .scoring import compute_planet_score, level_from_score
 
 app = FastAPI(title="Astro-Kabbale API", version="1.0.0")
+
+
+def _get_allowed_origins():
+  raw_origins = os.getenv("ALLOWED_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173")
+  origins = [origin.strip() for origin in raw_origins.split(",") if origin.strip()]
+  return origins or ["http://localhost:5173", "http://127.0.0.1:5173"]
+
+
 app.add_middleware(
   CORSMiddleware,
-  allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+  allow_origins=_get_allowed_origins(),
   allow_credentials=True,
   allow_methods=["*"],
   allow_headers=["*"],

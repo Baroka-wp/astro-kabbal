@@ -1,0 +1,58 @@
+.angel-remede-block {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border: 1px solid #d4b896;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #fffbf5 0%, #fff7ed 100%);
+}
+
+.angel-remede-heading {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #78350f;
+  margin: 0 0 8px;
+}
+
+.angel-remede-repere {
+  font-size: 0.78rem;
+  color: #6b5b4b;
+  margin: 0 0 10px;
+  line-height: 1.4;
+}
+
+.angel-remede-dl {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.angel-remede-row {
+  display: grid;
+  grid-template-columns: minmax(100px, 0.28fr) 1fr;
+  gap: 8px 12px;
+  align-items: start;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #1c1208;
+}
+
+.angel-remede-row dt {
+  font-weight: 700;
+  color: #b45309;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.angel-remede-row dd {
+  margin: 0;
+}
+
+@media (max-width: 520px) {
+  .angel-remede-row {
+    grid-template-columns: 1fr;
+  }
+}

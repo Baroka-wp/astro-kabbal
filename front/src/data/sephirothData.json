@@ -1,0 +1,606 @@
+{
+  "version": "3.2.0",
+  "description": "Les 32 Sentiers de la Sagesse (10 Sephiroth + 22 Sentiers) avec doubles directions - Version complète",
+  "structure": {
+    "sephiroth_count": 10,
+    "paths_count": 22,
+    "total": 32,
+    "note": "Les Sephiroth sont les états, les Sentiers sont les transitions. Chaque voie fonctionne en descente (création) et en montée (retour)."
+  },
+  "sephiroth": [
+    {
+      "id": 1,
+      "name": "Keter",
+      "hebrew": "כֶּתֶר",
+      "meaning": "Couronne",
+      "pillar": "Milieu",
+      "titles": {
+        "sefer_yetzirah": "Intelligence Cachée",
+        "godwin": "Intelligence Cachée (Sekhel Neelam)"
+      },
+      "angel": {
+        "name": "Metatron",
+        "alternate_names": [
+          "Sar HaPanim",
+          "Prince des Visages"
+        ],
+        "function": "Voix de Dieu, scribe céleste, gardien du trône divin"
+      },
+      "direction_experience": {
+        "descending": "Émanation de la volonté divine pure depuis l'Ain Sof",
+        "ascending": "Retour à l'unité absolue, dépassement de l'ego"
+      },
+      "keywords": [
+        "unité",
+        "volonté divine",
+        "couronne",
+        "commencement",
+        "infini",
+        "point",
+        "étincelle"
+      ],
+      "meditation": {
+        "descending": "Asseyez-vous dans le silence complet. Visualisez un point de lumière blanche pure au-dessus de votre tête. Ce point s'ouvre comme une couronne. Vous êtes ce point. Vous n'êtes rien d'autre que cela. Il n'y a ni pensée, ni forme, ni limite. Il y a seulement l'intention d'être. Répétez en silence : 'Je suis une étincelle de Dieu. Mon essence est divine.' [citation:2] Les ténèbres autour de vous ne sont pas l'absence de lumière, mais sa potentialité non encore déployée. Demeurez dans ce silence créateur.",
+        "ascending": "Asseyez-vous dans le silence complet. Visualisez un point de lumière blanche pure au-dessus de votre tête. Ce point s'ouvre comme une couronne. Vous êtes ce point. Vous n'êtes rien d'autre que cela. Il n'y a ni pensée, ni forme, ni limite. Il y a seulement l'intention d'être. Répétez en silence : 'Je suis une étincelle de Dieu. Mon essence est divine.' [citation:2] Les ténèbres autour de vous ne sont pas l'absence de lumière, mais sa potentialité non encore déployée. Demeurez dans ce silence créateur."
+      },
+      "angel_message": {
+        "descending": "« Je suis le Prince de la Face divine. Devant moi, aucun voile ne subsiste. Tu as cherché partout sauf là où J'étais : en toi-même, avant le premier souffle. Cesse de chercher. Sois. »",
+        "ascending": "« Je suis le Prince de la Face divine. Devant moi, aucun voile ne subsiste. Tu as cherché partout sauf là où J'étais : en toi-même, avant le premier souffle. Cesse de chercher. Sois. »"
+      },
+      "integration": {
+        "descending": "Chaque matin, avant toute action, prenez trois respirations profondes. Sentez la couronne invisible au-dessus de votre tête. Dites : 'Que ta volonté, et non la mienne, s'accomplisse en ce jour.' [citation:2] Remarquez comment votre perspective change.",
+        "ascending": "Chaque matin, avant toute action, prenez trois respirations profondes. Sentez la couronne invisible au-dessus de votre tête. Dites : 'Que ta volonté, et non la mienne, s'accomplisse en ce jour.' [citation:2] Remarquez comment votre perspective change."
+      },
+      "qliphoth": {
+        "demon": "Thamiel",
+        "meaning": "Dualité en Dieu / Les Jumeaux de Dieu",
+        "function": "Dualité contredisant l'unité parfaite de Keter",
+        "shadow": "Fierté spirituelle, arrogance, refus de la manifestation, isolement dans la pureté, division de ce qui ne peut être que parfait dans l'unité [citation:4][citation:8]"
+      },
+      "qliphoth_work": {
+        "corrective_meditation": {
+          "descending": "Visualisez deux têtes géantes aux ailes de chauve-souris, opposées l'une à l'autre [citation:8]. Sentez leur lutte. Puis voyez la lumière blanche descendre entre elles. Elles cessent de se battre. Elles s'unissent. Cette unité est votre vérité.",
+          "ascending": "Visualisez deux têtes géantes aux ailes de chauve-souris, opposées l'une à l'autre [citation:8]. Sentez leur lutte. Puis voyez la lumière blanche descendre entre elles. Elles cessent de se battre. Elles s'unissent. Cette unité est votre vérité."
+        },
+        "ritual_action": {
+          "descending": "Identifiez une contradiction intérieure qui vous déchire. Au lieu de choisir un camp, cherchez un troisième terme qui les dépasse et les inclut.",
+          "ascending": "Identifiez une contradiction intérieure qui vous déchire. Au lieu de choisir un camp, cherchez un troisième terme qui les dépasse et les inclut."
+        }
+      }
+    },
+    {
+      "id": 2,
+      "name": "Chokmah",
+      "hebrew": "חָכְמָה",
+      "meaning": "Sagesse",
+      "pillar": "Droit",
+      "titles": {
+        "sefer_yetzirah": "Intelligence Illuminante",
+        "godwin": "Illuminating Intelligence"
+      },
+      "angel": {
+        "name": "Raziel",
+        "alternate_names": [
+          "Ratziel"
+        ],
+        "function": "Héraut divin, gardien des secrets de la Torah, ange des mystères"
+      },
+      "direction_experience": {
+        "descending": "Activation de la volonté créatrice, première impulsion",
+        "ascending": "Reconnaissance de la source de toute sagesse, illumination soudaine"
+      },
+      "keywords": [
+        "sagesse",
+        "créativité",
+        "père",
+        "force active",
+        "initiative",
+        "commencement",
+        "étincelle"
+      ],
+      "meditation": {
+        "descending": "Fermez les yeux. Visualisez un éclair de lumière gris-bleu qui jaillit du point blanc au-dessus de votre tête. Cet éclair n'est pas aléatoire ; il est la première parole créatrice, le 'Je suis' qui émerge du silence. Sentez cette sagesse sauvage, imprévisible, qui ose tout risquer pour exister. Dites : 'Je suis né de la créativité sauvage de l'existence — je suis un chemin qui vaut tous les risques.' [citation:2] Laissez la joie de cette impulsion créatrice vous traverser sans la contrôler.",
+        "ascending": "Fermez les yeux. Visualisez un éclair de lumière gris-bleu qui jaillit du point blanc au-dessus de votre tête. Cet éclair n'est pas aléatoire ; il est la première parole créatrice, le 'Je suis' qui émerge du silence. Sentez cette sagesse sauvage, imprévisible, qui ose tout risquer pour exister. Dites : 'Je suis né de la créativité sauvage de l'existence — je suis un chemin qui vaut tous les risques.' [citation:2] Laissez la joie de cette impulsion créatrice vous traverser sans la contrôler."
+      },
+      "angel_message": {
+        "descending": "« Je suis le gardien des lettres secrètes qui précèdent la création. La sagesse que tu cherches n'est pas à trouver, elle est à enfanter. Toi-même, tu es cette naissance permanente. »",
+        "ascending": "« Je suis le gardien des lettres secrètes qui précèdent la création. La sagesse que tu cherches n'est pas à trouver, elle est à enfanter. Toi-même, tu es cette naissance permanente. »"
+      },
+      "integration": {
+        "descending": "Lorsque vous avez une intuition, une étincelle d'inspiration, agissez immédiatement — même par un petit geste. Ne la laissez pas retomber dans l'analyse. Notez ce qui se produit quand vous honorez la spontanéité de votre sagesse intérieure.",
+        "ascending": "Lorsque vous avez une intuition, une étincelle d'inspiration, agissez immédiatement — même par un petit geste. Ne la laissez pas retomber dans l'analyse. Notez ce qui se produit quand vous honorez la spontanéité de votre sagesse intérieure."
+      },
+      "qliphoth": {
+        "demon": "Chaigidel",
+        "meaning": "Les Obstructions / Impuissance",
+        "function": "Stagnation de la force créatrice, blocage de l'impulsion vitale",
+        "shadow": "Créativité bloquée, impuissance, apathie, refus du risque, peur de la nouveauté, sarcasme destructeur"
+      },
+      "qliphoth_work": {
+        "corrective_meditation": {
+          "descending": "Imaginez un éclair figé à mi-chemin, suspendu sans pouvoir frapper. Respirez profondément. Puis soufflez avec force pour le libérer. Voyez-le enfin toucher le sol et y faire naître une source d'eau vive.",
+          "ascending": "Imaginez un éclair figé à mi-chemin, suspendu sans pouvoir frapper. Respirez profondément. Puis soufflez avec force pour le libérer. Voyez-le enfin toucher le sol et y faire naître une source d'eau vive."
+        },
+        "ritual_action": {
+          "descending": "Faites chaque jour une petite chose que vous n'avez jamais faite auparavant, sans vous soucier du résultat. Brisez un rituel de blocage par un acte de créativité spontanée.",
+          "ascending": "Faites chaque jour une petite chose que vous n'avez jamais faite auparavant, sans vous soucier du résultat. Brisez un rituel de blocage par un acte de créativité spontanée."
+        }
+      }
+    },
+    {
+      "id": 3,
+      "name": "Binah",
+      "hebrew": "בִּינָה",
+      "meaning": "Compréhension",
+      "pillar": "Gauche",
+      "titles": {
+        "sefer_yetzirah": "Intelligence Sanctifiante",
+        "godwin": "Sanctifying Intelligence"
+      },
+      "angel": {
+        "name": "Tzaphkiel",
+        "alternate_names": [
+          "Zaphkiel",
+          "Tzaphkiel"
+        ],
+        "function": "Contemplation divine, mère céleste, principe réceptif"
+      },
+      "direction_experience": {
+        "descending": "Formation du chaos primordial en structures intelligibles",
+        "ascending": "Acceptation de l'ombre créatrice, deuil et renaissance"
+      },
+      "keywords": [
+        "compréhension",
+        "structure",
+        "mère",
+        "réceptivité",
+        "limite",
+        "forme",
+        "douleur féconde"
+      ],
+      "meditation": {
+        "descending": "Visualisez un grand espace carré ou circulaire, une matrice de lumière noire et bleue qui contient toutes les formes potentielles. Vous êtes l'Espace, non pas l'objet dans l'espace. Votre être tout entier — corps, esprit et âme — s'aligne sur le motif de l'univers. Dites : 'Je suis un temple pour mon âme divine.' [citation:2] Sentez le poids doux de la limite qui donne naissance à la forme. La douleur de la limitation est aussi la joie de l'incarnation.",
+        "ascending": "Visualisez un grand espace carré ou circulaire, une matrice de lumière noire et bleue qui contient toutes les formes potentielles. Vous êtes l'Espace, non pas l'objet dans l'espace. Votre être tout entier — corps, esprit et âme — s'aligne sur le motif de l'univers. Dites : 'Je suis un temple pour mon âme divine.' [citation:2] Sentez le poids doux de la limite qui donne naissance à la forme. La douleur de la limitation est aussi la joie de l'incarnation."
+      },
+      "angel_message": {
+        "descending": "« Ma contemplation est l'amour que la forme porte à l'informe. Cesse de fuir tes limites. Elles sont les moules sacrés où se coule ton destin. Tu es ma pensée devenue vivante. »",
+        "ascending": "« Ma contemplation est l'amour que la forme porte à l'informe. Cesse de fuir tes limites. Elles sont les moules sacrés où se coule ton destin. Tu es ma pensée devenue vivante. »"
+      },
+      "integration": {
+        "descending": "Cette semaine, chaque fois que vous vous sentez limité ou contraint, remerciez cette limite. Demandez-lui : 'Quelle compréhension m'apportes-tu ?' Transformez la frustration en question.",
+        "ascending": "Cette semaine, chaque fois que vous vous sentez limité ou contraint, remerciez cette limite. Demandez-lui : 'Quelle compréhension m'apportes-tu ?' Transformez la frustration en question."
+      },
+      "qliphoth": {
+        "demon": "Satariel",
+        "meaning": "Les Dissimulateurs / Ocultation",
+        "function": "Refus de comprendre, obscurantisme volontaire, évasion de la réalité",
+        "shadow": "Déni, confusion mentale, refus de voir la vérité, pensée magique, fuite dans l'irrationnel"
+      },
+      "qliphoth_work": {
+        "corrective_meditation": {
+          "descending": "Imaginez un voile épais devant vos yeux. Au lieu de l'arracher, demandez-lui ce qu'il cache. Attendez. Le voile se lève de lui-même quand vous acceptez de voir ce qui se trouve en dessous : votre peur la plus profonde. Regardez-la sans ciller.",
+          "ascending": "Imaginez un voile épais devant vos yeux. Au lieu de l'arracher, demandez-lui ce qu'il cache. Attendez. Le voile se lève de lui-même quand vous acceptez de voir ce qui se trouve en dessous : votre peur la plus profonde. Regardez-la sans ciller."
+        },
+        "ritual_action": {
+          "descending": "Écrivez une vérité que vous fuyez. Lisez-la à voix haute devant un miroir. Puis brûlez la page en disant : 'Je ne fuis plus. Je comprends.'",
+          "ascending": "Écrivez une vérité que vous fuyez. Lisez-la à voix haute devant un miroir. Puis brûlez la page en disant : 'Je ne fuis plus. Je comprends.'"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "name": "Chesed",
+      "hebrew": "חֶסֶד",
+      "meaning": "Miséricorde",
+      "pillar": "Droit",
+      "titles": {
+        "sefer_yetzirah": "Intelligence Mesurante",
+        "godwin": "Cohesive Intelligence"
+      },
+      "angel": {
+        "name": "Tzadkiel",
+        "alternate_names": [
+          "Zadkiel",
+          "Sachiel"
+        ],
+        "function": "Justice divine, miséricorde, expansion de l'amour"
+      },
+      "direction_experience": {
+        "descending": "Expansion de l'abondance, générosité cosmique",
+        "ascending": "Activation de la générosité, ouverture du cœur"
+      },
+      "keywords": [
+        "miséricorde",
+        "amour",
+        "expansion",
+        "abondance",
+        "générosité",
+        "roi",
+        "bénédiction"
+      ],
+      "meditation": {
+        "descending": "VISUALISEZ une lumière bleue vaste comme l'océan, qui s'étend dans toutes les directions à l'infini. Sentez que cette immensité vous soutient : vous êtes porté par le support de l'univers, par l'amour inconditionnel de Dieu. Dites : 'Je suis en contact avec l'amour infini qui me soutient totalement.' [citation:2] Laissez votre cœur s'ouvrir. Puis projetez cet amour vers quelqu'un que vous aimez, puis vers un neutre, puis vers un être difficile. Sentez l'expansion illimitée.",
+        "ascending": "VISUALISEZ une lumière bleue vaste comme l'océan, qui s'étend dans toutes les directions à l'infini. Sentez que cette immensité vous soutient : vous êtes porté par le support de l'univers, par l'amour inconditionnel de Dieu. Dites : 'Je suis en contact avec l'amour infini qui me soutient totalement.' [citation:2] Laissez votre cœur s'ouvrir. Puis projetez cet amour vers quelqu'un que vous aimez, puis vers un neutre, puis vers un être difficile. Sentez l'expansion illimitée."
+      },
+      "angel_message": {
+        "descending": "« Ma justice est miséricorde. Ma rigueur est amour. Tu as peur de donner de peur de manquer. Mais le manque n'existe pas dans mon royaume. Donne, et l'océan se remplit. »",
+        "ascending": "« Ma justice est miséricorde. Ma rigueur est amour. Tu as peur de donner de peur de manquer. Mais le manque n'existe pas dans mon royaume. Donne, et l'océan se remplit. »"
+      },
+      "integration": {
+        "descending": "Chaque jour, faites un acte de générosité invisible : un don anonyme, une aide silencieuse, une parole douce non sollicitée. Ne dites à personne ce que vous avez fait. Observez ce qui se modifie dans votre perception de l'abondance.",
+        "ascending": "Chaque jour, faites un acte de générosité invisible : un don anonyme, une aide silencieuse, une parole douce non sollicitée. Ne dites à personne ce que vous avez fait. Observez ce qui se modifie dans votre perception de l'abondance."
+      },
+      "qliphoth": {
+        "demon": "Gamchicoth / Amchicoth",
+        "meaning": "Les Dévoreurs / Les Empoisonneurs",
+        "function": "Fausse générosité, don avec attachement, manipulation par l'amour",
+        "shadow": "Excès de contrôle sous couvert d'amour, jalousie, dépendance affective, manipulation, don intéressé"
+      },
+      "qliphoth_work": {
+        "corrective_meditation": {
+          "descending": "Imaginez une main qui s'ouvre pour donner mais ne peut desserrer les doigts. Regardez ce qu'elle retient : une peur, un calcul, une attente. Nommez-le. Puis ouvrez les doigts un à un. L'objet tombe. La main s'élève, vide et libre.",
+          "ascending": "Imaginez une main qui s'ouvre pour donner mais ne peut desserrer les doigts. Regardez ce qu'elle retient : une peur, un calcul, une attente. Nommez-le. Puis ouvrez les doigts un à un. L'objet tombe. La main s'élève, vide et libre."
+        },
+        "ritual_action": {
+          "descending": "Donnez quelque chose qui vous coûte vraiment (un objet précieux, du temps, de l'argent) à quelqu'un qui ne pourra jamais vous le rendre.",
+          "ascending": "Donnez quelque chose qui vous coûte vraiment (un objet précieux, du temps, de l'argent) à quelqu'un qui ne pourra jamais vous le rendre."
+        }
+      }
+    },
+    {
+      "id": 5,
+      "name": "Geburah",
+      "hebrew": "גְּבוּרָה",
+      "meaning": "Rigueur",
+      "pillar": "Gauche",
+      "titles": {
+        "sefer_yetzirah": "Intelligence Radicale",
+        "godwin": "Radical Intelligence"
+      },
+      "angel": {
+        "name": "Kamael",
+        "alternate_names": [
+          "Camael",
+          "Chamuel"
+        ],
+        "function": "Sévérité divine, courage, force guerrière spirituelle"
+      },
+      "direction_experience": {
+        "descending": "Discipline, discernement, coupure du superflu",
+        "ascending": "Confrontation aux limites, combat intérieur, purification"
+      },
+      "keywords": [
+        "force",
+        "justice",
+        "discernement",
+        "limitation",
+        "combat",
+        "courage",
+        "purification"
+      ],
+      "meditation": {
+        "descending": "Visualisez une lumière rouge, vive et tranchante comme une épée. Elle ne détruit pas par méchanceté, mais pour élaguer ce qui est mort. Sentez vos limites et vos défis non comme des punitions, mais comme des cadeaux divins qui vous sculptent [citation:2]. Demandez : 'Quoi, en moi, doit être coupé pour que la sève monte plus haut ?' Écoutez la réponse sans crainte. Dites : 'Mes limitations et mes épreuves sont des dons divins. Maintenant, j'ai l'opportunité de réexaminer mon lien avec mon chemin spirituel.' [citation:2] Accueillez la douleur de la coupure comme une libération. Sentez le soulagement après l'élagage.",
+        "ascending": "Visualisez une lumière rouge, vive et tranchante comme une épée. Elle ne détruit pas par méchanceté, mais pour élaguer ce qui est mort. Sentez vos limites et vos défis non comme des punitions, mais comme des cadeaux divins qui vous sculptent [citation:2]. Demandez : 'Quoi, en moi, doit être coupé pour que la sève monte plus haut ?' Écoutez la réponse sans crainte. Dites : 'Mes limitations et mes épreuves sont des dons divins. Maintenant, j'ai l'opportunité de réexaminer mon lien avec mon chemin spirituel.' [citation:2] Accueillez la douleur de la coupure comme une libération. Sentez le soulagement après l'élagage."
+      },
+      "angel_message": {
+        "descending": "« Je ne suis pas la colère. Je suis le feu qui brûle sans consumer. Ne me crains pas. Crains plutôt ta propre tiédeur. Ce que Je coupe, Je le prépare à une plus grande floraison. »",
+        "ascending": "« Je ne suis pas la colère. Je suis le feu qui brûle sans consumer. Ne me crains pas. Crains plutôt ta propre tiédeur. Ce que Je coupe, Je le prépare à une plus grande floraison. »"
+      },
+      "integration": {
+        "descending": "Lorsque vous êtes confronté à un conflit ou à un défi, ne fuyez pas. Demandez : 'Quelle est la leçon cachée dans cette difficulté ?' Résistez à la tentation de blâmer. Cherchez en vous la part qui a besoin de croissance, puis agissez avec discernement.",
+        "ascending": "Lorsque vous êtes confronté à un conflit ou à un défi, ne fuyez pas. Demandez : 'Quelle est la leçon cachée dans cette difficulté ?' Résistez à la tentation de blâmer. Cherchez en vous la part qui a besoin de croissance, puis agissez avec discernement."
+      },
+      "qliphoth": {
+        "demon": "Golachab",
+        "meaning": "Les Brûleurs / Les Incendiaires",
+        "function": "Violence sans discernement, destruction inutile, rage aveugle",
+        "shadow": "Colère destructrice, cruauté, violence, sadisme, destruction gratuite, auto-destruction"
+      },
+      "qliphoth_work": {
+        "corrective_meditation": {
+          "descending": "Visualisez un brasier dévorant tout sur son passage sans distinction. Ne luttez pas. Asseyez-vous devant lui. Quand la rage s'apaise à force d'avoir tout consumé, il reste une braise douce. Approchez-vous de cette braise. Elle réchauffe, elle n'incinère plus. C'est votre force juste.",
+          "ascending": "Visualisez un brasier dévorant tout sur son passage sans distinction. Ne luttez pas. Asseyez-vous devant lui. Quand la rage s'apaise à force d'avoir tout consumé, il reste une braise douce. Approchez-vous de cette braise. Elle réchauffe, elle n'incinère plus. C'est votre force juste."
+        },
+        "ritual_action": {
+          "descending": "Quand la colère monte, au lieu de l'exprimer ou de la réprimer, écrivez-la. Laissez la plume brûler la page. Puis déchirez (ne brûlez pas) la page en disant : 'La rage est passée. La décision reste.'",
+          "ascending": "Quand la colère monte, au lieu de l'exprimer ou de la réprimer, écrivez-la. Laissez la plume brûler la page. Puis déchirez (ne brûlez pas) la page en disant : 'La rage est passée. La décision reste.'"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "name": "Tiferet",
+      "hebrew": "תִּפְאֶרֶת",
+      "meaning": "Beauté",
+      "pillar": "Milieu",
+      "titles": {
+        "sefer_yetzirah": "Intelligence Médiatrice",
+        "godwin": "Mediating Intelligence"
+      },
+      "angel": {
+        "name": "Michael",
+        "alternate_names": [
+          "Mikhael"
+        ],
+        "function": "Prince solaire, équilibre, sacrifice rédempteur"
+      },
+      "direction_experience": {
+        "descending": "Harmonisation des polarités, médiation entre force et douceur",
+        "ascending": "Union du cœur et de l'esprit, alignement de la volonté personnelle et divine"
+      },
+      "keywords": [
+        "beauté",
+        "harmonie",
+        "soleil",
+        "cœur",
+        "sacrifice",
+        "équilibre",
+        "guérison"
+      ],
+      "meditation": {
+        "descending": "Visualisez un soleil doré au centre de votre poitrine. Il n'est ni trop brûlant, ni trop faible. Il est la mesure parfaite de la chaleur et de la lumière. Depuis ce soleil, deux rayons partent : l'un vers la droite (force, action), l'autre vers la gauche (retrait, contemplation). Vous êtes l'équilibre entre les deux. Dites : 'Je suis un être libre, choisissant d'aligner ma volonté sur la volonté divine.' [citation:2] Dieu se connecte au monde à travers moi ; mon but sur terre s'accomplit même s'il ne m'est pas encore visible. [citation:2] Sentez la beauté de cette juste mesure. Laissez ce centre soleil rayonner paisiblement, illuminant toutes les parties de votre être sans exception. Toutes vos polarités — force et faiblesse, ombre et lumière — s'harmonisent en Lui.",
+        "ascending": "Visualisez un soleil doré au centre de votre poitrine. Il n'est ni trop brûlant, ni trop faible. Il est la mesure parfaite de la chaleur et de la lumière. Depuis ce soleil, deux rayons partent : l'un vers la droite (force, action), l'autre vers la gauche (retrait, contemplation). Vous êtes l'équilibre entre les deux. Dites : 'Je suis un être libre, choisissant d'aligner ma volonté sur la volonté divine.' [citation:2] Dieu se connecte au monde à travers moi ; mon but sur terre s'accomplit même s'il ne m'est pas encore visible. [citation:2] Sentez la beauté de cette juste mesure. Laissez ce centre soleil rayonner paisiblement, illuminant toutes les parties de votre être sans exception. Toutes vos polarités — force et faiblesse, ombre et lumière — s'harmonisent en Lui."
+      },
+      "angel_message": {
+        "descending": "« Je ne tranche pas les nœuds. Je les éclaire. Quand la lumière est suffisante, le nœud se défait de lui-même. Ne cherche pas à résoudre la contradiction. Élève-toi au-dessus d'elle. »",
+        "ascending": "« Je ne tranche pas les nœuds. Je les éclaire. Quand la lumière est suffisante, le nœud se défait de lui-même. Ne cherche pas à résoudre la contradiction. Élève-toi au-dessus d'elle. »"
+      },
+      "integration": {
+        "descending": "En situation de conflit intérieur ou extérieur, ne prenez pas parti immédiatement. Respirez. Centrez-vous. Demandez : 'Quelle est la solution qui honore les deux parties et les dépasse ?' N'agissez qu'ensuite.",
+        "ascending": "En situation de conflit intérieur ou extérieur, ne prenez pas parti immédiatement. Respirez. Centrez-vous. Demandez : 'Quelle est la solution qui honore les deux parties et les dépasse ?' N'agissez qu'ensuite."
+      },
+      "qliphoth": {
+        "demon": "Tagiriron",
+        "meaning": "Les Contesteurs / Les Disputeurs",
+        "function": "Séduction arrogante, faux équilibre, lumière sans substance",
+        "shadow": "Narcissisme, faux-semblant, orgueil esthétique, culte de l'apparence, spiritualité folklorique sans profondeur"
+      },
+      "qliphoth_work": {
+        "corrective_meditation": {
+          "descending": "Visualisez un miroir qui reflète une lumière aveuglante mais sans chaleur. Approchez-vous. Regardez au-delà du reflet. Derrière le miroir, une petite flamme vacille. C'est votre vérité nue, sans ornement. Honorez-la. Le miroir se brise. Seule la flamme demeure, plus claire, plus vraie.",
+          "ascending": "Visualisez un miroir qui reflète une lumière aveuglante mais sans chaleur. Approchez-vous. Regardez au-delà du reflet. Derrière le miroir, une petite flamme vacille. C'est votre vérité nue, sans ornement. Honorez-la. Le miroir se brise. Seule la flamme demeure, plus claire, plus vraie."
+        },
+        "ritual_action": {
+          "descending": "Passez un jour entier sans vous regarder dans aucun miroir. Ne cherchez aucune validation extérieure. Le soir, écrivez ce que vous avez ressenti. Qui êtes-vous quand personne ne vous regarde ?",
+          "ascending": "Passez un jour entier sans vous regarder dans aucun miroir. Ne cherchez aucune validation extérieure. Le soir, écrivez ce que vous avez ressenti. Qui êtes-vous quand personne ne vous regarde ?"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "name": "Netzach",
+      "hebrew": "נֶצַח",
+      "meaning": "Victoire",
+      "pillar": "Droit",
+      "titles": {
+        "sefer_yetzirah": "Intelligence Émotionnelle",
+        "godwin": "Emotional Intelligence"
+      },
+      "angel": {
+        "name": "Haniel",
+        "alternate_names": [
+          "Aniel"
+        ],
+        "function": "Grâce vénusienne, désir, art, persévérance amoureuse"
+      },
+      "direction_experience": {
+        "descending": "Force créatrice, passion, désir qui meut le monde",
+        "ascending": "Élévation des désirs, alchimie de la libido"
+      },
+      "keywords": [
+        "amour",
+        "désir",
+        "art",
+        "victoire",
+        "persévérance",
+        "créativité",
+        "passion"
+      ],
+      "meditation": {
+        "descending": "Visualisez une lumière verte éclatante. Sentez-la vibrer dans vos hanches et votre bassin, siège de votre désir. Ce désir sacré n'est pas un péché — c'est la force qui pousse les galaxies à tourner et les roses à fleurir. Dites : 'Je suis un donateur, contribuant de tout cœur à créer le monde en prenant soin de ma petite partie de l'univers.' [citation:2] Ma créativité est valorisée et chérie dans le schéma ultime du déploiement divin. [citation:2] Sentez l'élan vital. Laissez-le monter sans jugement. Puis dirigez-le consciemment, comme on canalise une rivière. Devenez l'artiste de votre propre désir.",
+        "ascending": "Visualisez une lumière verte éclatante. Sentez-la vibrer dans vos hanches et votre bassin, siège de votre désir. Ce désir sacré n'est pas un péché — c'est la force qui pousse les galaxies à tourner et les roses à fleurir. Dites : 'Je suis un donateur, contribuant de tout cœur à créer le monde en prenant soin de ma petite partie de l'univers.' [citation:2] Ma créativité est valorisée et chérie dans le schéma ultime du déploiement divin. [citation:2] Sentez l'élan vital. Laissez-le monter sans jugement. Puis dirigez-le consciemment, comme on canalise une rivière. Devenez l'artiste de votre propre désir."
+      },
+      "angel_message": {
+        "descending": "« La défaite n'existe pas dans mon royaume, seulement la leçon à répéter. Tu n'es jamais vaincu tant que ton cœur ne s'est pas arrêté d'aimer l'épreuve elle-même. Persévère. L'aube vient toujours après la plus longue nuit. »",
+        "ascending": "« La défaite n'existe pas dans mon royaume, seulement la leçon à répéter. Tu n'es jamais vaincu tant que ton cœur ne s'est pas arrêté d'aimer l'épreuve elle-même. Persévère. L'aube vient toujours après la plus longue nuit. »"
+      },
+      "integration": {
+        "descending": "Engagez-vous dans un projet créatif concret, même minime, sans attachement au résultat. L'important est l'acte de création lui-même, pas son succès. Tenez-vous-y pendant 40 jours, sans en attendre de reconnaissance.",
+        "ascending": "Engagez-vous dans un projet créatif concret, même minime, sans attachement au résultat. L'important est l'acte de création lui-même, pas son succès. Tenez-vous-y pendant 40 jours, sans en attendre de reconnaissance."
+      },
+      "qliphoth": {
+        "demon": "Harab Serapel",
+        "meaning": "Les Corbeaux Brûlants / Ardents",
+        "function": "Désir sans amour, création sans âme, passion destructrice",
+        "shadow": "Luxure, obsession, jalousie, manipulation sentimentale, art vide, désir possessif"
+      },
+      "qliphoth_work": {
+        "corrective_meditation": {
+          "descending": "Imaginez un corbeau qui tient dans son bec un objet brillant qu'il ne lâche sous aucun prétexte. Approchez-vous. Derrière l'objet, voyez son regard. Il ne veut pas l'objet. Il veut l'amour qu'on lui donnerait s'il lâchait. Lâchez-le vous-même le premier.",
+          "ascending": "Imaginez un corbeau qui tient dans son bec un objet brillant qu'il ne lâche sous aucun prétexte. Approchez-vous. Derrière l'objet, voyez son regard. Il ne veut pas l'objet. Il veut l'amour qu'on lui donnerait s'il lâchait. Lâchez-le vous-même le premier."
+        },
+        "ritual_action": {
+          "descending": "Abandonnez consciemment une habitude dont vous savez qu'elle nuit à quelqu'un que vous aimez (même si c'est vous-même).",
+          "ascending": "Abandonnez consciemment une habitude dont vous savez qu'elle nuit à quelqu'un que vous aimez (même si c'est vous-même)."
+        }
+      }
+    },
+    {
+      "id": 8,
+      "name": "Hod",
+      "hebrew": "הוֹד",
+      "meaning": "Gloire",
+      "pillar": "Gauche",
+      "titles": {
+        "sefer_yetzirah": "Intelligence Parfaite",
+        "godwin": "Perfect Intelligence"
+      },
+      "angel": {
+        "name": "Raphael",
+        "alternate_names": [
+          "Rafahel"
+        ],
+        "function": "Guérison, sagesse, analyse, science sacrée"
+      },
+      "direction_experience": {
+        "descending": "Structuration, logique, organisation du savoir",
+        "ascending": "Méditation, contemplation, humilité intellectuelle"
+      },
+      "keywords": [
+        "gloire",
+        "intellect",
+        "analyse",
+        "langage",
+        "rituel",
+        "science",
+        "sagesse"
+      ],
+      "meditation": {
+        "descending": "Visualisez une lumière orangée ou violette, précise et structurée, dans votre gorge et votre front. Vous n'êtes pas dans le vague ; vous êtes dans la louange précise, la formule juste, le rituel exact. Dites : 'Je regarde vers l'avant avec confiance vers la réalisation parfaite de la Splendeur éternelle de la Lumière Illimitée.' [citation:10] Je suis reconnaissant, appréciant et honorant le travail des autres. [citation:2] Je suis prêt à sacrifier mes désirs personnels pour le bien commun et pour la gloire du Divin. [citation:2] Sentez l'humilité de l'intellect qui reconnaît ses limites et contemple un ordre plus grand que lui.",
+        "ascending": "Visualisez une lumière orangée ou violette, précise et structurée, dans votre gorge et votre front. Vous n'êtes pas dans le vague ; vous êtes dans la louange précise, la formule juste, le rituel exact. Dites : 'Je regarde vers l'avant avec confiance vers la réalisation parfaite de la Splendeur éternelle de la Lumière Illimitée.' [citation:10] Je suis reconnaissant, appréciant et honorant le travail des autres. [citation:2] Je suis prêt à sacrifier mes désirs personnels pour le bien commun et pour la gloire du Divin. [citation:2] Sentez l'humilité de l'intellect qui reconnaît ses limites et contemple un ordre plus grand que lui."
+      },
+      "angel_message": {
+        "descending": "« Je suis le médicament et le médecin. Je ne te demande pas de croire. Je te demande d'analyser, de vérifier, de comprendre. La vérité divine n'a pas peur de l'examen rationnel. Seule l'illusion fuit la lumière de l'intelligence. »",
+        "ascending": "« Je suis le médicament et le médecin. Je ne te demande pas de croire. Je te demande d'analyser, de vérifier, de comprendre. La vérité divine n'a pas peur de l'examen rationnel. Seule l'illusion fuit la lumière de l'intelligence. »"
+      },
+      "integration": {
+        "descending": "Tenez un journal rituel. Notez chaque jour une observation précise sur vos états intérieurs, sans jugement. Ajoutez un symbole ou une correspondance que vous avez apprise. Après 30 jours, relisez. Vous verrez votre Gloire.",
+        "ascending": "Tenez un journal rituel. Notez chaque jour une observation précise sur vos états intérieurs, sans jugement. Ajoutez un symbole ou une correspondance que vous avez apprise. Après 30 jours, relisez. Vous verrez votre Gloire."
+      },
+      "qliphoth": {
+        "demon": "Samael",
+        "meaning": "Dieu aveugle / La Fausseté",
+        "function": "Intellectualisme stérile, faux raisonnement, mensonge sophistiqué",
+        "shadow": "Rationalisation, mauvaise foi, rhétorique creuse, intelligence au service du mensonge, occultation de la vérité par le discours"
+      },
+      "qliphoth_work": {
+        "corrective_meditation": {
+          "descending": "Imaginez un miroir déformant dans une maison des miroirs. Vous savez que votre reflet n'est pas fidèle, mais vous ne pouvez pas l'atteindre. Asseyez-vous au centre. Attendez. Le brouhaha cesse. Un miroir différent, net et clair, apparaît devant vous seul. Regardez. Acceptez.",
+          "ascending": "Imaginez un miroir déformant dans une maison des miroirs. Vous savez que votre reflet n'est pas fidèle, mais vous ne pouvez pas l'atteindre. Asseyez-vous au centre. Attendez. Le brouhaha cesse. Un miroir différent, net et clair, apparaît devant vous seul. Regardez. Acceptez."
+        },
+        "ritual_action": {
+          "descending": "Pendant une semaine, chaque fois que vous avez une pensée critique envers autrui, retournez-la en question : 'En quoi est-ce aussi vrai de moi ?' Écrivez la réponse.",
+          "ascending": "Pendant une semaine, chaque fois que vous avez une pensée critique envers autrui, retournez-la en question : 'En quoi est-ce aussi vrai de moi ?' Écrivez la réponse."
+        }
+      }
+    },
+    {
+      "id": 9,
+      "name": "Yesod",
+      "hebrew": "יְסוֹד",
+      "meaning": "Fondation",
+      "pillar": "Milieu",
+      "titles": {
+        "sefer_yetzirah": "Intelligence Fondamentale",
+        "godwin": "Foundation Intelligence"
+      },
+      "angel": {
+        "name": "Gabriel",
+        "alternate_names": [
+          "Jibril"
+        ],
+        "function": "Force lunaire, rêves, révélation, annonciateur"
+      },
+      "direction_experience": {
+        "descending": "Ancrage des énergies subtiles dans la matrice astrale",
+        "ascending": "Navigation dans l'inconscient, travail des rêves"
+      },
+      "keywords": [
+        "fondation",
+        "rêve",
+        "subconscient",
+        "lune",
+        "réceptivité",
+        "astral",
+        "imagination"
+      ],
+      "meditation": {
+        "descending": "Visualisez une lumière violette ou indigo dans votre bassin. Sentez ce point comme le fondation de tout votre être. De là montent et descendent toutes les énergies. Dormez un peu, rêvez. Dans l'état de rêve éveillé, dites : 'Je suis un canal de transmission, recueillant et transmettant tout ce qui me traverse pour le bien, à d'autres êtres vivants et à la génération suivante.' [citation:2] Dieu est Maître du temps, Créateur des coïncidences et Seigneur de l'histoire — que je le voie ou non, il y a un dessein en évolution. [citation:2] Sentez la confiance absolue dans l'invisible qui tisse la trame.",
+        "ascending": "Visualisez une lumière violette ou indigo dans votre bassin. Sentez ce point comme le fondation de tout votre être. De là montent et descendent toutes les énergies. Dormez un peu, rêvez. Dans l'état de rêve éveillé, dites : 'Je suis un canal de transmission, recueillant et transmettant tout ce qui me traverse pour le bien, à d'autres êtres vivants et à la génération suivante.' [citation:2] Dieu est Maître du temps, Créateur des coïncidences et Seigneur de l'histoire — que je le voie ou non, il y a un dessein en évolution. [citation:2] Sentez la confiance absolue dans l'invisible qui tisse la trame."
+      },
+      "angel_message": {
+        "descending": "« Mes ailes couvrent tes rêves. Ne crains pas l'obscurité. C'est dans l'obscurité que les graines germent et que les astres se lèvent. Laisse-toi porter. Tu es plus sûr dans mes mains que tu ne le serais jamais en pleine lumière éveillée. »",
+        "ascending": "« Mes ailes couvrent tes rêves. Ne crains pas l'obscurité. C'est dans l'obscurité que les graines germent et que les astres se lèvent. Laisse-toi porter. Tu es plus sûr dans mes mains que tu ne le serais jamais en pleine lumière éveillée. »"
+      },
+      "integration": {
+        "descending": "Avant de dormir, posez une question claire à votre inconscient. Tenez un journal de rêves au réveil. Ne les interprétez pas immédiatement. Recueillez. Après une semaine, les motifs se révéleront d'eux-mêmes comme une fondation sous la maison.",
+        "ascending": "Avant de dormir, posez une question claire à votre inconscient. Tenez un journal de rêves au réveil. Ne les interprétez pas immédiatement. Recueillez. Après une semaine, les motifs se révéleront d'eux-mêmes comme une fondation sous la maison."
+      },
+      "qliphoth": {
+        "demon": "Gamaliel",
+        "meaning": "Les Impurs",
+        "function": "Fausse réceptivité, régression infantile, illusion collective",
+        "shadow": "Idéalisation malsaine, hystérie collective, dépendance affective, cauchemars chroniques, fixation à l'imaginaire"
+      },
+      "qliphoth_work": {
+        "corrective_meditation": {
+          "descending": "Imaginez un marais où l'eau est stagnante. Des formes mouvantes vous attirent. Ne les suivez pas. Asseyez-vous sur une pierre au centre. Observez le marais. Peu à peu, l'eau s'éclaircit. Les formes deviennent des reflets. Vous voyez le ciel dans l'eau. C'est votre lucidité.",
+          "ascending": "Imaginez un marais où l'eau est stagnante. Des formes mouvantes vous attirent. Ne les suivez pas. Asseyez-vous sur une pierre au centre. Observez le marais. Peu à peu, l'eau s'éclaircit. Les formes deviennent des reflets. Vous voyez le ciel dans l'eau. C'est votre lucidité."
+        },
+        "ritual_action": {
+          "descending": "Choisissez un cauchemar récurrent. Le jour, écrivez-en une fin différente, dans laquelle vous êtes acteur et non victime. Rêvez-la avant de dormir.",
+          "ascending": "Choisissez un cauchemar récurrent. Le jour, écrivez-en une fin différente, dans laquelle vous êtes acteur et non victime. Rêvez-la avant de dormir."
+        }
+      }
+    },
+    {
+      "id": 10,
+      "name": "Malkuth",
+      "hebrew": "מַלְכוּת",
+      "meaning": "Royaume",
+      "pillar": "Milieu",
+      "titles": {
+        "sefer_yetzirah": "Intelligence Éclatante",
+        "godwin": "Resplendent Intelligence"
+      },
+      "angel": {
+        "name": "Sandalphon",
+        "alternate_names": [
+          "Sandalfon"
+        ],
+        "function": "Frère jumeau de Metatron, incarnation matérielle"
+      },
+      "direction_experience": {
+        "descending": "Manifestation complète dans la matière, aboutissement",
+        "ascending": "Éveil à la réalité spirituelle à travers le monde physique"
+      },
+      "keywords": [
+        "royaume",
+        "matière",
+        "incarnation",
+        "terre",
+        "présence",
+        "réalisation",
+        "totalité"
+      ],
+      "meditation": {
+        "descending": "Asseyez-vous confortablement. Sentez le sol sous vous, votre poids sur la chaise. Vous êtes ancré. Visualisez les couleurs de Malkuth : citrine, olive, roux et noir — les quatre éléments entrelacés. Dites : 'Je fais partie d'un tout plus grand, me joignant à tous les autres êtres pour exprimer gratitude et louange au Créateur de l'univers.' [citation:2] La volonté de Dieu se manifeste ici et maintenant ; tout est exactement comme il est censé être. [citation:2] Le Royaume de l'Esprit s'incarne dans ma chair. [citation:10] Sentez la plénitude de la présence. Non pas un ailleurs, mais un ici absolu. Non pas un plus tard, mais un maintenant éternel. La matière n'est pas l'antithèse de l'esprit. Elle est sa plus haute réalisation.",
+        "ascending": "Asseyez-vous confortablement. Sentez le sol sous vous, votre poids sur la chaise. Vous êtes ancré. Visualisez les couleurs de Malkuth : citrine, olive, roux et noir — les quatre éléments entrelacés. Dites : 'Je fais partie d'un tout plus grand, me joignant à tous les autres êtres pour exprimer gratitude et louange au Créateur de l'univers.' [citation:2] La volonté de Dieu se manifeste ici et maintenant ; tout est exactement comme il est censé être. [citation:2] Le Royaume de l'Esprit s'incarne dans ma chair. [citation:10] Sentez la plénitude de la présence. Non pas un ailleurs, mais un ici absolu. Non pas un plus tard, mais un maintenant éternel. La matière n'est pas l'antithèse de l'esprit. Elle est sa plus haute réalisation."
+      },
+      "angel_message": {
+        "descending": "« Je suis le parfum de la rose après la pluie. Je suis la chaleur du pain dans tes mains. Je suis l'instant présent que tu fuis toujours pour demain. Arrête-toi. Je suis ici. Tu es ici. C'est assez. C'est tout. »",
+        "ascending": "« Je suis le parfum de la rose après la pluie. Je suis la chaleur du pain dans tes mains. Je suis l'instant présent que tu fuis toujours pour demain. Arrête-toi. Je suis ici. Tu es ici. C'est assez. C'est tout. »"
+      },
+      "integration": {
+        "descending": "Chaque jour, consacrez un moment à honorer votre corps par une action simple : marcher pieds nus sur la terre, manger un fruit en pleine conscience, toucher un arbre, respirer profondément. Dites : 'Ce corps est le temple de l'esprit. Cette terre est le Royaume des Cieux.'",
+        "ascending": "Chaque jour, consacrez un moment à honorer votre corps par une action simple : marcher pieds nus sur la terre, manger un fruit en pleine conscience, toucher un arbre, respirer profondément. Dites : 'Ce corps est le temple de l'esprit. Cette terre est le Royaume des Cieux.'"
+      },
+      "qliphoth": {
+        "demon": "Lilith",
+        "meaning": "La Nuit / La Femme de la Nuit",
+        "function": "Matérialisme grossier, refus de l'élévation spirituelle",
+        "shadow": "Apathie, inertie, dépression, surmatérialisme, oubli de l'âme, prison du corps"
+      },
+      "qliphoth_work": {
+        "corrective_meditation": {
+          "descending": "Visualisez un jardin luxuriant où tout pousse trop vite et s'étouffe. Au centre, enterré sous les ronces, un petit coffre. Au lieu de le déterrer, désherbez une parcelle autour. Puis une autre. Sans forcer. Le coffre apparaîtra de lui-même, non par violence, mais par l'espace que vous lui aurez fait. À l'intérieur, votre noyau spirituel, intact.",
+          "ascending": "Visualisez un jardin luxuriant où tout pousse trop vite et s'étouffe. Au centre, enterré sous les ronces, un petit coffre. Au lieu de le déterrer, désherbez une parcelle autour. Puis une autre. Sans forcer. Le coffre apparaîtra de lui-même, non par violence, mais par l'espace que vous lui aurez fait. À l'intérieur, votre noyau spirituel, intact."
+        },
+        "ritual_action": {
+          "descending": "Pendant une semaine, traitez votre corps comme un sanctuaire : nourrissez-le sainement, bougez-le avec gratitude, reposez-le avec honneur. Sans ascèse ni indulgence. Juste la juste mesure.",
+          "ascending": "Pendant une semaine, traitez votre corps comme un sanctuaire : nourrissez-le sainement, bougez-le avec gratitude, reposez-le avec honneur. Sans ascèse ni indulgence. Juste la juste mesure."
+        }
+      }
+    }
+  ]
+}

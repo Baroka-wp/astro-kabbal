@@ -1,0 +1,369 @@
+{
+  "version": "2.0",
+  "description": "Interprétations astro-kabalistes pour les 10 Sephiroth bloquées, avec Ange remède pour chaque aspect",
+  "regle_generale_ange_remede": "Pour chaque aspect dur entre une Sephirah et un point/planète, on repère le degré zodiacal du point/planète, on trouve l’Ange associé à ces 5°, et on applique son rituel (Psaume + visualisation du sentier). Si la Sephirah est bloquée par plusieurs aspects, on priorise l’Ange du point le plus proche d’un axe cardinal (MC/IC/Asc).",
+  "sephiroth": {
+    "Kether": {
+      "blocage_general": "Kether bloqué → perte de sens global, impression de déconnexion de son étoile, nihilisme, dépression spirituelle",
+      "aspects": [
+        {
+          "aspect": "opposition",
+          "avec": "Saturne",
+          "position_degre_associe": "ex: Saturne à 22° Capricorne",
+          "ange_remede": {
+            "nom": "Mitzrael",
+            "degres": "25°–30° Capricorne",
+            "sentier": "Chesed – Yesod (porte 36)",
+            "psaume": "7:2",
+            "rituel": "Psaume 7:2 à minuit, face au Nord, bougie noire, visualiser Kether s'ouvrant comme un lotus"
+          }
+        },
+        {
+          "aspect": "square",
+          "avec": "Neptune",
+          "position_degre_associe": "ex: Neptune à 5° Poissons",
+          "ange_remede": {
+            "nom": "Habuiah",
+            "degres": "5°–10° Poissons",
+            "sentier": "Chesed – Malkuth (porte 44)",
+            "psaume": "145:18",
+            "rituel": "Psaume 145:18 sur de l'encens, 9 jours, visualiser la couronne au-dessus de la tête"
+          }
+        },
+        {
+          "aspect": "inconjunct",
+          "avec": "Uranus",
+          "position_degre_associe": "ex: Uranus à 14° Taureau",
+          "ange_remede": {
+            "nom": "Haziel",
+            "degres": "10°–15° Taureau",
+            "sentier": "Binah – Chesed (Teth)",
+            "psaume": "40:2",
+            "rituel": "Psaume 40:2 au lever du soleil, rituel de foudre symbolique"
+          }
+        }
+      ]
+    },
+    "Chokmah": {
+      "blocage_general": "Chokmah bloqué → blocage de l'inspiration, peur de l'innovation, créativité entravée, impossibilité de commencer",
+      "aspects": [
+        {
+          "aspect": "square",
+          "avec": "Saturne",
+          "position_degre_associe": "ex: Saturne à 18° Verseau",
+          "ange_remede": {
+            "nom": "Mehiel",
+            "degres": "15°–20° Verseau",
+            "sentier": "Yesod – Geburah (porte 40)",
+            "psaume": "40:2",
+            "rituel": "Psaume 40:2 à l'heure de Mercure, tracer le sceau de Chokmah"
+          }
+        },
+        {
+          "aspect": "opposition",
+          "avec": "Mars",
+          "position_degre_associe": "ex: Mars à 8° Scorpion",
+          "ange_remede": {
+            "nom": "Yelahiah",
+            "degres": "5°–10° Scorpion",
+            "sentier": "Tiphareth – Hod (porte 20)",
+            "psaume": "149:4",
+            "rituel": "Psaume 149:4, danse extatique, 7 nuits de pleine lune"
+          }
+        }
+      ]
+    },
+    "Binah": {
+      "blocage_general": "Binah bloqué → compréhension tronquée, mélancolie cyclique, rituels vides, peur des formes figées",
+      "aspects": [
+        {
+          "aspect": "inconjunct",
+          "avec": "Uranus",
+          "position_degre_associe": "ex: Uranus à 3° Bélier",
+          "ange_remede": {
+            "nom": "Vehuiah",
+            "degres": "0°–5° Bélier",
+            "sentier": "Kether – Chokmah (Aleph)",
+            "psaume": "3:3",
+            "rituel": "Psaume 3:3 invoquer Binah comme matrice, 3 jours"
+          }
+        },
+        {
+          "aspect": "square",
+          "avec": "Lilith_True",
+          "position_degre_associe": "ex: Lilith à 27° Lion",
+          "ange_remede": {
+            "nom": "Omael",
+            "degres": "25°–30° Lion",
+            "sentier": "Binah – Tiphareth (porte 6)",
+            "psaume": "107:20",
+            "rituel": "Psaume 107:20, rituel de miroir brisé/réparé"
+          }
+        }
+      ]
+    },
+    "Chesed": {
+      "blocage_general": "Chesed bloqué → incapacité à recevoir, don contraint, peur de l'abondance, générosité toxique",
+      "aspects": [
+        {
+          "aspect": "opposition",
+          "avec": "Mars",
+          "position_degre_associe": "ex: Mars à 14° Sagittaire",
+          "ange_remede": {
+            "nom": "Hahasiah",
+            "degres": "10°–15° Sagittaire",
+            "sentier": "Chesed – Hod (porte 27)",
+            "psaume": "122:6",
+            "rituel": "Psaume 122:6, offrande d'eau, 7 jours consécutifs"
+          }
+        },
+        {
+          "aspect": "square",
+          "avec": "Pluton",
+          "position_degre_associe": "ex: Pluton à 2° Capricorne",
+          "ange_remede": {
+            "nom": "Mebahiah",
+            "degres": "0°–5° Capricorne",
+            "sentier": "Hod – Netzach (porte 31)",
+            "psaume": "117:2",
+            "rituel": "Psaume 117:2, rituel d'expansion par le don symbolique"
+          }
+        }
+      ]
+    },
+    "Geburah": {
+      "blocage_general": "Geburah bloqué → colère retournée contre soi, jugement sans discernement, violence passive ou explosive",
+      "aspects": [
+        {
+          "aspect": "square",
+          "avec": "Venus",
+          "position_degre_associe": "ex: Vénus à 22° Balance",
+          "ange_remede": {
+            "nom": "Hahahel",
+            "degres": "20°–25° Balance",
+            "sentier": "Binah – Chesed (porte 18)",
+            "psaume": "103:20",
+            "rituel": "Psaume 103:20, respiration martiale - douce, 40 jours"
+          }
+        },
+        {
+          "aspect": "opposition",
+          "avec": "Jupiter",
+          "position_degre_associe": "ex: Jupiter à 9° Cancer",
+          "ange_remede": {
+            "nom": "Pahaliah",
+            "degres": "5°–10° Cancer",
+            "sentier": "Netzach – Hod (Resh)",
+            "psaume": "106:1",
+            "rituel": "Psaume 106:1, couper un fruit amer et le jeter au feu"
+          }
+        }
+      ]
+    },
+    "Tiphareth": {
+      "blocage_general": "Tiphareth bloqué → vide intérieur, beau dehors mais plus de cœur, impossibilité de joie profonde",
+      "aspects": [
+        {
+          "aspect": "opposition",
+          "avec": "Saturne",
+          "position_degre_associe": "ex: Saturne à 16° Poissons",
+          "ange_remede": {
+            "nom": "Rochel",
+            "degres": "10°–15° Poissons",
+            "sentier": "Geburah – Tiphareth (porte 45)",
+            "psaume": "124:8",
+            "rituel": "Psaume 124:8, visualisation du cœur comme un soleil, 21 jours"
+          }
+        },
+        {
+          "aspect": "square",
+          "avec": "Uranus",
+          "position_degre_associe": "ex: Uranus à 7° Vierge",
+          "ange_remede": {
+            "nom": "Vasariah",
+            "degres": "5°–10° Vierge",
+            "sentier": "Chesed – Geburah (porte 8)",
+            "psaume": "25:6",
+            "rituel": "Psaume 25:6, offrande de miel et de laurier"
+          }
+        }
+      ]
+    },
+    "Netzach": {
+      "blocage_general": "Netzach bloqué → désir étouffé, plaisir coupable, relations sans saveur, culpabilité à vouloir",
+      "aspects": [
+        {
+          "aspect": "opposition",
+          "avec": "Saturne",
+          "position_degre_associe": "ex: Saturne à 27° Scorpion",
+          "ange_remede": {
+            "nom": "Mihael",
+            "degres": "25°–30° Scorpion",
+            "sentier": "Kether – Binah (porte 24)",
+            "psaume": "121:7",
+            "rituel": "Psaume 121:7, danser avec un ruban rouge, 7 samedis"
+          }
+        },
+        {
+          "aspect": "square",
+          "avec": "Pluton",
+          "position_degre_associe": "ex: Pluton à 12° Vierge",
+          "ange_remede": {
+            "nom": "Yehuiah",
+            "degres": "10°–15° Vierge",
+            "sentier": "Chesed – Tiphareth (porte 9)",
+            "psaume": "8:10",
+            "rituel": "Psaume 8:10, rituel de désir autorisé"
+          }
+        }
+      ]
+    },
+    "Hod": {
+      "blocage_general": "Hod bloqué → mental en boucle, rituel vide, pensée sans ancrage, rumination, TOC mental",
+      "aspects": [
+        {
+          "aspect": "square",
+          "avec": "Lune",
+          "position_degre_associe": "ex: Lune à 18° Gémeaux",
+          "ange_remede": {
+            "nom": "Hakamiah",
+            "degres": "15°–20° Gémeaux",
+            "sentier": "Tiphareth – Hod (Ayin)",
+            "psaume": "3:5",
+            "rituel": "Psaume 3:5, écriture automatique puis brûler le texte"
+          }
+        },
+        {
+          "aspect": "opposition",
+          "avec": "Neptune",
+          "position_degre_associe": "ex: Neptune à 2° Balance",
+          "ange_remede": {
+            "nom": "Aniel",
+            "degres": "0°–5° Balance",
+            "sentier": "Netzach – Hod (porte 13)",
+            "psaume": "26:8",
+            "rituel": "Psaume 26:8, méditation silencieuse sans mental, 30 min/jour"
+          }
+        }
+      ]
+    },
+    "Yesod": {
+      "blocage_general": "Yesod bloqué → angoisse flottante, intuition brouillée, cauchemars, peurs irrationnelles",
+      "aspects": [
+        {
+          "aspect": "opposition",
+          "avec": "Mercure",
+          "position_degre_associe": "ex: Mercure à 12° Vierge",
+          "ange_remede": {
+            "nom": "Vasariah",
+            "degres": "5°–10° Vierge",
+            "sentier": "Chesed – Geburah (porte 8)",
+            "psaume": "25:6",
+            "rituel": "Psaume 25:6 chaque soir + visualisation du sentier vert entre Chesed et Geburah, 7 jours"
+          }
+        },
+        {
+          "aspect": "square",
+          "avec": "True_North_Lunar_Node",
+          "position_degre_associe": "ex: Nœud Nord à 18° Balance",
+          "ange_remede": {
+            "nom": "Ieiazel",
+            "degres": "15°–20° Balance",
+            "sentier": "Kether – Tiphareth (porte 16)",
+            "psaume": "48:2",
+            "rituel": "Psaume 48:2 à l'aube, tracer un pentagramme d'air avec le nom de l'Ange"
+          }
+        },
+        {
+          "aspect": "opposition",
+          "avec": "Ascendant",
+          "position_degre_associe": "ex: Asc 25° Gémeaux",
+          "ange_remede": {
+            "nom": "Caliel",
+            "degres": "25°–30° Gémeaux",
+            "sentier": "Tiphareth – Yesod (Tzaddi)",
+            "psaume": "93:4",
+            "rituel": "Psaume 93:4 sur un miroir noir (Yesod) face à l'Est, 3 nuits consécutives"
+          }
+        },
+        {
+          "aspect": "square",
+          "avec": "Medium_Coeli",
+          "position_degre_associe": "ex: MC 7° Lion",
+          "ange_remede": {
+            "nom": "Haaiah",
+            "degres": "5°–10° Lion",
+            "sentier": "Kether – Chokmah (secondaire)",
+            "psaume": "112:4",
+            "rituel": "Psaume 112:4 au zénith solaire, méditer sur le MC débloqué par Kether"
+          }
+        },
+        {
+          "aspect": "square",
+          "avec": "Imum_Coeli",
+          "position_degre_associe": "ex: IC 7° Lion",
+          "ange_remede": {
+            "nom": "Haaiah",
+            "degres": "5°–10° Lion",
+            "sentier": "Kether – Chokmah (secondaire)",
+            "psaume": "112:4",
+            "rituel": "Même Ange car IC & MC sont liés. Rituel à minuit, face au Nord."
+          }
+        },
+        {
+          "aspect": "square",
+          "avec": "True_South_Lunar_Node",
+          "position_degre_associe": "ex: Nœud Sud 18° Balance",
+          "ange_remede": {
+            "nom": "Ieiazel (même que Nœud Nord mais rituel inversé)",
+            "degres": "15°–20° Balance",
+            "sentier": "Kether – Tiphareth",
+            "psaume": "48:2 (lu à rebours)",
+            "rituel": "Psaume 48:2 lu en hébreu de droite à gauche, sur une pierre noire, puis briser symboliquement le blocage."
+          }
+        }
+      ]
+    },
+    "Malkuth": {
+      "blocage_general": "Malkuth bloqué → rien ne se concrétise, fatigue chronique, éparpillement, projets échouent au dernier moment",
+      "aspects": [
+        {
+          "aspect": "square",
+          "avec": "Pluton",
+          "position_degre_associe": "ex: Pluton à 19° Balance",
+          "ange_remede": {
+            "nom": "Rehael",
+            "degres": "10°–15° Balance",
+            "sentier": "Yesod – Malkuth (porte 15)",
+            "psaume": "139:9",
+            "rituel": "Psaume 139:9, rituel de semence (planter une graine), 40 jours"
+          }
+        },
+        {
+          "aspect": "opposition",
+          "avec": "Mars",
+          "position_degre_associe": "ex: Mars à 27° Cancer",
+          "ange_remede": {
+            "nom": "Haheuiah",
+            "degres": "25°–30° Cancer",
+            "sentier": "Hod – Malkuth (porte 2)",
+            "psaume": "115:11",
+            "rituel": "Psaume 115:11, marcher pieds nus sur la terre, 7 jours"
+          }
+        },
+        {
+          "aspect": "square",
+          "avec": "Saturne",
+          "position_degre_associe": "ex: Saturne à 5° Taureau",
+          "ange_remede": {
+            "nom": "Cahethel",
+            "degres": "5°–10° Taureau",
+            "sentier": "Binah – Geburah (Cheth)",
+            "psaume": "119:68",
+            "rituel": "Psaume 119:68, rituel de concrétisation par l'argile"
+          }
+        }
+      ]
+    }
+  }
+}

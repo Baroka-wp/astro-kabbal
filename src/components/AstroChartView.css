@@ -1,0 +1,36 @@
+.astro-chart-view {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 14px;
+}
+
+.astro-chart-view h2 {
+  color: #0f172a;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.astro-chart-svg {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  padding: 8px;
+  min-height: 420px;
+  overflow: auto;
+}
+
+.astro-chart-svg svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.astro-chart-empty {
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 12px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}

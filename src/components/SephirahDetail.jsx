@@ -1,7 +1,43 @@
 import React, { useState } from 'react';
 import './SephirahDetail.css';
 
-const SephirahDetail = ({ sephirah, selectedDirection = 'descending', onDirectionChange, onBack }) => {
+const SIGN_LABELS = {
+  Ari: 'Bélier',
+  Tau: 'Taureau',
+  Gem: 'Gémeaux',
+  Can: 'Cancer',
+  Leo: 'Lion',
+  Vir: 'Vierge',
+  Lib: 'Balance',
+  Sco: 'Scorpion',
+  Sag: 'Sagittaire',
+  Cap: 'Capricorne',
+  Aqu: 'Verseau',
+  Pis: 'Poissons',
+};
+
+const DIGNITY_LABELS = {
+  rulership: 'Domicile',
+  exaltation: 'Exaltation',
+  detriment: 'Exil',
+  fall: 'Chute',
+  neutral: 'Neutre',
+};
+
+const ASPECT_GLYPHS = {
+  square: '□',
+  opposition: '☍',
+  quincunx: '⚻',
+};
+
+const SephirahDetail = ({
+  sephirah,
+  selectedDirection = 'descending',
+  onDirectionChange,
+  onBack,
+  astroSephirahData,
+  astroPlanetData,
+}) => {
   const [activeTab, setActiveTab] = useState('overview');
   if (!sephirah) return null;
 
@@ -73,6 +109,12 @@ const SephirahDetail = ({ sephirah, selectedDirection = 'descending', onDirectio
           onClick={() => setActiveTab('qliphoth')}
         >
           Qliphoth
+        </button>
+        <button
+          className={`tab-btn ${activeTab === 'astro' ? 'active' : ''}`}
+          onClick={() => setActiveTab('astro')}
+        >
+          Astro-Kabbale
         </button>
       </div>
 
@@ -194,6 +236,101 @@ const SephirahDetail = ({ sephirah, selectedDirection = 'descending', onDirectio
             <span className="direction-label">Action rituelle</span>
             <p>{sephirah?.qliphoth_work?.ritual_action}</p>
           </div>
+        </section>
+      )}
+
+      {activeTab === 'astro' && (
+        <section className="section">
+          <h3>Lecture Astro-Kabbale</h3>
+          {astroSephirahData ? (
+            <>
+              <div className="astro-sephirah-summary">
+                <div className="astro-sephirah-cell">
+                  <span className="astro-cell-label">Planète principale</span>
+                  <span className="astro-cell-value">
+                    {astroSephirahData.planet_symbol || '·'} {astroSephirahData.primary_planet}
+                  </span>
+                </div>
+                {astroSephirahData.secondary_planet && (
+                  <div className="astro-sephirah-cell">
+                    <span className="astro-cell-label">Attribution secondaire</span>
+                    <span className="astro-cell-value">{astroSephirahData.secondary_planet}</span>
+                  </div>
+                )}
+                <div className={`astro-sephirah-cell level-${astroSephirahData.level}`}>
+                  <span className="astro-cell-label">Score de blocage</span>
+                  <span className="astro-cell-value">
+                    {astroSephirahData.score} / 100 — {astroSephirahData.level}
+                  </span>
+                </div>
+              </div>
+
+              {astroPlanetData ? (
+                <div className="planet-state-card">
+                  <h4>État de la planète {astroPlanetData.name}</h4>
+                  <div className="planet-state-grid">
+                    <div>
+                      <span className="astro-cell-label">Signe</span>
+                      <span className="astro-cell-value">
+                        {SIGN_LABELS[astroPlanetData.sign] || astroPlanetData.sign || '—'}
+                      </span>
+                    </div>
+                    <div>
+                      <span className="astro-cell-label">Maison</span>
+                      <span className="astro-cell-value">{astroPlanetData.house || '—'}</span>
+                    </div>
+                    <div>
+                      <span className="astro-cell-label">Dignité</span>
+                      <span className="astro-cell-value">
+                        {DIGNITY_LABELS[astroPlanetData.dignity_status] ||
+                          astroPlanetData.dignity_status ||
+                          'Neutre'}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="planet-factor-list">
+                    <div className={`planet-factor ${astroPlanetData?.factors?.aspect_hard?.active ? 'active' : ''}`}>
+                      <span className="planet-factor-label">A · Aspects difficiles</span>
+                      <span className="planet-factor-detail">{astroPlanetData?.factors?.aspect_hard?.detail}</span>
+                    </div>
+                    <div className={`planet-factor ${astroPlanetData?.factors?.weak_dignity?.active ? 'active' : ''}`}>
+                      <span className="planet-factor-label">B · Dignité faible</span>
+                      <span className="planet-factor-detail">{astroPlanetData?.factors?.weak_dignity?.detail}</span>
+                    </div>
+                    <div className={`planet-factor ${astroPlanetData?.factors?.difficult_house?.active ? 'active' : ''}`}>
+                      <span className="planet-factor-label">C · Maison difficile</span>
+                      <span className="planet-factor-detail">{astroPlanetData?.factors?.difficult_house?.detail}</span>
+                    </div>
+                  </div>
+
+                  {(astroPlanetData?.hard_aspect_links || []).length > 0 && (
+                    <div className="planet-aspects-list">
+                      <h5>Aspects difficiles actifs</h5>
+                      <ul>
+                        {astroPlanetData.hard_aspect_links.map((link, idx) => (
+                          <li key={`${link.aspect}-${link.target_planet}-${idx}`}>
+                            <span className={`aspect-pill aspect-${link.aspect}`}>
+                              {ASPECT_GLYPHS[link.aspect] || '·'} {link.aspect}
+                            </span>
+                            avec <strong>{link.target_planet}</strong>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className="integration-card">
+                  <p>Aucune donnée natale détaillée pour cette planète.</p>
+                </div>
+              )}
+            </>
+          ) : (
+            <div className="integration-card">
+              <p>Generez d'abord votre carte natale pour afficher les correspondances astro.</p>
+            </div>
+          )}
         </section>
       )}
     </div>

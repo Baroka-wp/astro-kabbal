@@ -1,0 +1,137 @@
+.path-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 14px;
+  gap: 10px;
+}
+
+.path-list-header h2 {
+  font-size: 1.25rem;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.result-count {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.path-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.path-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 14px;
+  cursor: pointer;
+  transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.path-card:hover {
+  transform: translateY(-1px);
+  border-color: #2563eb;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.path-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.path-id {
+  font-size: 11px;
+  color: #64748b;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.path-letter {
+  min-width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 22px;
+  font-weight: 800;
+  font-family: 'Times New Roman', serif;
+}
+
+.path-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.path-card-body {
+  display: grid;
+  gap: 7px;
+  margin-bottom: 10px;
+}
+
+.path-tarot,
+.path-angel {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.label {
+  color: #64748b;
+}
+
+.value {
+  color: #0f172a;
+  font-weight: 600;
+  text-align: right;
+}
+
+.path-connection {
+  font-size: 12px;
+  color: #0f766e;
+  margin-top: 4px;
+  padding: 6px 9px;
+  background: #ecfdf5;
+  border-radius: 10px;
+}
+
+.path-card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.keyword {
+  font-size: 11px;
+  color: #475569;
+  background: #f1f5f9;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.path-list-empty {
+  text-align: center;
+  padding: 36px 18px;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 18px;
+}
+
+.path-list-empty p:first-child {
+  font-size: 16px;
+  color: #0f172a;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.path-list-empty p:last-child {
+  color: #64748b;
+}

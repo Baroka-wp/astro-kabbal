@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', 'Georgia', serif;
+  background: #0f0f1a;
+  color: #e8e8e8;
+  line-height: 1.5;
+}
+
+#root {
+  min-height: 100vh;
+}

@@ -1,0 +1,1484 @@
+{
+  "version": "3.0.0",
+  "description": "Les 22 Sentiers de l'Arbre de Vie - Version complète pour application interactive",
+  "source": "Golden Dawn, Sefer Yetzirah, Regardie, Fortune, tradition luriarique",
+  "total_paths": 22,
+  "paths": [
+    {
+      "id": 11,
+      "letter": {
+        "hebrew": "א",
+        "transliteration": "Aleph",
+        "meaning": "Bœuf",
+        "value": 1,
+        "type": "Lettre Mère"
+      },
+      "connections": {
+        "from": "Keter",
+        "from_number": 1,
+        "to": "Chokmah",
+        "to_number": 2
+      },
+      "pillar": "Milieu",
+      "tarot": {
+        "major_arcana": "Le Fou",
+        "key": 0
+      },
+      "astrology": {
+        "element": "Air",
+        "planet": null,
+        "sign": null
+      },
+      "kabbalistic_title": "Intelligence Scintillante (Sekhel Metzuchtzach)",
+      "sefer_yetzirah_description": "Car elle est l'essence de ce voile qui est placé devant les dispositions du Primordial, dont les Sages font allusion au Tzelem et l'Tzura.",
+      "angel": {
+        "name": "Chassan",
+        "alternate_names": ["Raziel", "Metatron"],
+        "function": "Révélation, souffle divin, gardien des secrets"
+      },
+      "qliphoth": {
+        "demon": "Qerub et l'Épée Flamboyante",
+        "function": "Illusion de l'air impur, stagnation spirituelle"
+      },
+      "colors": {
+        "golden_dawn": "Jaune clair",
+        "queen_scale": "Blanc scintillant"
+      },
+      "pathworking": {
+        "preparation": "Posture haute, colonne droite. Encens : Galbanum.",
+        "visualization": "Keter → couronne blanche, Chokmah → lumière gris-bleu",
+        "activation": "Tracer Aleph dans l'air, sentir le souffle",
+        "angel_invocation": "Chassan, ouvre les lettres du ciel. Laisse-moi respirer l'infini.",
+        "expected_experience": "Expansion au-dessus du crâne, légèreté, visions de vent"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "Émanation de la volonté divine pure vers la sagesse créatrice",
+          "experience": "Expansion, souffle primordial, révélation sans mots"
+        },
+        "ascending": {
+          "perspective": "Retour de la sagesse vers la source unifiée",
+          "experience": "Lâcher-prise, unification, dépassement du mental analytique"
+        }
+      },
+      "keywords": ["souffle", "création", "potentialité pure", "air", "liberté"],
+      "meditation": "Fermez les yeux. Sentez votre souffle. Après l'expiration, un silence suspendu. Dans ce silence, la lettre Aleph apparaît, formée d'air et de lumière. Vous lâchez toute intention. Vous marchez vers un précipice sans le voir. Au dernier moment, vos pieds quittent le sol. Vous volez. Le vide est doux.",
+      "angel_message": "« Le premier mot n'a pas été prononcé. Il a été respiré. Cesse de chercher le chemin : sois le chemin. »",
+      "integration": "Cette semaine, identifiez une situation où vous attendez des certitudes avant d'agir. Agissez quand même. Observez ce qui se passe.",
+      "qliphoth_work": {
+        "demon": "Qerub – l'Épée flamboyante",
+        "shadow": "Peur du mouvement, procrastination spirituelle, attente d'une permission extérieure.",
+        "corrective_meditation": "Visualisez l'épée flamboyante qui tourne lentement devant vous. Passez à travers. Elle ne brûle pas. Entendez : « Je ne te retiens pas. Retiens-toi toi-même. »",
+        "ritual_action": "Marchez intentionnellement vers un endroit inconnu sans GPS ni plan."
+      }
+    },
+    {
+      "id": 12,
+      "letter": {
+        "hebrew": "ב",
+        "transliteration": "Beth",
+        "meaning": "Maison",
+        "value": 2,
+        "type": "Lettre Double"
+      },
+      "connections": {
+        "from": "Keter",
+        "from_number": 1,
+        "to": "Binah",
+        "to_number": 3
+      },
+      "pillar": "Gauche",
+      "tarot": {
+        "major_arcana": "Le Bateleur",
+        "key": 1
+      },
+      "astrology": {
+        "element": null,
+        "planet": "Mercure",
+        "sign": null
+      },
+      "kabbalistic_title": "Intelligence de Transparence (Sekhel Bahir)",
+      "sefer_yetzirah_description": "Car elle est la figure de la Grandeur, représentant le spectacle des colonnes primordiales et aucune figure n'est à sa hauteur.",
+      "angel": {
+        "name": "Tiriel",
+        "alternate_names": ["Kokabiel"],
+        "function": "Communication magique, intelligence mercurienne"
+      },
+      "qliphoth": {
+        "demon": "Theuniel – Le Double",
+        "function": "Duperie, manipulation, dispersion mentale"
+      },
+      "colors": {
+        "golden_dawn": "Jaune / Orange doré",
+        "queen_scale": "Pourpre"
+      },
+      "pathworking": {
+        "preparation": "Cercle de communication, plume et encre. Encens : Storax.",
+        "visualization": "Lumière violette filtrant de Keter à Binah à travers des lettres dansantes",
+        "activation": "Tracer Beth, imaginer une porte qui s'ouvre",
+        "angel_invocation": "Tiriel, transmets la parole juste. Que ma bouche soit instrument du divin.",
+        "expected_experience": "Clarté mentale, mots précis, synchronicités linguistiques"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "La volonté divine se structure en langage et en lois",
+          "experience": "Révélation des correspondances, compréhension des symboles"
+        },
+        "ascending": {
+          "perspective": "Le langage humain s'élève pour toucher le divin",
+          "experience": "Prière efficace, invocation puissante"
+        }
+      },
+      "keywords": ["communication", "magie", "langage sacré", "Mercure", "intellect"],
+      "meditation": "Devant vous, quatre outils sur une table blanche. Vous choisissez celui qui pèse le plus juste dans votre main. En le soulevant, la pièce entière se remplit de symboles qui dansent. Vous réalisez que chaque mot que vous prononcerez désormais construit un monde.",
+      "angel_message": "« Tu n'invoques pas la magie : tu es la magie qui s'ignore. Choisis ton verbe avec la précision d'un diamantaire. »",
+      "integration": "Tenez un journal de vos paroles : notez trois choses que vous avez dites et leurs effets réels. Ajustez demain.",
+      "qliphoth_work": {
+        "demon": "Theuniel – le Double",
+        "shadow": "Parole creuse ou manipulatrice, mensonge par omission, dispersion mentale.",
+        "corrective_meditation": "Visualisez deux bouches parlant en décalé. Respirez jusqu'à ce qu'elles ne fassent plus qu'une.",
+        "ritual_action": "Passez une journée à ne dire que ce que vous êtes prêt à assumer pleinement."
+      }
+    },
+    {
+      "id": 13,
+      "letter": {
+        "hebrew": "ג",
+        "transliteration": "Gimel",
+        "meaning": "Chameau",
+        "value": 3,
+        "type": "Lettre Double"
+      },
+      "connections": {
+        "from": "Keter",
+        "from_number": 1,
+        "to": "Tiferet",
+        "to_number": 6
+      },
+      "pillar": "Milieu",
+      "tarot": {
+        "major_arcana": "La Papesse",
+        "key": 2
+      },
+      "astrology": {
+        "element": null,
+        "planet": "Lune",
+        "sign": null
+      },
+      "kabbalistic_title": "Intelligence Unificatrice (Sekhel HaAchdut)",
+      "sefer_yetzirah_description": "Car elle est elle-même la substance de la gloire, elle est l'accomplissement de la vérité des unités individuelles.",
+      "angel": {
+        "name": "Shad Barshemot ha-Shartathan",
+        "alternate_names": ["Gabriel Lunaire"],
+        "function": "Intuition prophétique, mémoire divine, eaux supérieures"
+      },
+      "qliphoth": {
+        "demon": "Chariel et Tzaphiriron – les Eaux Amères",
+        "function": "Illusion, fantasme, mensonge à soi-même"
+      },
+      "colors": {
+        "golden_dawn": "Bleu argenté / Blanc nacré",
+        "queen_scale": "Indigo"
+      },
+      "pathworking": {
+        "preparation": "Nuit, bougie blanche. Lune visible. Encens : Camphre.",
+        "visualization": "Keter → lune décroissante traversant un désert d'argent vers Tiferet",
+        "activation": "Tracer Gimel, sentir l'humidité lunaire, le silence absolu",
+        "angel_invocation": "Shad Barshemot, ouvre les portes des rêves. Laisse-moi lire dans le livre fermé.",
+        "expected_experience": "Rêves lucides, prophéties, révélation des mystères cachés"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "La mémoire divine s'écoule dans le cœur de l'Arbre",
+          "experience": "Accès à la mémoire akashique, visions archétypales"
+        },
+        "ascending": {
+          "perspective": "L'âme remonte vers sa source à travers l'Abîme",
+          "experience": "Traversée des peurs profondes, lâcher-prise absolu"
+        }
+      },
+      "keywords": ["intuition", "mystères", "inconscient supérieur", "Lune", "rêves"],
+      "meditation": "Asseyez-vous devant un voile. Derrière, une présence lit vos pensées sans les juger. Le voile devient eau. Vous entrez. Il n'y a aucun secret, seulement des souvenirs que vous n'aviez pas encore regardés en face.",
+      "angel_message": "« Connaître n'est pas posséder. La vraie connaissance te traverse. Laisse-toi traverser. »",
+      "integration": "Chaque soir, avant de dormir, demandez : « Qu'est-ce que j'ai refusé de voir aujourd'hui ? » Notez la première réponse venue.",
+      "qliphoth_work": {
+        "demon": "Chariel – les Eaux amères",
+        "shadow": "Mensonge à soi-même, fantasme compensatoire, fuite dans l'imaginaire.",
+        "corrective_meditation": "Plongez les mains dans une eau salée. Sentez l'amertume. Noyez-y une illusion que vous entretenez.",
+        "ritual_action": "Parlez à voix haute d'un échec ou d'une peur que vous cachiez."
+      }
+    },
+    {
+      "id": 14,
+      "letter": {
+        "hebrew": "ד",
+        "transliteration": "Daleth",
+        "meaning": "Porte",
+        "value": 4,
+        "type": "Lettre Double"
+      },
+      "connections": {
+        "from": "Chokmah",
+        "from_number": 2,
+        "to": "Binah",
+        "to_number": 3
+      },
+      "pillar": "Horizontal (Haut)",
+      "tarot": {
+        "major_arcana": "L'Impératrice",
+        "key": 3
+      },
+      "astrology": {
+        "element": null,
+        "planet": "Vénus",
+        "sign": null
+      },
+      "kabbalistic_title": "Intelligence Lumineuse (Sekhel Mair)",
+      "sefer_yetzirah_description": "Car elle est le fondement de la lumière primitive et elle est le corps de Binah qui illumine les splendeurs de toutes les lumières.",
+      "angel": {
+        "name": "Kedemel",
+        "alternate_names": ["Haniel"],
+        "function": "Amour, beauté créatrice, fécondité"
+      },
+      "qliphoth": {
+        "demon": "Ba'airiron – Les Bêtes Rugissantes",
+        "function": "Luxure stérile, amour possessif, création sans âme"
+      },
+      "colors": {
+        "golden_dawn": "Vert émeraude / Rose",
+        "queen_scale": "Vert clair"
+      },
+      "pathworking": {
+        "preparation": "Roses, cuivre, encens de rose. Bougie verte.",
+        "visualization": "Chokmah → Binah traversant une arche végétale fleurie",
+        "activation": "Tracer Daleth, sentir le battement de cœur vénusien, l'ouverture",
+        "angel_invocation": "Kedemel, enseigne-moi l'amour qui crée. Ouvre la porte de ma fécondité.",
+        "expected_experience": "Créativité, visions de beauté, réconciliation avec le féminin"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "La sagesse masculine féconde la compréhension féminine",
+          "experience": "Naissance des idées, inspiration créatrice"
+        },
+        "ascending": {
+          "perspective": "Réceptivité et intuition s'élèvent vers la sagesse",
+          "experience": "Accueil de l'inspiration, confiance dans le processus créatif"
+        }
+      },
+      "keywords": ["amour", "créativité", "réception", "Vénus", "abondance"],
+      "meditation": "Un jardin. Au centre, une fontaine où l'eau ne tombe pas mais monte vers le ciel. L'Impératrice vous tend une grenade. Chaque grain est un désir que vous n'osiez pas formuler. Mangez.",
+      "angel_message": "« L'abondance ne s'attrape pas. Elle s'accueille comme une respiration. Ouvre tes mains, pas pour prendre, mais pour reconnaître. »",
+      "integration": "Chaque jour, remerciez trois plaisirs simples (un fruit, un rayon de soleil, une caresse). Verbalisez la gratitude.",
+      "qliphoth_work": {
+        "demon": "Ba'airiron – les Bêtes rugissantes",
+        "shadow": "Excès de plaisir sans conscience, possessivité, création sans âme.",
+        "corrective_meditation": "Visualisez une bête rugissante. Asseyez-vous devant elle sans fuir. Quand elle se tait, demandez : « Que veux-tu vraiment ? »",
+        "ritual_action": "Offrez un objet aimé sans attendre de retour."
+      }
+    },
+    {
+      "id": 15,
+      "letter": {
+        "hebrew": "ה",
+        "transliteration": "He",
+        "meaning": "Fenêtre",
+        "value": 5,
+        "type": "Lettre Simple"
+      },
+      "connections": {
+        "from": "Chokmah",
+        "from_number": 2,
+        "to": "Tiferet",
+        "to_number": 6
+      },
+      "pillar": "Droit",
+      "tarot": {
+        "major_arcana": "L'Empereur",
+        "key": 4
+      },
+      "astrology": {
+        "element": null,
+        "planet": null,
+        "sign": "Bélier"
+      },
+      "kabbalistic_title": "Intelligence Constituante (Sekhel Maamid)",
+      "sefer_yetzirah_description": "Car elle constitue la substance de la Création dans les ténèbres pures, selon les maîtres en spéculation, qui est Choshekh.",
+      "angel": {
+        "name": "Malkhidael",
+        "alternate_names": ["Samael Aspect Martial"],
+        "function": "Volonté agressive sacrée, élan pionnier"
+      },
+      "qliphoth": {
+        "demon": "Byriron – Les Sceptres Brisés",
+        "function": "Tyrannie, autoritarisme, rigidité"
+      },
+      "colors": {
+        "golden_dawn": "Écarlate vif / Rouge",
+        "queen_scale": "Écarlate"
+      },
+      "pathworking": {
+        "preparation": "Épée, bougie rouge. Représentation du feu. Encens : Dragon's Blood.",
+        "visualization": "Chokmah → foudre descendant vers Tiferet, trône de pierre rouge",
+        "activation": "Tracer He, souffler comme un bélier, appuyer son énergie",
+        "angel_invocation": "Malkhidael, donne-moi la force juste. Que je règne sur mes passions avant de gouverner le monde.",
+        "expected_experience": "Volonté affirmée, dépassement des peurs, autorité intérieure"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "La volonté du Père établit l'ordre du Fils",
+          "experience": "Affirmation, structuration, pouvoir juste"
+        },
+        "ascending": {
+          "perspective": "Le Fils reconnaît et honore le Père",
+          "experience": "Humilité, service, autorité spirituelle"
+        }
+      },
+      "keywords": ["volonté", "autorité", "impulsion", "Bélier", "pouvoir"],
+      "meditation": "Vous montez un trône. Ce n'est pas un pouvoir sur les autres, mais sur vos propres hésitations. Sentez le poids du manteau. Ce poids, c'est la responsabilité d'exister.",
+      "angel_message": "« Gouverner, c'est servir. Commande d'abord à tes peurs, ensuite à tes désirs. Alors seulement tu pourras guider les autres. »",
+      "integration": "Cette semaine, prenez trois décisions que vous remettiez à plus tard. Exécutez-les.",
+      "qliphoth_work": {
+        "demon": "Byriron – les Sceptres brisés",
+        "shadow": "Autoritarisme, rigidité, refus de déléguer.",
+        "corrective_meditation": "Tenez un bâton. Dites « je commande ». Puis donnez-le à quelqu'un d'autre dans votre visualisation.",
+        "ritual_action": "Déléguez une tâche importante sans contrôler le résultat."
+      }
+    },
+    {
+      "id": 16,
+      "letter": {
+        "hebrew": "ו",
+        "transliteration": "Vav",
+        "meaning": "Crochet",
+        "value": 6,
+        "type": "Lettre Simple"
+      },
+      "connections": {
+        "from": "Chokmah",
+        "from_number": 2,
+        "to": "Chesed",
+        "to_number": 4
+      },
+      "pillar": "Droit",
+      "tarot": {
+        "major_arcana": "Le Hiérophante",
+        "key": 5
+      },
+      "astrology": {
+        "element": null,
+        "planet": null,
+        "sign": "Taureau"
+      },
+      "kabbalistic_title": "Intelligence du Triomphe Éternel (Sekhel HaNitzchi)",
+      "sefer_yetzirah_description": "Car elle est la délice de la gloire, il n'y a pas d'autre gloire comme elle.",
+      "angel": {
+        "name": "Asmodel",
+        "alternate_names": ["Tzadkiel"],
+        "function": "Stabilité, royauté, tradition, transmission"
+      },
+      "qliphoth": {
+        "demon": "Adimiron – Les Sanglants",
+        "function": "Dogmatisme, fanatisme, traditions mortes"
+      },
+      "colors": {
+        "golden_dawn": "Rouge orange / Indigo",
+        "queen_scale": "Bleu ciel"
+      },
+      "pathworking": {
+        "preparation": "Encens royal (encens, cèdre). Crosse ou sceptre symbolique.",
+        "visualization": "Chokmah → colonne bleue stable descendant vers Chesed, cathédrale de lumière",
+        "activation": "Tracer Vav, ancrer ses pieds dans la terre, s'élever intérieurement",
+        "angel_invocation": "Asmodel, affermis mon trône intérieur. Que je sois un maillon solide de la chaîne d'or.",
+        "expected_experience": "Sécurité, légitimité, connexion à la tradition vivante"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "La sagesse se structure en tradition et en loi",
+          "experience": "Transmission, enseignement, rituel efficace"
+        },
+        "ascending": {
+          "perspective": "Le chercheur reçoit l'initiation et la clé des traditions",
+          "experience": "Compréhension profonde des symboles, appartenance"
+        }
+      },
+      "keywords": ["stabilité", "tradition", "autorité spirituelle", "Taureau", "transmission"],
+      "meditation": "Vous êtes dans une bibliothèque sans murs. Les livres sont des vies. On vous confie un parchemin vierge. Vous comprenez que votre rôle n'est pas de répéter, mais de transmettre ce que vous vivez.",
+      "angel_message": "« La tradition n'est pas une cage. C'est un élan que tes ancêtres te passent. Attrape-le sans le figer. »",
+      "integration": "Transmettez un enseignement utile (même bref) à quelqu'un cette semaine, sans volonté de pouvoir.",
+      "qliphoth_work": {
+        "demon": "Adimiron – les Sanglants",
+        "shadow": "Dogmatisme, autorité vide, rituels morts, répétition sans âme.",
+        "corrective_meditation": "Visualisez un scribe écrivant la même phrase depuis mille ans. Effacez la phrase. Laissez-le écrire la sienne.",
+        "ritual_action": "Modifiez un rituel personnel (prière, méditation) de façon créative."
+      }
+    },
+    {
+      "id": 17,
+      "letter": {
+        "hebrew": "ז",
+        "transliteration": "Zayin",
+        "meaning": "Épée",
+        "value": 7,
+        "type": "Lettre Simple"
+      },
+      "connections": {
+        "from": "Binah",
+        "from_number": 3,
+        "to": "Tiferet",
+        "to_number": 6
+      },
+      "pillar": "Gauche",
+      "tarot": {
+        "major_arcana": "Les Amoureux",
+        "key": 6
+      },
+      "astrology": {
+        "element": null,
+        "planet": null,
+        "sign": "Gémeaux"
+      },
+      "kabbalistic_title": "Intelligence Disposante (Sekhel HaRatzon)",
+      "sefer_yetzirah_description": "Car elle prépare la foi des Justes et elle est vêtue des Esprits Saints.",
+      "angel": {
+        "name": "Ambriel",
+        "alternate_names": ["Raphaël Aspect Dual"],
+        "function": "Discernement, choix, guérison des dualités"
+      },
+      "qliphoth": {
+        "demon": "Dagdagiron – Les Poissons Rampants",
+        "function": "Indécision chronique, duplicité, infidélité"
+      },
+      "colors": {
+        "golden_dawn": "Orange pâle / Mauve",
+        "queen_scale": "Orangé"
+      },
+      "pathworking": {
+        "preparation": "Deux bougies (rose et jaune). Symbole d'épée. Encens : Lavande.",
+        "visualization": "Binah → Tiferet, deux colonnes torsadées s'unissant en une seule lumière",
+        "activation": "Tracer Zayin, sentir la lame qui tranche le doute, qui distingue",
+        "angel_invocation": "Ambriel, unifie mes contraires. Éclaire mon choix avec la lumière du cœur.",
+        "expected_experience": "Choix clair, réconciliation intérieure, paix après l'orage"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "La compréhension maternelle se diversifie en choix et relations",
+          "experience": "Découverte de la dualité apparente, leçon du discernement"
+        },
+        "ascending": {
+          "perspective": "L'âme choisit sa voie vers le cœur",
+          "experience": "Engagement, acceptation des conséquences, liberté"
+        }
+      },
+      "keywords": ["choix", "dualité", "union", "Gémeaux", "discernement"],
+      "meditation": "Un carrefour. Deux chemins. Une douleur de ne pas pouvoir choisir les deux. Une voix dit : « Le vrai choix ne t'enlève rien. Il te révèle. » Vous avancez.",
+      "angel_message": "« L'indécision vole plus d'énergie qu'un mauvais choix. Coupe. Choisis avec le cœur, assume avec la tête. »",
+      "integration": "Face à une hésitation : prenez une décision rapide (moins d'une minute) et tenez-vous-y.",
+      "qliphoth_work": {
+        "demon": "Dagdagiron – les Poissons rampants",
+        "shadow": "Duplicité, désir de plaire à tous, peur de décevoir.",
+        "corrective_meditation": "Visualisez un poisson qui rampe sur la terre. Aidez-le à retrouver l'eau.",
+        "ritual_action": "Dites « non » à quelque chose cette semaine sans justifier."
+      }
+    },
+    {
+      "id": 18,
+      "letter": {
+        "hebrew": "ח",
+        "transliteration": "Cheth",
+        "meaning": "Clôture",
+        "value": 8,
+        "type": "Lettre Simple"
+      },
+      "connections": {
+        "from": "Binah",
+        "from_number": 3,
+        "to": "Geburah",
+        "to_number": 5
+      },
+      "pillar": "Gauche",
+      "tarot": {
+        "major_arcana": "Le Chariot",
+        "key": 7
+      },
+      "astrology": {
+        "element": null,
+        "planet": null,
+        "sign": "Cancer"
+      },
+      "kabbalistic_title": "Intelligence d'Influence (Sekhel HaShefa)",
+      "sefer_yetzirah_description": "Car elle est le secret de l'Arcane par excellence et elle a une influence sur toutes les choses.",
+      "angel": {
+        "name": "Muriel",
+        "alternate_names": ["Kamael"],
+        "function": "Protection, combat intérieur, canalisation des forces"
+      },
+      "qliphoth": {
+        "demon": "Nashimiron – Les Serpents Enroulés",
+        "function": "Victoire sans but, force mal dirigée"
+      },
+      "colors": {
+        "golden_dawn": "Ambre / Brun orangé",
+        "queen_scale": "Orange foncé"
+      },
+      "pathworking": {
+        "preparation": "Armure imaginaire, bouclier. Symbole de char. Encens : Onycha.",
+        "visualization": "Binah → char de feu traversant un champ de bataille vers Geburah",
+        "activation": "Tracer Cheth, sentir l'enclos sacré, la clôture qui protège",
+        "angel_invocation": "Muriel, protège ma traversée. Dirige mes forces contraires vers un même but.",
+        "expected_experience": "Force protectrice, maîtrise des peurs, victoire intérieure"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "La compréhension se cristallise en force disciplinée",
+          "experience": "Contrôle des émotions, maîtrise de soi"
+        },
+        "ascending": {
+          "perspective": "La force brute s'élève en compréhension",
+          "experience": "Transmutation de la rage en volonté"
+        }
+      },
+      "keywords": ["protection", "combat spirituel", "confinement sacré", "Cancer", "volonté"],
+      "meditation": "Vous tenez les rênes de deux sphinx : l'un rage, l'autre doute. Vous ne tirez pas. Vous respirez au centre. Les sphinx s'alignent. Le char avance dans la seule direction qui compte : la vôtre.",
+      "angel_message": "« La victoire n'est pas d'écraser l'opposé, mais de l'intégrer. Tes contradictions sont tes meilleurs chevaux. »",
+      "integration": "Identifiez un conflit intérieur. Au lieu de trancher, cherchez une troisième voie qui inclut les deux.",
+      "qliphoth_work": {
+        "demon": "Nashimiron – les Serpents enroulés",
+        "shadow": "Force mal dirigée, victoire sans but, narcissisme du vainqueur.",
+        "corrective_meditation": "Déroulez un serpent imaginaire enroulé sur lui-même. Montrez-lui l'horizon.",
+        "ritual_action": "Fixez un objectif clair avant chaque action importante."
+      }
+    },
+    {
+      "id": 19,
+      "letter": {
+        "hebrew": "ט",
+        "transliteration": "Teth",
+        "meaning": "Serpent",
+        "value": 9,
+        "type": "Lettre Simple"
+      },
+      "connections": {
+        "from": "Chesed",
+        "from_number": 4,
+        "to": "Geburah",
+        "to_number": 5
+      },
+      "pillar": "Horizontal (Milieu)",
+      "tarot": {
+        "major_arcana": "La Force",
+        "key": 8
+      },
+      "astrology": {
+        "element": null,
+        "planet": null,
+        "sign": "Lion"
+      },
+      "kabbalistic_title": "Intelligence du Secret de Toutes les Activités Spirituelles (Sekhel HaSod)",
+      "sefer_yetzirah_description": "Car c'est l'influence exercée sur les Esprits Sacrés.",
+      "angel": {
+        "name": "Verchiel",
+        "alternate_names": ["Michéal Courage Solaire"],
+        "function": "Force maîtrisée, douceur souveraine, domptage"
+      },
+      "qliphoth": {
+        "demon": "Bahimiron – Les Bêtes de Charge",
+        "function": "Force brute sans amour, domination animale"
+      },
+      "colors": {
+        "golden_dawn": "Jaune verdâtre / Violet",
+        "queen_scale": "Jaune d'or"
+      },
+      "pathworking": {
+        "preparation": "Représentation d'un lion, bougie dorée. Symbole de courage. Encens : Oliban.",
+        "visualization": "Chesed → Geburah, serpent se dressant en lion, puis s'apaisant",
+        "activation": "Tracer Teth, rugir silencieusement, sentir la kundalini",
+        "angel_invocation": "Verchiel, dompte ma force intérieure. Que ma colère devienne puissance calme.",
+        "expected_experience": "Maîtrise de la colère, courage calme, force sereine"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "La miséricorde rencontre la rigueur et les équilibre",
+          "experience": "Force juste, équilibre entre douceur et fermeté"
+        },
+        "ascending": {
+          "perspective": "L'âme traverse l'épreuve de ses propres limites",
+          "experience": "Acceptation de l'ombre, transformation"
+        }
+      },
+      "keywords": ["force intérieure", "kundalini", "domptage", "Lion", "douceur"],
+      "meditation": "Le lion ouvre sa gueule. Vous mettez la main à l'intérieur. Ce n'est pas un risque. C'est une confiance. Il referme doucement. Vous n'avez jamais été aussi vivant.",
+      "angel_message": "« La douceur n'est pas faiblesse. C'est la force qui n'a plus besoin de prouver. Dompte ta colère, elle deviendra puissance. »",
+      "integration": "Quand vous sentez de la colère monter, respirez trois fois avant d'agir. Notez ce qui change.",
+      "qliphoth_work": {
+        "demon": "Bahimiron – les Bêtes de charge",
+        "shadow": "Brutalité, domination animale, cruauté, instinct non sublimé.",
+        "corrective_meditation": "Nourrissez la bête en vous sans la laisser mener. Asseyez-vous à côté d'elle.",
+        "ritual_action": "Protégez un être vulnérable (animal, enfant, vieillard) sans violence."
+      }
+    },
+    {
+      "id": 20,
+      "letter": {
+        "hebrew": "י",
+        "transliteration": "Yod",
+        "meaning": "Main",
+        "value": 10,
+        "type": "Lettre Simple"
+      },
+      "connections": {
+        "from": "Chesed",
+        "from_number": 4,
+        "to": "Tiferet",
+        "to_number": 6
+      },
+      "pillar": "Droit",
+      "tarot": {
+        "major_arcana": "L'Ermite",
+        "key": 9
+      },
+      "astrology": {
+        "element": null,
+        "planet": null,
+        "sign": "Vierge"
+      },
+      "kabbalistic_title": "Intelligence de Volonté (Sekhel HaRatzon)",
+      "sefer_yetzirah_description": "Car elle est le moyen de préparer toutes choses créées et tous les êtres existants.",
+      "angel": {
+        "name": "Hamaliel",
+        "alternate_names": ["Raphaël Solitaire"],
+        "function": "Retrait, guidance, lumière intérieure"
+      },
+      "qliphoth": {
+        "demon": "Tzaphiriron – Les Poussières Tourbillonnantes",
+        "function": "Isolement stérile, perfectionnisme paralysant"
+      },
+      "colors": {
+        "golden_dawn": "Vert jaunâtre / Gris",
+        "queen_scale": "Violet foncé"
+      },
+      "pathworking": {
+        "preparation": "Lanterne, silence complet. Bougie blanche. Encens : Narcisse.",
+        "visualization": "Chesed → descente lente vers Tiferet, lampe dans la nuit éclairant juste un pas",
+        "activation": "Tracer Yod, fermer les yeux, pointer l'intérieur",
+        "angel_invocation": "Hamaliel, guide-moi dans le retrait sacré. Allume ma lampe intérieure.",
+        "expected_experience": "Introspection, sagesse discrète, illumination silencieuse"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "La miséricorde se retire pour laisser place à l'incarnation",
+          "experience": "Solitude fertile, concentration, précision"
+        },
+        "ascending": {
+          "perspective": "L'âme se tourne vers l'intérieur pour trouver la lumière",
+          "experience": "Discernement, purification, guidance intérieure"
+        }
+      },
+      "keywords": ["solitude", "sagesse", "guidance intérieure", "Vierge", "silence"],
+      "meditation": "Vous marchez seul dans le froid. Votre lanterne n'éclaire que le prochain pas. C'est suffisant. Au bout du chemin, personne ne vous attend. Personne d'autre que vous.",
+      "angel_message": "« La solitude n'est pas un abandon. C'est une rencontre avec toi-même. N'aie pas peur de ton propre silence. »",
+      "integration": "Passez une heure (puis une demi-journée) seul sans aucun écran. Observez ce qui émerge.",
+      "qliphoth_work": {
+        "demon": "Tzaphiriron – les Poussières tourbillonnantes",
+        "shadow": "Isolement stérile, perfectionnisme paralysant, refus du monde.",
+        "corrective_meditation": "Laissez la poussière tourbillonner sans la nettoyer. Elle se posera d'elle-même.",
+        "ritual_action": "Faites quelque chose d'imparfait volontairement."
+      }
+    },
+    {
+      "id": 21,
+      "letter": {
+        "hebrew": "כ",
+        "transliteration": "Kaph",
+        "meaning": "Paume",
+        "value": 20,
+        "type": "Lettre Double"
+      },
+      "connections": {
+        "from": "Chesed",
+        "from_number": 4,
+        "to": "Netzach",
+        "to_number": 7
+      },
+      "pillar": "Droit (Descente)",
+      "tarot": {
+        "major_arcana": "La Roue de Fortune",
+        "key": 10
+      },
+      "astrology": {
+        "element": null,
+        "planet": "Jupiter",
+        "sign": null
+      },
+      "kabbalistic_title": "Intelligence de Conciliation (Sekhel HaHefetz)",
+      "sefer_yetzirah_description": "Car elle reçoit l'influence divine qui entre dans elle selon la bénédiction dont elle est revêtue.",
+      "angel": {
+        "name": "Hismael",
+        "alternate_names": ["Tzadkiel Chance"],
+        "function": "Destin, cycles, abondance, chance karmique"
+      },
+      "qliphoth": {
+        "demon": "Baratchial – Le Foudre Dispersé",
+        "function": "Jeu pathologique, refus de la responsabilité"
+      },
+      "colors": {
+        "golden_dawn": "Violet / Bleu royal",
+        "queen_scale": "Bleu roi"
+      },
+      "pathworking": {
+        "preparation": "Roue dessinée, encens de cèdre. Symbole de spirale.",
+        "visualization": "Chesed → descente en spirale vers Netzach, roue tournant doucement",
+        "activation": "Tracer Kaph, ouvrir les paumes vers le ciel, recevoir",
+        "angel_invocation": "Hismael, enseigne-moi les cycles sacrés. Fais-moi trouver l'axe au centre de la roue.",
+        "expected_experience": "Acceptation du destin, vision cyclique, compréhension karmique"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "La miséricorde se déploie en abondance cyclique",
+          "experience": "Chance, expansion, générosité"
+        },
+        "ascending": {
+          "perspective": "Les désirs s'élèvent pour être bénis",
+          "experience": "Discernement des vrais désirs, gratitude"
+        }
+      },
+      "keywords": ["destin", "cycle", "chance", "abondance", "Jupiter"],
+      "meditation": "La Roue tourne. Vous montez, vous descendez. À chaque tour, vous reconnaissez un cycle ancien. Au centre, vous trouvez l'axe immobile. C'est là que vous vous installez.",
+      "angel_message": "« Le karma n'est pas une punition. C'est un élan qui t'apprend. Monte et descends sans t'accrocher. Rien n'est permanent, sauf l'apprentissage. »",
+      "integration": "Identifiez un cycle récurrent (relation, santé, travail). Cherchez la leçon que vous n'avez pas encore apprise.",
+      "qliphoth_work": {
+        "demon": "Baratchial – le Foudre dispersé",
+        "shadow": "Jeu pathologique, dépendance au hasard, refus de la responsabilité.",
+        "corrective_meditation": "Voyez l'éclair frapper une cible précise. Soyez la cible. Soyez l'éclair.",
+        "ritual_action": "Prenez une responsabilité que vous fuyiez."
+      }
+    },
+    {
+      "id": 22,
+      "letter": {
+        "hebrew": "ל",
+        "transliteration": "Lamed",
+        "meaning": "Aiguillon",
+        "value": 30,
+        "type": "Lettre Simple"
+      },
+      "connections": {
+        "from": "Geburah",
+        "from_number": 5,
+        "to": "Tiferet",
+        "to_number": 6
+      },
+      "pillar": "Milieu (Montant)",
+      "tarot": {
+        "major_arcana": "La Justice",
+        "key": 11
+      },
+      "astrology": {
+        "element": null,
+        "planet": null,
+        "sign": "Balance"
+      },
+      "kabbalistic_title": "Intelligence Fidèle (Sekhel Emunah)",
+      "sefer_yetzirah_description": "Car par elle augmentent les pouvoirs spirituels des initiés de tous les initiés de la sainteté.",
+      "angel": {
+        "name": "Zuriel",
+        "alternate_names": ["Tzaphkiel"],
+        "function": "Justice, équanimité karmique, contemplation"
+      },
+      "qliphoth": {
+        "demon": "Tzabarim – Les Tyranniques",
+        "function": "Jugement sans miséricorde, légalisme froid"
+      },
+      "colors": {
+        "golden_dawn": "Vert émeraude / Bleu",
+        "queen_scale": "Émeraude"
+      },
+      "pathworking": {
+        "preparation": "Balance imaginaire, plume de paon. Symbole d'épée. Encens : Galbanum.",
+        "visualization": "Geburah → Tiferet, épées et balances, équilibre parfait",
+        "activation": "Tracer Lamed, sentir l'aiguillon qui équilibre, qui corrige la trajectoire",
+        "angel_invocation": "Zuriel, rends-moi fidèle à l'équilibre. Que je voie sans juger, que je pèse sans peser.",
+        "expected_experience": "Sens aigu de la justice intérieure, équanimité"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "La rigueur s'adoucit pour devenir justice éclairée",
+          "experience": "Discernement, loi, cause à effet"
+        },
+        "ascending": {
+          "perspective": "L'âme se mesure à ses actes et les intègre",
+          "experience": "Responsabilité, réparation, pardon"
+        }
+      },
+      "keywords": ["équilibre", "justice", "karma", "Balance", "équanimité"],
+      "meditation": "Une balance. Dans un plateau : ce que vous avez fait. Dans l'autre : pourquoi vous l'avez fait. L'équilibre ne pardonne ni ne condamne. Il montre.",
+      "angel_message": "« La vraie justice ne juge pas. Elle rétablit. Demande-toi : qu'est-ce qui manque pour que toi et les autres soyez libres ? »",
+      "integration": "Avant de juger quelqu'un, demandez : « Quelle part de moi ne supporte-t-il pas de voir ? »",
+      "qliphoth_work": {
+        "demon": "Tzabarim – les Tyranniques",
+        "shadow": "Jugement sans miséricorde, légalisme froid, vengeance déguisée.",
+        "corrective_meditation": "Bandez vos yeux. Sentez la balance. Lâchez le plateau « coupable ».",
+        "ritual_action": "Faites une action réparatrice envers quelqu'un que vous avez mal jugé."
+      }
+    },
+    {
+      "id": 23,
+      "letter": {
+        "hebrew": "מ",
+        "transliteration": "Mem",
+        "meaning": "Eau",
+        "value": 40,
+        "type": "Lettre Mère"
+      },
+      "connections": {
+        "from": "Geburah",
+        "from_number": 5,
+        "to": "Hod",
+        "to_number": 8
+      },
+      "pillar": "Gauche (Descente)",
+      "tarot": {
+        "major_arcana": "Le Pendu",
+        "key": 12
+      },
+      "astrology": {
+        "element": "Eau",
+        "planet": null,
+        "sign": null
+      },
+      "kabbalistic_title": "Intelligence Stable (Sekhel Kayam)",
+      "sefer_yetzirah_description": "Car elle possède une vertu consistante dans tous ses archétypes.",
+      "angel": {
+        "name": "Taliahad",
+        "alternate_names": ["Gabriel Eaux Profondes"],
+        "function": "Sacrifice, révélation, fluidité, abandon"
+      },
+      "qliphoth": {
+        "demon": "Malkunofat – Les Pieuvres des Profondeurs",
+        "function": "Victimisation, martyre complaisante"
+      },
+      "colors": {
+        "golden_dawn": "Bleu profond / Vert marin",
+        "queen_scale": "Noir bleuté"
+      },
+      "pathworking": {
+        "preparation": "Coupelle d'eau, bougie bleue. Symbole de coupe. Encens : Myrrhe.",
+        "visualization": "Geburah → Hod, chute lente dans l'eau, suspension, inversion",
+        "activation": "Tracer Mem, sentir l'humilité liquide, le lâcher-prise",
+        "angel_invocation": "Taliahad, apprends-moi le sacrifice fécond. Que ma chute soit une offrande.",
+        "expected_experience": "Lâcher-prise, visions aquatiques, paix profonde"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "La rigueur se fluidifie en intelligence"
+        },
+        "ascending": {
+          "perspective": "L'intellect se noie pour renaître"
+        }
+      },
+      "keywords": ["sacrifice", "lâcher-prise", "émotion profonde", "Eau", "humilité"],
+      "meditation": "Une forêt inversée sous l'eau. Les arbres poussent vers le bas. Un homme est pendu par un pied à une racine immergée. Il sourit. Vous le rejoignez. Le monde se retourne.",
+      "angel_message": "« Mem est les Eaux. Le sacrifice du Pendu n'est pas une perte. C'est une offrande qui ouvre un espace nouveau. »",
+      "integration": "Identifiez ce que vous devez lâcher cette semaine. Lâchez-le consciemment.",
+      "qliphoth_work": {
+        "demon": "Malkunofat – les Pieuvres des profondeurs",
+        "shadow": "Victimisation, martyre complaisante, manipulation par la souffrance.",
+        "corrective_meditation": "Nagez dans l'eau sombre. Les tentacules vous entourent. Respirez. Elles se retirent.",
+        "ritual_action": "Refusez un rôle de victime qu'on vous propose."
+      }
+    },
+    {
+      "id": 24,
+      "letter": {
+        "hebrew": "נ",
+        "transliteration": "Nun",
+        "meaning": "Poisson",
+        "value": 50,
+        "type": "Lettre Simple"
+      },
+      "connections": {
+        "from": "Tiferet",
+        "from_number": 6,
+        "to": "Netzach",
+        "to_number": 7
+      },
+      "pillar": "Droit",
+      "tarot": {
+        "major_arcana": "La Mort",
+        "key": 13
+      },
+      "astrology": {
+        "element": null,
+        "planet": null,
+        "sign": "Scorpion"
+      },
+      "kabbalistic_title": "Intelligence Imaginative (Sekhel Dimyoni)",
+      "sefer_yetzirah_description": "Car elle est la base sur laquelle toutes les similitudes sont faites.",
+      "angel": {
+        "name": "Barchiel",
+        "alternate_names": ["Azraël"],
+        "function": "Transformation, mort initiatique, renaissance"
+      },
+      "qliphoth": {
+        "demon": "Necheshthiron – Les Serpents d'Airain",
+        "function": "Fixation morbide sur la mort, destruction gratuite"
+      },
+      "colors": {
+        "golden_dawn": "Bleu-vert / Brun sombre",
+        "queen_scale": "Rouge sombre"
+      },
+      "pathworking": {
+        "preparation": "Crâne ou symbole de mort, bougie noire. Encens : Sinapsis.",
+        "visualization": "Tiferet → Netzach, descente dans l'eau profonde, automne avancé",
+        "activation": "Tracer Nun, mourir à l'ancien, plonger",
+        "angel_invocation": "Barchiel, transmute mes attaches. Que ce qui doit mourir trouve sa paix.",
+        "expected_experience": "Fin d'un cycle, libération, renaissance"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "La beauté se sacrifie pour devenir victoire"
+        },
+        "ascending": {
+          "perspective": "Le désir se purifie pour atteindre la beauté"
+        }
+      },
+      "keywords": ["mort", "renaissance", "transmutation", "Scorpion", "libération"],
+      "meditation": "Un paysage d'automne avancé. Un squelette couronné passe sur un cheval blanc. Il s'arrête devant vous. Il vous montre ce qui doit mourir. Vous le laissez partir.",
+      "angel_message": "« Pour qu'une chose nouvelle naisse, l'ancienne doit mourir tout à fait. Ne pleure pas. Prépare le berceau. »",
+      "integration": "Identifiez ce qui est terminé dans votre vie. Remerciez-le. Enterrez-le symboliquement.",
+      "qliphoth_work": {
+        "demon": "Necheshthiron – les Serpents d'airain",
+        "shadow": "Fixation morbide sur la mort, destruction gratuite, vengeance perpétuelle.",
+        "corrective_meditation": "Tenez un serpent d'airain. Il devient vivant. Il mue. Laissez l'ancienne peau.",
+        "ritual_action": "Écrivez ce qui doit mourir. Brûlez le papier. Plantez une graine dans les cendres."
+      }
+    },
+    {
+      "id": 25,
+      "letter": {
+        "hebrew": "ס",
+        "transliteration": "Samekh",
+        "meaning": "Étai",
+        "value": 60,
+        "type": "Lettre Simple"
+      },
+      "connections": {
+        "from": "Tiferet",
+        "from_number": 6,
+        "to": "Yesod",
+        "to_number": 9
+      },
+      "pillar": "Milieu",
+      "tarot": {
+        "major_arcana": "Tempérance",
+        "key": 14
+      },
+      "astrology": {
+        "element": null,
+        "planet": null,
+        "sign": "Sagittaire"
+      },
+      "kabbalistic_title": "Intelligence de l'Épreuve et de la Tentation (Sekhel HaNisayon)",
+      "sefer_yetzirah_description": "Car elle est la première tentation par laquelle le Créateur met à l'épreuve toutes les personnes Saintes.",
+      "angel": {
+        "name": "Adnakhiel",
+        "alternate_names": ["Métatron Petit Visage"],
+        "function": "Alchimie intérieure, équilibre dynamique, tentateur purifié"
+      },
+      "qliphoth": {
+        "demon": "Naphaliron – Les Infernaux Aboyeurs",
+        "function": "Extrémisme, fanatisme, excès de zèle"
+      },
+      "colors": {
+        "golden_dawn": "Bleu arc-en-ciel / Or",
+        "queen_scale": "Lavande"
+      },
+      "pathworking": {
+        "preparation": "Deux flacons (eau et feu), cercle. Symbole d'arc. Encens : Lignum Aloes.",
+        "visualization": "Tiferet → Yesod, pont de lumière colorée, ange transvasant",
+        "activation": "Tracer Samekh, soutenir les opposés, ne pas tomber",
+        "angel_invocation": "Adnakhiel, équilibre mes contraires. Que je sois le pont et non le précipice.",
+        "expected_experience": "Alchimie intérieure, paix, intégration"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "La beauté s'équilibre pour fonder l'astral"
+        },
+        "ascending": {
+          "perspective": "Les images s'élèvent pour devenir beauté"
+        }
+      },
+      "keywords": ["alchimie", "équilibre", "transmutation", "Sagittaire", "tempérance"],
+      "meditation": "Une rivière. Un ange transvase l'eau entre deux coupes. Rien ne se perd. Il vous tend une coupe. Vous versez à votre tour. L'eau change de couleur.",
+      "angel_message": "« L'Univers te soutient exactement dans la mesure où tu te fais confiance. Transmute ta peur en prudence, ta colère en courage. »",
+      "integration": "Chaque jour, trouvez un équilibre entre action et repos. Notez-le.",
+      "qliphoth_work": {
+        "demon": "Naphaliron – les Infernaux aboyeurs",
+        "shadow": "Extrémisme, excès de zèle, fanatisme spirituel, manque de mesure.",
+        "corrective_meditation": "Les chiens aboient. Vous ne courez pas. Vous marchez au milieu. Ils se taisent.",
+        "ritual_action": "Pratiquez une activité avec une mesure stricte (exactement 20 minutes, pas plus)."
+      }
+    },
+    {
+      "id": 26,
+      "letter": {
+        "hebrew": "ע",
+        "transliteration": "Ayin",
+        "meaning": "Œil",
+        "value": 70,
+        "type": "Lettre Simple"
+      },
+      "connections": {
+        "from": "Tiferet",
+        "from_number": 6,
+        "to": "Hod",
+        "to_number": 8
+      },
+      "pillar": "Gauche",
+      "tarot": {
+        "major_arcana": "Le Diable",
+        "key": 15
+      },
+      "astrology": {
+        "element": null,
+        "planet": null,
+        "sign": "Capricorne"
+      },
+      "kabbalistic_title": "Intelligence Rénovatrice (Sekhel Mechudash)",
+      "sefer_yetzirah_description": "Car le Saint Unique la renouvelle en tout ce qui est recomposé dans le Monde Nouveau.",
+      "angel": {
+        "name": "Caassioiah",
+        "alternate_names": ["Adrammelek"],
+        "function": "Conscience de la matière, illusion dominée, lucidité"
+      },
+      "qliphoth": {
+        "demon": "Ogiel / A'arab Zaraq – La Foule des Corbeaux",
+        "function": "Addiction, esclavage volontaire"
+      },
+      "colors": {
+        "golden_dawn": "Brun-noir / Indigo sombre",
+        "queen_scale": "Indigo sombre"
+      },
+      "pathworking": {
+        "preparation": "Miroir noir, bougie de suif. Symbole de crâne. Encens : Civette.",
+        "visualization": "Tiferet → Hod, descente dans la caverne, chaînes lâches",
+        "activation": "Tracer Ayin, regarder sans peur, voir à travers l'illusion",
+        "angel_invocation": "Caassioiah, révèle-moi l'ombre féconde. Que je voie mes chaînes et les défasse.",
+        "expected_experience": "Confrontation aux attaches matérielles, libération"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "La beauté s'incarne et se confronte à la matière"
+        },
+        "ascending": {
+          "perspective": "L'intellect s'élève en reconnaissant ses limites"
+        }
+      },
+      "keywords": ["matière", "illusion", "ombre", "Capricorne", "libération"],
+      "meditation": "Une caverne. Un bouc sur un trône. Des chaînes lâches. Vous défaites les chaînes des figures à ses pieds. Elles se lèvent libres. Le bouc disparaît.",
+      "angel_message": "« L'esclavage est toujours volontaire au niveau profond. Vois tes chaînes. Elles sont déjà ouvertes. »",
+      "integration": "Identifiez une addiction ou dépendance. Voyez-la sans jugement. Commencez par une heure de liberté.",
+      "qliphoth_work": {
+        "demon": "Ogiel / A'arab Zaraq – la Foule des corbeaux",
+        "shadow": "Addiction, obsession matérielle, esclavage volontaire à ses démons.",
+        "corrective_meditation": "Un corbeau se pose. Il tient un objet auquel vous tenez. Il le lâche. Il s'envole.",
+        "ritual_action": "Débarrassez-vous d'un objet matériel inutile auquel vous êtes attaché."
+      }
+    },
+    {
+      "id": 27,
+      "letter": {
+        "hebrew": "פ",
+        "transliteration": "Peh",
+        "meaning": "Bouche",
+        "value": 80,
+        "type": "Lettre Double"
+      },
+      "connections": {
+        "from": "Netzach",
+        "from_number": 7,
+        "to": "Hod",
+        "to_number": 8
+      },
+      "pillar": "Horizontal (Bas)",
+      "tarot": {
+        "major_arcana": "La Maison-Dieu",
+        "key": 16
+      },
+      "astrology": {
+        "element": null,
+        "planet": "Mars",
+        "sign": null
+      },
+      "kabbalistic_title": "Intelligence Excitante (Sekhel Murgash)",
+      "sefer_yetzirah_description": "Car par elle est complétée et perfectionnée la nature de chaque être existant sous l'orbite du Soleil.",
+      "angel": {
+        "name": "Bartzabel",
+        "alternate_names": ["Michéal Foudre"],
+        "function": "Rupture, vérité libératrice, parole qui frappe"
+      },
+      "qliphoth": {
+        "demon": "Golachab – Les Brûleurs",
+        "function": "Destruction gratuite, rage incontrôlée"
+      },
+      "colors": {
+        "golden_dawn": "Rouge écarlate / Orange vif",
+        "queen_scale": "Orange vif"
+      },
+      "pathworking": {
+        "preparation": "Cristal de roche, bougie rouge vif. Symbole de tour. Encens : Dragon's Blood.",
+        "visualization": "Netzach → Hod, éclair brisant une statue, foudre qui purifie",
+        "activation": "Tracer Peh, crier un mot vrai, ouvrir la bouche",
+        "angel_invocation": "Bartzabel, brise mes mensonges utiles. Que mon silence devienne parole quand le moment est venu.",
+        "expected_experience": "Révélation brutale, libération, vérité"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "Le désir perce l'intellect pour le purifier"
+        },
+        "ascending": {
+          "perspective": "L'intellect se libère du désir par l'épreuve"
+        }
+      },
+      "keywords": ["rupture", "vérité", "foudre", "Mars", "libération"],
+      "meditation": "Une tour. La foudre frappe. La couronne explose. Les pierres tombent sans vous toucher. Quand la poussière retombe, vous êtes libre.",
+      "angel_message": "« La parole divine peut détruire autant que créer. Laisse tomber ce qui ne peut plus tenir debout. »",
+      "integration": "Identifiez une fausse certitude que vous portez. Lâchez-la consciemment.",
+      "qliphoth_work": {
+        "demon": "Golachab – les Brûleurs",
+        "shadow": "Destruction gratuite, rage incontrôlée, nihilisme, terrorisme intérieur.",
+        "corrective_meditation": "Le feu brûle. Vous traversez les flammes. Elles purifient, elles ne consument pas.",
+        "ritual_action": "Écrivez vos rages. Brûlez le papier en conscience. Ne brûlez que le papier."
+      }
+    },
+    {
+      "id": 28,
+      "letter": {
+        "hebrew": "צ",
+        "transliteration": "Tzaddi",
+        "meaning": "Hameçon",
+        "value": 90,
+        "type": "Lettre Simple"
+      },
+      "connections": {
+        "from": "Netzach",
+        "from_number": 7,
+        "to": "Yesod",
+        "to_number": 9
+      },
+      "pillar": "Droit",
+      "tarot": {
+        "major_arcana": "L'Étoile",
+        "key": 17
+      },
+      "astrology": {
+        "element": null,
+        "planet": null,
+        "sign": "Verseau"
+      },
+      "kabbalistic_title": "Intelligence Naturelle (Sekhel Mutbaa)",
+      "sefer_yetzirah_description": "Car par elle est complétée et perfectionnée la nature de tout ce qui existe sous l'orbite du Soleil.",
+      "angel": {
+        "name": "Cambriel",
+        "alternate_names": ["Uriel"],
+        "function": "Espoir, inspiration, reconnexion à l'âme"
+      },
+      "qliphoth": {
+        "demon": "Austatikoth – Les Disperseurs",
+        "function": "Utopisme naïf, espoir sans action"
+      },
+      "colors": {
+        "golden_dawn": "Violet / Indigo étoilé",
+        "queen_scale": "Indigo étoilé"
+      },
+      "pathworking": {
+        "preparation": "Eau pure, étoile dessinée. Symbole d'hameçon. Encens : Galbanum.",
+        "visualization": "Netzach → Yesod, puits d'étoiles, source d'eau vive",
+        "activation": "Tracer Tzaddi, pêcher la lumière, tirer l'espoir",
+        "angel_invocation": "Cambriel, verse sur moi l'espérance active. Que mon étoile intérieure brille clair.",
+        "expected_experience": "Inspiration, rêves éveillés, connexion"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "Le désir s'illumine en fondation"
+        },
+        "ascending": {
+          "perspective": "Les rêves s'élèvent pour devenir désir sacré"
+        }
+      },
+      "keywords": ["espoir", "inspiration", "guérison", "Verseau", "étoile"],
+      "meditation": "Une nuit étoilée. Une femme verse l'eau de deux urnes. Une étoile brille plus fort que les autres. Vous vous asseyez. Vous la regardez. Elle est en vous.",
+      "angel_message": "« L'espoir n'est pas un vœu. C'est une certitude ancrée dans l'essence de ce que tu es. »",
+      "integration": "Chaque matin, avant toute action, visualisez votre étoile intérieure.",
+      "qliphoth_work": {
+        "demon": "Austatikoth – les Disperseurs",
+        "shadow": "Utopisme naïf, espoir sans action, rêverie stérile.",
+        "corrective_meditation": "Les étoiles tombent autour de vous. Ramassez-en une. Elle est chaude. Agissez.",
+        "ritual_action": "Concrétisez un petit rêve cette semaine (un geste, une lettre, un pas)."
+      }
+    },
+    {
+      "id": 29,
+      "letter": {
+        "hebrew": "ק",
+        "transliteration": "Qoph",
+        "meaning": "Arrière-crâne",
+        "value": 100,
+        "type": "Lettre Simple"
+      },
+      "connections": {
+        "from": "Netzach",
+        "from_number": 7,
+        "to": "Malkuth",
+        "to_number": 10
+      },
+      "pillar": "Droit (Descendant)",
+      "tarot": {
+        "major_arcana": "La Lune",
+        "key": 18
+      },
+      "astrology": {
+        "element": null,
+        "planet": null,
+        "sign": "Poissons"
+      },
+      "kabbalistic_title": "Intelligence Corporelle (Sekhel Mughsham)",
+      "sefer_yetzirah_description": "Car elle forme le corps de tout ce qui a été formé sous tout le ciel.",
+      "angel": {
+        "name": "Amnitziel",
+        "alternate_names": ["Métatron Lunaire"],
+        "function": "Navigation dans l'inconscient, rêves, intuition"
+      },
+      "qliphoth": {
+        "demon": "Qulielfi – Les Poulpes de la Nuit",
+        "function": "Hallucination, psychose, dissolution"
+      },
+      "colors": {
+        "golden_dawn": "Cramoisie / Marron rouille",
+        "queen_scale": "Marron rouille"
+      },
+      "pathworking": {
+        "preparation": "Lune visible, bol d'eau. Symbole de miroir. Encens : Amandes amères.",
+        "visualization": "Netzach → Malkuth, descente onirique, marécage nocturne",
+        "activation": "Tracer Qoph, entrer dans le rêve éveillé, accepter l'incertitude",
+        "angel_invocation": "Amnitziel, éclaire mes nuits. Que je traverse mes peurs sans m'y perdre.",
+        "expected_experience": "Rêves lucides, accès au subconscient, guérison"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "Le désir s'incarne dans la matière"
+        },
+        "ascending": {
+          "perspective": "Le corps devient temple de l'âme"
+        }
+      },
+      "keywords": ["rêves", "subconscient", "cycles", "Poissons", "Lune"],
+      "meditation": "Un marécage nocturne. Une lune étrange. Des formes bougent. Vous marchez sans vous arrêter. Les peurs vous regardent sans vous saisir. Vous arrivez entre deux tours.",
+      "angel_message": "« Traverse ce chemin, et rien ne pourra plus te faire peur depuis les profondeurs. Le monstre n'est qu'une partie de toi que tu n'as pas encore accueillie. »",
+      "integration": "Cette semaine, tenez un journal de rêves. Notez chaque matin ce que vous avez vu.",
+      "qliphoth_work": {
+        "demon": "Qulielfi – les Poulpes de la nuit",
+        "shadow": "Hallucination, psychose, peur de soi-même, dissolution dans l'inconscient.",
+        "corrective_meditation": "Le poulpe vous entoure. Vous respirez calmement. Il se détend. Il devient une étoile de mer.",
+        "ritual_action": "Affrontez un cauchemar récurrent en l'écrivant et en lui donnant une fin heureuse."
+      }
+    },
+    {
+      "id": 30,
+      "letter": {
+        "hebrew": "ר",
+        "transliteration": "Resh",
+        "meaning": "Tête",
+        "value": 200,
+        "type": "Lettre Double"
+      },
+      "connections": {
+        "from": "Hod",
+        "from_number": 8,
+        "to": "Yesod",
+        "to_number": 9
+      },
+      "pillar": "Gauche (Descente)",
+      "tarot": {
+        "major_arcana": "Le Soleil",
+        "key": 19
+      },
+      "astrology": {
+        "element": null,
+        "planet": "Soleil",
+        "sign": null
+      },
+      "kabbalistic_title": "Intelligence Collective (Sekhel Kelali)",
+      "sefer_yetzirah_description": "Car les astrologues en tirent leur jugement des étoiles et des orbites célestes.",
+      "angel": {
+        "name": "Sorath",
+        "alternate_names": ["Raphaël Solaire"],
+        "function": "Illumination, joie, conscience solaire"
+      },
+      "qliphoth": {
+        "demon": "Thagirion – Les Disputeurs",
+        "function": "Narcissisme solaire, arrogance spirituelle"
+      },
+      "colors": {
+        "golden_dawn": "Orange doré / Jaune solaire",
+        "queen_scale": "Jaune solaire"
+      },
+      "pathworking": {
+        "preparation": "Représentation du soleil, bougies dorées. Symbole d'enfant. Encens : Oliban.",
+        "visualization": "Hod → Yesod, descente lumineuse, jardin ensoleillé",
+        "activation": "Tracer Resh, rayonner intérieurement, danser",
+        "angel_invocation": "Sorath, éclaire mon ombre. Que ma tête s'illumine et que mon cœur danse.",
+        "expected_experience": "Joie simple, certitude intérieure, lumière"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "L'intellect s'illumine en fondation"
+        },
+        "ascending": {
+          "perspective": "Les rêves s'éclairent pour devenir intellect"
+        }
+      },
+      "keywords": ["joie", "soleil", "illumination", "enfant intérieur", "lumière"],
+      "meditation": "Un jardin. Deux enfants dansent. Un soleil avec un visage. Il vous sourit. Les enfants vous prennent la main. Vous dansez. Vous n'avez jamais été aussi léger.",
+      "angel_message": "« Resh est la Tête. Quand la tête est illuminée, tout le corps danse. Ta joie n'est pas une récompense. Elle est ta nature profonde. »",
+      "integration": "Chaque jour, trouvez une raison simple de sourire. Notez-la.",
+      "qliphoth_work": {
+        "demon": "Thagirion – les Disputeurs",
+        "shadow": "Narcissisme solaire, arrogance spirituelle, lumière sans chaleur.",
+        "corrective_meditation": "Le soleil brille. Vous ne le regardez pas fixement. Vous vous baignez dans sa chaleur. Vous donnez de cette chaleur.",
+        "ritual_action": "Faites un compliment sincère à quelqu'un sans rien attendre en retour."
+      }
+    },
+    {
+      "id": 31,
+      "letter": {
+        "hebrew": "ש",
+        "transliteration": "Shin",
+        "meaning": "Dent",
+        "value": 300,
+        "type": "Lettre Mère"
+      },
+      "connections": {
+        "from": "Hod",
+        "from_number": 8,
+        "to": "Malkuth",
+        "to_number": 10
+      },
+      "pillar": "Gauche (Descente rapide)",
+      "tarot": {
+        "major_arcana": "Le Jugement",
+        "key": 20
+      },
+      "astrology": {
+        "element": "Feu",
+        "planet": null,
+        "sign": null
+      },
+      "kabbalistic_title": "Intelligence Perpétuelle (Sekhel Tamidi)",
+      "sefer_yetzirah_description": "Parce qu'elle règle le mouvement du Soleil et de la Lune.",
+      "angel": {
+        "name": "Aral",
+        "alternate_names": ["Seraphiel"],
+        "function": "Réveil, résurrection, appel intérieur"
+      },
+      "qliphoth": {
+        "demon": "Satariel – Les Dissimulateurs",
+        "function": "Refus de l'appel, surdité spirituelle"
+      },
+      "colors": {
+        "golden_dawn": "Rouge-orange / Blanc éclatant",
+        "queen_scale": "Blanc éclatant"
+      },
+      "pathworking": {
+        "preparation": "Représentation du feu, bougie blanche. Symbole de trompette. Encens : Oliban.",
+        "visualization": "Hod → Malkuth, descente enflammée, tombes qui s'ouvrent",
+        "activation": "Tracer Shin, s'enflammer intérieurement, entendre l'appel",
+        "angel_invocation": "Aral, réveille ce qui dort en moi. Que j'entende mon nom véritable.",
+        "expected_experience": "Appel intérieur clair, vocation, résurrection"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "L'intellect s'enflamme pour s'incarner"
+        },
+        "ascending": {
+          "perspective": "La matière s'éveille et s'élève"
+        }
+      },
+      "keywords": ["feu", "appel", "résurrection", "jugement intérieur", "vérité"],
+      "meditation": "Un ange descend du ciel. Il sonne de la trompette. Le son ne fait pas peur. Il appelle. Vous entendez votre vrai nom. Vous vous levez. Les bras vers le ciel.",
+      "angel_message": "« Shin est le Feu divin. Il ne détruit pas. Il purifie et illumine. Que réveilles-tu aujourd'hui ? »",
+      "integration": "Demandez-vous chaque matin : « Quel est mon vrai travail aujourd'hui ? »",
+      "qliphoth_work": {
+        "demon": "Satariel – les Dissimulateurs",
+        "shadow": "Refus de l'appel, surdité spirituelle, résistance à l'évolution.",
+        "corrective_meditation": "Vous êtes dans un tombeau. La trompette sonne. La pierre roule. Vous sortez. Vous respirez.",
+        "ritual_action": "Répondez à un appel que vous repoussez (un message, une démarche, une conversation)."
+      }
+    },
+    {
+      "id": 32,
+      "letter": {
+        "hebrew": "ת",
+        "transliteration": "Tav",
+        "meaning": "Marque / Croix",
+        "value": 400,
+        "type": "Lettre Double"
+      },
+      "connections": {
+        "from": "Yesod",
+        "from_number": 9,
+        "to": "Malkuth",
+        "to_number": 10
+      },
+      "pillar": "Milieu (Descente finale)",
+      "tarot": {
+        "major_arcana": "Le Monde",
+        "key": 21
+      },
+      "astrology": {
+        "element": null,
+        "planet": "Saturne / Terre",
+        "sign": null
+      },
+      "kabbalistic_title": "Intelligence Administrative (Sekhel Menamenet)",
+      "sefer_yetzirah_description": "Car elle dirige et associe le mouvement des sept planètes, les dirigeant dans leurs propres sphères.",
+      "angel": {
+        "name": "Agiel",
+        "alternate_names": ["Sandalphon"],
+        "function": "Accomplissement, totalité, incarnation"
+      },
+      "qliphoth": {
+        "demon": "Thaumiel – Les Jumeaux de Dieu (tête du Kliphoth)",
+        "function": "Totalitarisme, perfectionnisme tyrannique"
+      },
+      "colors": {
+        "golden_dawn": "Indigo / Noir avec étoiles",
+        "queen_scale": "Noir avec étoiles"
+      },
+      "pathworking": {
+        "preparation": "Cercle de danse, musique douce. Symbole de couronne. Encens : Musc sombre.",
+        "visualization": "Yesod → Malkuth, descente dans la matière sacrée, danse cosmique",
+        "activation": "Tracer Tav, sceller son parcours, entrer dans la danse",
+        "angel_invocation": "Agiel, grave ta marque dans ma chair. Que je sois un mot juste dans la phrase infinie.",
+        "expected_experience": "Paix, accomplissement, joie d'être là"
+      },
+      "directions": {
+        "descending": {
+          "perspective": "La fondation s'incarne en royaume"
+        },
+        "ascending": {
+          "perspective": "La matière reconnaît sa source"
+        }
+      },
+      "keywords": ["accomplissement", "incarnation", "totalité", "Monde", "unité"],
+      "meditation": "Un cercle de lumière. Une figure danse au centre. Elle vous voit. Elle vous invite. Vous entrez dans le cercle. Vous dansez. Vous êtes la danse. Tout est accompli.",
+      "angel_message": "« Tav est le Sceau. Ton existence est une lettre dans la phrase infinie. Chaque moment est complet. »",
+      "integration": "Chaque soir, dites : « Ce que j'ai fait aujourd'hui était suffisant. »",
+      "qliphoth_work": {
+        "demon": "Thaumiel – les Jumeaux de Dieu",
+        "shadow": "Totalitarisme, perfectionnisme tyrannique, refus de l'imperfection du manifesté.",
+        "corrective_meditation": "Deux visages se regardent. L'un demande la perfection. L'autre sourit. Ils s'embrassent. Ils ne font qu'un.",
+        "ritual_action": "Célébrez une imperfection chez vous ou chez un autre comme une qualité unique."
+      }
+    }
+  ]
+}

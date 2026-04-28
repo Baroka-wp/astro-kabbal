@@ -1,0 +1,687 @@
+{
+  "version": "1.1.0",
+  "titre": "Tikkoun des Qliphoth - Tradition Juive Primaire",
+  "description": "Système de correction (Tikkoun) des forces d'impureté (Qliphoth/Klipot) selon les sources primaires de la Kabbale juive. Aucune influence Golden Dawn, Tarot ou occultisme occidental.",
+  "avertissement": "Ce système est fondé exclusivement sur les sources primaires hébraïques. Le Tikkoun n'est pas une 'magie' individuelle mais un travail de correction du désir (Ratzon) orienté vers l'équivalence de forme avec le Créateur (Hashvaath haTsourah).",
+  "sources_primaires": {
+    "textes_fondateurs": [
+      {
+        "nom": "Sefer HaZohar",
+        "auteur": "Attribué à Rabbi Shimon Bar Yohaï, rédigé par Moshe de León, XIIIe s.",
+        "pertinence": "Source principale sur la nature des Qliphoth comme enveloppes (Klipot) séparant la Lumière du Kli"
+      },
+      {
+        "nom": "Etz Haïm (Arbre de Vie)",
+        "auteur": "Rabbi Haïm Vital, transcription de l'enseignement d'Isaac Louria (Ari), XVIe s.",
+        "pertinence": "Description systématique des Qliphoth comme résidus de la brisure des vases (Chevirat HaKelim)"
+      },
+      {
+        "nom": "Talmud Esser Séfirot",
+        "auteur": "Rabbi Yehoudah Leib Ashlag (Baal HaSoulam), 1937",
+        "pertinence": "Définition précise du désir de recevoir comme matière première, du Tikkoun comme retournement du désir"
+      },
+      {
+        "nom": "Mavo LeHokhmat HaKabbalah (Introduction à la sagesse de la Kabbale)",
+        "auteur": "Baal HaSoulam",
+        "pertinence": "Description des quatre mondes comme étapes d'épaississement du désir et de sa correction"
+      },
+      {
+        "nom": "Tanya (Likkoutei Amarim)",
+        "auteur": "Rabbi Chnéour Zalman de Liadi (Alter Rebbe), 1797",
+        "pertinence": "Psychologie du Tikkoun : Nefesh HaBéhamit vs Nefesh HaElohit, transformation par le Beinoni"
+      },
+      {
+        "nom": "Likutey Moharan",
+        "auteur": "Rabbi Nachman de Breslev, 1806",
+        "pertinence": "Tikkoun par la parole (Hitbodédout), la joie (Simha), et la foi (Emounah)"
+      },
+      {
+        "nom": "Shimmush Tehillim",
+        "auteur": "Attribué à Rav Hai Gaon, Xe s.",
+        "pertinence": "Usage liturgique et thérapeutique des Psaumes comme outils de Tikkoun"
+      }
+    ]
+  },
+  "concepts_fondamentaux": {
+    "Ein_Sof": {
+      "definition": "L'Infini absolu, sans limite ni forme. Source de toute Lumière. N'a pas de relation directe avec les créatures.",
+      "source": "Zohar, Parashat Bo ; Etz Haïm, Shaar HaKlallim"
+    },
+    "Or_Ein_Sof": {
+      "definition": "La Lumière de l'Infini qui émane de Ein Sof. Elle est le contenu, le plaisir, l'abondance que le Créateur veut transmettre.",
+      "source": "Talmud Esser Séfirot, Partie 1, Histaklout Pnimit"
+    },
+    "Ratzon_Lekabel": {
+      "definition": "Le désir de recevoir. Seule matière créée ex nihilo. Constitue la substance de toute créature depuis les mondes supérieurs jusqu'à la plus petite particule du monde physique.",
+      "source": "Baal HaSoulam, Introduction au Livre du Zohar, §9-12 ; Talmud Esser Séfirot, §1"
+    },
+    "Kli": {
+      "definition": "Le récipient. Désigne le désir de recevoir dans sa forme structurée. La mesure du Kli détermine exactement la mesure de Lumière qu'il peut contenir.",
+      "source": "Talmud Esser Séfirot, Histaklout Pnimit §4-5"
+    },
+    "Tsimtsoum": {
+      "definition": "Contraction primordiale. Le Créateur se retire pour créer un espace (Tehiru) où les créatures peuvent exister avec une apparence d'indépendance. Sans Tsimtsoum, les créatures seraient annulées dans la Lumière.",
+      "source": "Etz Haïm, Shaar HaKlallim, Chapitre 1 ; Louria via Vital"
+    },
+    "Chevirat_HaKelim": {
+      "definition": "Brisure des vases. Les récipients des Sept Séfirot inférieures (de Hessed à Malkhout) n'ont pas pu contenir la Lumière et se sont brisés. Les éclats (Nitsotsot, étincelles) ont chuté et sont devenus la racine des Qliphoth.",
+      "source": "Etz Haïm, Shaar Chevirat HaKelim ; Zohar, Idra Rabba"
+    },
+    "Nitsotsot": {
+      "definition": "Les étincelles de sainteté emprisonnées dans les Qliphoth. Le Tikkoun consiste à les libérer et les faire remonter à leur source.",
+      "source": "Etz Haïm, Shaar HaNitsotsot ; Baal Shem Tov, Tsavaat HaRivash"
+    },
+    "Klipah_Klipot": {
+      "definition": "Enveloppe, écorce. Désigne les forces qui enveloppent et obscurcissent la sainteté. Elles ont quatre niveaux correspondant aux quatre mondes. Leur existence est nécessaire car elles créent la résistance sans laquelle le libre choix est impossible.",
+      "source": "Zohar, Parashat Pekoudei ; Tanya, Chapitre 1-7 ; Etz Haïm, Shaar HaKlipot"
+    },
+    "Tikkoun": {
+      "definition": "Correction, réparation. Processus par lequel le désir de recevoir se retourne vers le désir de donner, libérant les étincelles emprisonnées dans les Qliphoth. Le Tikkoun n'est pas une destruction des Qliphoth mais leur transformation en instruments de sainteté.",
+      "source": "Baal HaSoulam, Préface à la Sagesse de la Kabbale ; Louria, Shaar HaKavanot"
+    },
+    "Hashvaath_haTsourah": {
+      "definition": "Équivalence de forme avec le Créateur. But ultime du Tikkoun. Atteint quand le désir de recevoir est entièrement retourné vers le don, rendant la créature similaire en qualité (pas en essence) au Créateur.",
+      "source": "Talmud Esser Séfirot, Partie 1 §1-3 ; Baal HaSoulam, Matan Torah"
+    },
+    "Masakh": {
+      "definition": "L'écran. La force de résistance que le Kli construit contre la Lumière pour ne pas recevoir égoïstement. L'écran est la racine du libre choix et la condition du Tikkoun.",
+      "source": "Talmud Esser Séfirot, Partie 1, Histaklout Pnimit §13-20"
+    }
+  },
+  "structure_des_qliphoth": {
+    "principe_general": {
+      "description": "Les Qliphoth ne sont pas des entités maléfiques indépendantes. Elles sont le revers (Achoraïm) des Séfirot, leur face non corrigée. Chaque Qliphah correspond à une Séfira dont le Kli n'a pas encore reçu son Masakh (écran de résistance).",
+      "source": "Tanya, Chapitre 6 ; Etz Haïm, Shaar HaKlipot"
+    },
+    "quatre_niveaux_de_klipot": [
+      {
+        "niveau": 1,
+        "nom": "Klipat Nogah",
+        "traduction": "Enveloppe de splendeur / Écorce lumineuse",
+        "nature": "La seule Klipah qui peut être corrigée directement. Elle contient des étincelles de sainteté encore accessibles. C'est le niveau de la plupart des désirs humains ordinaires : nourriture, sexualité, argent, gloire. Ni purs ni impurs en eux-mêmes. Leur direction détermine s'ils deviennent sainteté ou impureté.",
+        "rapport_au_tikkoun": "Corrigible par retournement de l'intention (Kavanah). C'est le champ principal du travail du Beinoni.",
+        "source": "Tanya, Chapitre 7 ; Etz Haïm, Shaar HaKlipot, Chapitre 2"
+      },
+      {
+        "niveau": 2,
+        "nom": "Shalosh Klipot Hatmeyot",
+        "traduction": "Trois enveloppes impures",
+        "nature": "Ruah, Saarah, Anan (vent, tempête, nuage). Correspondent aux trois Qliphoth totalement impures sans étincelles récupérables directement. Désirs entièrement fermés sur eux-mêmes. Ne peuvent être corrigés que de l'extérieur par la Lumière.",
+        "rapport_au_tikkoun": "Non corrigibles par l'effort humain direct. Requièrent l'Ohr Makif (Lumière environnante) qui agit de l'extérieur.",
+        "source": "Zohar, Parashat Pekoudei ; Tanya, Chapitre 6 ; Etz Haïm"
+      },
+      {
+        "niveau": 3,
+        "nom": "Klipot des quatre mondes",
+        "traduction": "Qliphoth correspondant à Atsilout, Briya, Yetsira, Assiya",
+        "nature": "Chaque monde a son niveau d'impureté correspondant. Plus on descend, plus la Klipah est dense et éloignée de la Lumière.",
+        "rapport_au_tikkoun": "Le Tikkoun commence toujours par le monde le plus bas (Assiya) et remonte.",
+        "source": "Etz Haïm, Shaar HaOlamot ; Baal HaSoulam, Introduction au Zohar §40-50"
+      },
+      {
+        "niveau": 4,
+        "nom": "Klipat Sitra Achra",
+        "traduction": "L'Autre Côté",
+        "nature": "Désigne l'ensemble du système des Qliphoth comme le 'côté opposé' à la sainteté. Non pas opposé au Créateur (il n'y a pas de dualisme), mais opposé à l'équivalence de forme. Créé délibérément pour rendre le choix libre possible.",
+        "rapport_au_tikkoun": "La Sitra Achra est vaincue non pas par combat mais par désintérêt : quand le désir ne s'y attache plus, elle perd sa prise.",
+        "source": "Tanya, Chapitre 6-9 ; Zohar, Parashat Bereshit"
+      }
+    ]
+  },
+  "dix_sephiroth_tikkoun": {
+    "Kether": {
+      "essence": "Volonté pure, intention originelle, point de contact entre Ein Sof et la Création",
+      "qliphah_associee": {
+        "nom": "Thamiel",
+        "traduction": "Dualité en Dieu / Les Jumeaux opposés",
+        "nature_juive": "Représente la division de ce qui est par nature un. Non pas deux dieux, mais la perception erronée que la volonté divine est divisée ou contradictoire. Produit le nihilisme spirituel.",
+        "source": "Zohar, Idra Rabba ; Etz Haïm, Shaar HaKlipot"
+      },
+      "symptomes_du_blocage": [
+        "Perte totale de sens, nihilisme existentiel",
+        "Impression que l'existence n'a pas de but",
+        "Déconnexion de toute source de sens transcendant",
+        "Depression spirituelle profonde (Atsvout)"
+      ],
+      "mecanisme_du_blocage": "Kether bloqué signifie que le Ratzon (volonté) est divisé contre lui-même. L'homme veut et ne veut pas simultanément. La Lumière ne peut pas entrer dans un Kli qui ne sait pas ce qu'il veut.",
+      "tikkoun": {
+        "principe": "Unification de la volonté (Yihoud HaRatzon). Le Tikkoun de Kether ne passe pas par l'action mais par le retour à l'intention simple et unifiée.",
+        "pratiques": [
+          {
+            "nom": "Hitbonenut sur Ein Sof",
+            "description": "Contemplation prolongée de l'unité absolue. Non pas visualisation mais immersion silencieuse dans la conscience que tout est Un. 20 minutes minimum, quotidiennement.",
+            "source": "Tanya, Chapitre 5 ; Alter Rebbe, Shaar HaYihoud VeHaEmounah"
+          },
+          {
+            "nom": "Kavanah de Shema Israël",
+            "description": "La récitation du Shema avec l'intention précise que 'Adonaï Echad' (l'Éternel est Un) signifie que rien n'existe en dehors de Lui, y compris soi-même. Dissoudre l'illusion de la dualité.",
+            "source": "Shoulhan Aroukh, Orah Haïm 61 ; Tanya, Shaar HaYihoud VeHaEmounah, Chapitre 1"
+          },
+          {
+            "nom": "Psaume de Tikkoun",
+            "psaume": "16",
+            "verset_cle": "16:2 - 'Tu es mon Seigneur, je n'ai de bien que toi'",
+            "kavanah": "Réciter en ayant conscience que tout désir fragmenté est une illusion de séparation",
+            "source": "Shimmush Tehillim ; tradition hassidique Loubavitch"
+          }
+        ],
+        "acte_concret": "Identifier une contradiction intérieure majeure (je veux X et je veux son contraire). Non pas choisir un camp, mais trouver l'intention unique plus profonde qui dépasse les deux. C'est le Yihoud (unification) appliqué au quotidien.",
+        "duree_recommandee": "40 jours minimum (cycle de transformation selon la tradition talmudique, Sota 12a)",
+        "duree_type": "cycle_transformation",
+        "duree_valeur_jours": 40,
+        "duree_explication": "40 jours : cycle talmudique minimal d'ancrage d'une transformation profonde (Sota 12a). C'est la durée de la pratique quotidienne spécifique, pas une période d'exclusivité sur cette Séfira.",
+        "duree_type_label": "Durée de pratique quotidienne pour ancrer une transformation profonde. Le travail des autres Séfirot continue en parallèle à un niveau de fond."
+      }
+    },
+    "Hokhma": {
+      "essence": "Sagesse, étincelle créatrice, inspiration soudaine, force active masculine",
+      "qliphah_associee": {
+        "nom": "Ghogiel",
+        "traduction": "Les Perturbateurs / Les Disperseurs",
+        "nature_juive": "Dispersent l'inspiration avant qu'elle ne prenne forme. Représentent l'élan créateur qui se perd en mille directions sans jamais s'incarner. La sagesse sans réceptacle.",
+        "source": "Etz Haïm, Shaar HaKlipot ; Zohar, Tikkouney Zohar"
+      },
+      "symptomes_du_blocage": [
+        "Créativité dispersée, incapacité à finir ce qu'on commence",
+        "Inspiration qui arrive mais ne se concrétise jamais",
+        "Peur de l'engagement dans une seule direction",
+        "Procrastination spirituelle"
+      ],
+      "mecanisme_du_blocage": "Hokhma est l'éclair (Baraq) qui doit immédiatement trouver Binah comme réceptacle. Quand Binah est faible ou absente, l'éclair de Hokhma se disperse sans créer. Le blocage est souvent dans la relation Hokhma-Binah, pas dans Hokhma seule.",
+      "tikkoun": {
+        "principe": "Le Tikkoun de Hokhma est de lui donner un réceptacle (Binah). Chaque inspiration doit trouver une structure qui la contient immédiatement.",
+        "pratiques": [
+          {
+            "nom": "Écriture immédiate (Ktivar Miyad)",
+            "description": "Toute inspiration, dès qu'elle arrive, est écrite immédiatement. Pas perfectionnée, pas repoussée. Écrite. L'écriture est le Binah de Hokhma.",
+            "source": "Tradition du Baal Shem Tov : 'Ne laisse pas une pensée sainte se perdre'"
+          },
+          {
+            "nom": "Engagement public (Kabbalt Ol)",
+            "description": "Prendre un engagement précis et public sur une inspiration. La parole publique est le Masakh qui empêche la dispersion.",
+            "source": "Tanya, Chapitre 15 ; Nedarim 8a"
+          },
+          {
+            "nom": "Psaume de Tikkoun",
+            "psaume": "111",
+            "verset_cle": "111:10 - 'Le commencement de la sagesse est la crainte de l'Éternel'",
+            "kavanah": "La Yirat Shamayim (crainte du Ciel) n'est pas la peur mais le respect de la limite : savoir que l'inspiration reçue est une responsabilité",
+            "source": "Shimmush Tehillim"
+          }
+        ],
+        "acte_concret": "Choisir UN projet parmi tous ceux en cours. S'y engager publiquement pour 30 jours. Les autres sont mis en attente consciente, pas abandonnés.",
+        "duree_recommandee": "30 jours",
+        "duree_type": "cycle_ancrage",
+        "duree_valeur_jours": 30,
+        "duree_explication": "30 jours : un cycle lunaire complet. Suffisant pour qu'un engagement public créé par l'inspiration devienne une habitude structurée.",
+        "duree_type_label": "Durée pour qu'un nouveau comportement ou intention devienne une seconde nature. Ni trop court pour avoir un effet, ni trop long pour décourager."
+      }
+    },
+    "Binah": {
+      "essence": "Compréhension, réceptacle féminin, structure, mémoire profonde, matrice",
+      "qliphah_associee": {
+        "nom": "Satariel",
+        "traduction": "Les Dissimulateurs / Ceux qui cachent",
+        "nature_juive": "Cachent la compréhension profonde. Produisent une intelligence de surface qui tourne en boucle sans jamais atteindre la racine. La forme sans le fond.",
+        "source": "Etz Haïm, Shaar HaKlipot ; Zohar, Parashat Bereshit"
+      },
+      "symptomes_du_blocage": [
+        "Compréhension intellectuelle sans transformation intérieure",
+        "Mélancolie cyclique sans cause identifiable (Atsvout profonde)",
+        "Rituels vidés de sens, forme sans intention",
+        "Mémoire qui répète les patterns sans les comprendre"
+      ],
+      "mecanisme_du_blocage": "Binah est la Mère supérieure (Imma Ilaah). Son blocage produit une séparation entre la forme et son contenu vital. On comprend les mots mais pas le sens. On fait les gestes mais pas les ressentir.",
+      "tikkoun": {
+        "principe": "Redonner à la forme sa vie intérieure. Le Tikkoun de Binah passe par la Tshouva (retour), car Binah est aussi appelée 'Shaar HaTshouva' (la porte du retour) dans le Zohar.",
+        "pratiques": [
+          {
+            "nom": "Tshouva profonde (Heshbon HaNefesh)",
+            "description": "Bilan de l'âme. Prendre un sujet de vie récurrent et remonter jusqu'à sa première occurrence. Comprendre le pattern dans sa profondeur, pas seulement en surface. S'asseoir avec la compréhension sans chercher à la résoudre immédiatement.",
+            "source": "Rabbi Menachem Mendel Lefin, Heshbon HaNefesh (1808) ; Tanya, Iggeret HaTshouva"
+          },
+          {
+            "nom": "Étude avec Bitul (annulation de soi)",
+            "description": "Étudier un texte kabbalistique (Tanya, Zohar) non pour accumuler du savoir mais pour laisser le texte agir sur soi. Lire lentement, une page en une heure si nécessaire. Laisser chaque phrase résonner avant de passer à la suivante.",
+            "source": "Alter Rebbe, Hayom Yom ; tradition d'étude Loubavitch"
+          },
+          {
+            "nom": "Psaume de Tikkoun",
+            "psaume": "51",
+            "verset_cle": "51:8 - 'Tu veux la vérité dans les profondeurs'",
+            "kavanah": "La vérité intérieure (Emet Beinah) est plus profonde que toute compréhension intellectuelle. Réciter en permettant à la honte purificatrice (Bushah) d'agir sans culpabilité.",
+            "source": "Shimmush Tehillim ; Tanya, Iggeret HaTshouva, Chapitre 7"
+          }
+        ],
+        "acte_concret": "Identifier un rituel ou une pratique devenu automatique et vide. Le suspendre pendant 7 jours. Observer ce que son absence révèle. Le reprendre avec une intention consciente reformulée.",
+        "duree_recommandee": "Cycle de 7 jours répété",
+        "duree_type": "cycle_observation",
+        "duree_valeur_jours": 7,
+        "duree_explication": "7 jours : cycle de la Création. À répéter autant de fois que nécessaire. La Tshouva de Binah est un processus en spirale, pas linéaire.",
+        "duree_type_label": "Cycle court et répétable. À recommencer autant de fois que nécessaire jusqu'à ce que le pattern se déplace."
+      }
+    },
+    "Hessed": {
+      "essence": "Grâce, amour, générosité, expansion, abondance, don sans condition",
+      "qliphah_associee": {
+        "nom": "Gha-agsheblah",
+        "traduction": "Les Briseurs / Ceux qui violent la miséricorde",
+        "nature_juive": "Transforment le don en instrument de domination. La générosité qui crée une dette. Le soin qui emprisonne. L'amour qui contrôle.",
+        "source": "Etz Haïm, Shaar HaKlipot ; Zohar, Parashat Vayera"
+      },
+      "symptomes_du_blocage": [
+        "Incapacité à recevoir : cadeaux, amour, aide",
+        "Don contraint ou accompagné d'attente inconsciente de retour",
+        "Générosité épuisante qui finit en ressentiment",
+        "Sentiment de ne pas mériter l'abondance"
+      ],
+      "mecanisme_du_blocage": "Hessed bloqué est souvent une Guevourah non intégrée : on donne parce qu'on n'a pas appris à limiter et à recevoir. Le don sans frontière n'est pas Hessed mais sa Klipah.",
+      "tikkoun": {
+        "principe": "Apprendre à recevoir est le Tikkoun de Hessed. Dans la Kabbale, recevoir correctement (avec Masakh, avec intention de transmette) est plus difficile et plus sacré que donner.",
+        "pratiques": [
+          {
+            "nom": "Exercice de réception consciente",
+            "description": "Pendant 30 jours, recevoir chaque aide, compliment, cadeau sans le minimiser, sans immédiatement contre-donner. Simplement dire 'merci' et laisser entrer. Observer la résistance intérieure. C'est le travail du Kli qui apprend à contenir.",
+            "source": "Baal HaSoulam, Préface à la Sagesse de la Kabbale §12 ; enseignement sur le Kli"
+          },
+          {
+            "nom": "Tsédaka avec Kavanah précise",
+            "description": "La Tsédaka (charité) n'est pas seulement donner de l'argent. C'est aligner le don avec la Kavanah de 'recevoir pour donner' (Lekabel Al Menat Lehashpia). Donner anonymement, sans retour attendu, en imaginant que la Lumière traverse toi vers l'autre.",
+            "source": "Maïmonide, Michné Torah, Lois de la Tsédaka 10:7-14 ; Baal HaSoulam, Matan Torah"
+          },
+          {
+            "nom": "Psaume de Tikkoun",
+            "psaume": "23",
+            "verset_cle": "23:1 - 'L'Éternel est mon berger, je ne manque de rien'",
+            "kavanah": "La confiance que l'abondance est déjà là et ne dépend pas de mon contrôle. Réciter en état de Bitahon (confiance absolue), pas comme formule magique mais comme réalignement du désir.",
+            "source": "Shimmush Tehillim ; Likutey Moharan, Torah 4"
+          }
+        ],
+        "acte_concret": "Identifier une personne à qui il est difficile de demander de l'aide. Lui demander quelque chose de concret cette semaine. Observer la résistance et l'accueillir sans la juger.",
+        "duree_recommandee": "30 jours"
+      }
+    },
+    "Guevourah": {
+      "essence": "Rigueur, force, jugement juste, limite nécessaire, discipline, colère sainte",
+      "qliphah_associee": {
+        "nom": "Golachab",
+        "traduction": "Les Incendiaires / Les Brûleurs",
+        "nature_juive": "La force retournée contre soi ou déversée sans discernement sur les autres. La colère sans justice. La rigueur sans miséricorde. La destruction sans reconstruction.",
+        "source": "Etz Haïm, Shaar HaKlipot ; Zohar, Parashat Mishpatim"
+      },
+      "symptomes_du_blocage": [
+        "Colère retournée contre soi (auto-destruction, auto-sabotage)",
+        "Jugement excessif de soi ou des autres sans compassion",
+        "Incapacité à dire non et à maintenir des limites saines",
+        "Violence passive ou explosion différée"
+      ],
+      "mecanisme_du_blocage": "Guevourah sans Hessed produit la cruauté. Hessed sans Guevourah produit la dissolution. Le Tikkoun est toujours dans la relation entre les deux, jamais dans l'une seule.",
+      "tikkoun": {
+        "principe": "La colère juste (Din) est une force sainte quand elle est au service de la vérité et non de l'ego. Le Tikkoun consiste à distinguer la colère égoïste (Chol) de la colère sainte (Kodesh) et à ne laisser s'exprimer que la seconde.",
+        "pratiques": [
+          {
+            "nom": "Pratique du Din LeShem Shamayim (jugement pour le Ciel)",
+            "description": "Avant toute décision impliquant une limite, un refus, un jugement : pause de trois respirations. Se demander : 'Est-ce pour moi ou pour la vérité ?' Si c'est pour la vérité, agir avec force. Si c'est pour l'ego, attendre.",
+            "source": "Pirké Avot 5:17 ; Tanya, Chapitre 12"
+          },
+          {
+            "nom": "Guevourah par la Hitlahavout (ardeur)",
+            "description": "Canaliser l'énergie de la colère vers une pratique physique ou créative intense. Non pour évacuer (ce qui est Klipah) mais pour transformer la force brute en élan dirigé.",
+            "source": "Likutey Moharan, Torah 2 : 'La mélancolie vient du côté de la Rigueur non transformée'"
+          },
+          {
+            "nom": "Psaume de Tikkoun",
+            "psaume": "7",
+            "verset_cle": "7:9 - 'Que l'Éternel juge les peuples. Juge-moi, Éternel, selon ma justice et mon intégrité'",
+            "kavanah": "Remettre le jugement à une autorité plus haute que l'ego. Réciter quand la colère monte, pour rediriger vers la conscience que le Din appartient au Créateur.",
+            "source": "Shimmush Tehillim ; tradition de récitation en cas de conflit injuste"
+          }
+        ],
+        "acte_concret": "Identifier une situation où tu n'as pas dit non alors que tu aurais dû. Formuler ce non clairement, même après coup, par écrit. Puis identifier la prochaine occasion et le dire au bon moment.",
+        "duree_recommandee": "21 jours"
+      }
+    },
+    "Tiferet": {
+      "essence": "Beauté, harmonie, vérité, cœur, Soi supérieur, axe intégrateur, compassion",
+      "qliphah_associee": {
+        "nom": "Tagiriron",
+        "traduction": "Les Disputeurs / Les Querelleurs",
+        "nature_juive": "Produisent la beauté de surface sans cœur. L'harmonie apparente qui cache la discorde intérieure. Le centre qui ne tient plus. Toutes les forces tirent dans des directions opposées sans réconciliation.",
+        "source": "Etz Haïm, Shaar HaKlipot ; Zohar, Parashat Tetsavé"
+      },
+      "symptomes_du_blocage": [
+        "Vide intérieur malgré une vie extérieurement belle et réussie",
+        "Incapacité à ressentir une joie profonde et durable",
+        "Sentiment d'être un acteur de sa propre vie",
+        "Perte de la connexion avec sa propre vérité intérieure"
+      ],
+      "mecanisme_du_blocage": "Tiferet est le Mashiah intérieur, le Melekh (roi) qui relie le haut et le bas. Son blocage produit la dissociation : on vit en surface pendant que la profondeur reste muette.",
+      "tikkoun": {
+        "principe": "Le Tikkoun de Tiferet passe par l'Emet (vérité radicale). Non la vérité intellectuelle mais la vérité vécue : dire ce qu'on pense, penser ce qu'on dit, faire ce qu'on pense.",
+        "pratiques": [
+          {
+            "nom": "Hitbodédout quotidienne (Retraite personnelle)",
+            "description": "Rabbi Nachman enseigne de consacrer chaque jour au moins une heure à parler au Créateur en langue maternelle, de façon totalement personnelle et honnête. Pas de formule, pas de rituel. Juste parler vrai. C'est le chemin royal vers Tiferet.",
+            "source": "Likutey Moharan, Torah 52 ; Sihot HaRan §68-70"
+          },
+          {
+            "nom": "Pratique de Simha (joie délibérée)",
+            "description": "Rabbi Nachman : 'C'est une grande Mitsva d'être toujours dans la joie.' Non pas nier la douleur mais chercher délibérément un point de Simha même dans l'obscurité. La joie est le signe que Tiferet est vivant.",
+            "source": "Likutey Moharan, Torah 24 ; tradition de Breslev"
+          },
+          {
+            "nom": "Psaume de Tikkoun",
+            "psaume": "19",
+            "verset_cle": "19:15 - 'Que les paroles de ma bouche et les méditations de mon cœur soient agréables devant toi'",
+            "kavanah": "Alignement de la parole et de la pensée avec la profondeur du cœur. Réciter le matin comme intention de cohérence pour la journée.",
+            "source": "Shimmush Tehillim ; tradition du siddour matinal"
+          }
+        ],
+        "acte_concret": "Identifier une chose que tu penses depuis longtemps sans l'avoir dite à personne. La dire à une personne de confiance cette semaine. Observer comment l'expression change l'état intérieur.",
+        "duree_recommandee": "40 jours de Hitbodédout quotidienne"
+      }
+    },
+    "Netsah": {
+      "essence": "Victoire, éternité, persistance, désir durable, émotions profondes, art, instinct",
+      "qliphah_associee": {
+        "nom": "Orev Zaraq",
+        "traduction": "Les Corbeaux dispersés / Les Esprits immondes mélangés",
+        "nature_juive": "Pervertissent le désir naturel en plaisir mécanique et répétitif. La répétition compulsive sans progression. Le désir qui tourne en rond et s'épuise sans jamais être nourri.",
+        "source": "Etz Haïm, Shaar HaKlipot ; Zohar, Parashat Vayetse"
+      },
+      "symptomes_du_blocage": [
+        "Désir étouffé ou honteux",
+        "Plaisir coupable ou inaccessible",
+        "Relations émotionnelles sans profondeur ni durée",
+        "Répétition des mêmes patterns sans évolution"
+      ],
+      "mecanisme_du_blocage": "Netsah est le siège du désir naturel (Hishtokekout). Son blocage vient souvent d'une Guevourah excessive qui a appris à l'enfant que désirer est dangereux ou honteux. Le désir survit mais se déguise.",
+      "tikkoun": {
+        "principe": "La réhabilitation du désir. Dans la tradition juive, le désir (Hishtokekout, Taavah) n'est pas intrinsèquement mauvais. C'est sa direction qui le détermine. Le Tikkoun de Netsah consiste à autoriser le désir et à le rediriger vers le sacré.",
+        "pratiques": [
+          {
+            "nom": "Élévation des étincelles par l'acte quotidien (Haalaath HaNitsotsot)",
+            "description": "Le Baal Shem Tov enseigne que même les désirs les plus corporels contiennent des étincelles de sainteté. Manger avec Kavanah, faire l'amour avec conscience du don, créer avec intention de servir : chaque acte de désir retourné vers le sacré libère une étincelle.",
+            "source": "Tsavaat HaRivash §1-5 ; Kéter Shem Tov ; enseignements du Baal Shem Tov"
+          },
+          {
+            "nom": "Shirah (chant)",
+            "description": "Le chant est le langage propre de Netsah. Chanter des Nigounim (mélodies hassidiques sans paroles) permet de donner au désir une expression pure qui ne passe pas par le mental. Le Nigun est un désir retourné vers sa source.",
+            "source": "Tanya, Iggeret HaKodesh, Chapitre 27 ; tradition Loubavitch et Breslev"
+          },
+          {
+            "nom": "Psaume de Tikkoun",
+            "psaume": "42",
+            "verset_cle": "42:2 - 'Comme la biche soupire après les eaux vives, ainsi mon âme soupire après toi, ô Dieu'",
+            "kavanah": "Le désir profond (Hishtokekout) est dans sa forme la plus pure un désir de Dieu. Réciter en laissant le désir humain se retourner vers sa source divine.",
+            "source": "Shimmush Tehillim ; Zohar sur le verset"
+          }
+        ],
+        "acte_concret": "Identifier un désir que tu as honte d'avoir ou que tu réprimes. Non pour le réaliser aveuglément mais pour l'écouter et comprendre quelle étincelle il porte. Le formuler sans jugement dans ton journal de Hitbodédout.",
+        "duree_recommandee": "7 semaines (49 jours, cycle du Omer)"
+      }
+    },
+    "Hod": {
+      "essence": "Splendeur, gratitude, communication précise, rituel juste, intelligence analytique",
+      "qliphah_associee": {
+        "nom": "Samael",
+        "traduction": "Le Poison de Dieu / L'Ange de la mort (dans certaines traditions)",
+        "nature_juive": "Dans le contexte de Hod : pervertit la communication en manipulation, le rituel en magie vide, la précision en obsession. Produit la pensée qui tourne en boucle sans jamais agir.",
+        "note_textuelle": "Samael est une figure complexe dans la tradition juive. Son association à Hod vient de sa nature d'ange accusateur (Satan dans Iyov/Job) : il parle beaucoup, accuse, analyse, mais ne construit rien.",
+        "source": "Zohar, Parashat Bereshit ; Talmud, Bava Batra 16a (Samael = Satan = Yetser HaRa)"
+      },
+      "symptomes_du_blocage": [
+        "Mental en boucle, pensée sans ancrage ni résolution",
+        "Rituel ou pratique devenu mécanique et vide",
+        "Parler beaucoup sans dire l'essentiel",
+        "Rumination, TOC mental, insomnie par excès de pensée"
+      ],
+      "mecanisme_du_blocage": "Hod est le canal de la communication descendante (réception de la Lumière sous forme de structure compréhensible). Son blocage produit un mental qui reçoit mais ne transmet pas, qui accumule sans digérer.",
+      "tikkoun": {
+        "principe": "Le Tikkoun de Hod passe par la Hodaah (gratitude, reconnaissance, aveu). Le mot Hod vient de la même racine que Todah (merci) et Vidoui (confession). Les trois sont des mouvements de Tikkoun : reconnaître ce qui est, sans le déformer.",
+        "pratiques": [
+          {
+            "nom": "Vidoui quotidien (confession structurée)",
+            "description": "Non la confession publique mais l'examen quotidien de conscience (Heshbon HaNefesh) suivi d'un énoncé simple de ce qui n'a pas été juste aujourd'hui, sans drama et sans excès de remords. Le Vidoui libère Hod de l'accumulation.",
+            "source": "Tanya, Iggeret HaTshouva, Chapitre 1-3 ; Shoulhan Aroukh, Orah Haïm 607"
+          },
+          {
+            "nom": "Pratique de Modeh Ani (gratitude au réveil)",
+            "description": "La première parole du matin en tradition juive est 'Modeh Ani' : 'Je rends grâce devant toi.' Non comme formule automatique mais comme acte conscient de reconnaissance que l'existence est un don non mérité. 30 secondes de vraie Kavanah avant de penser à quoi que ce soit.",
+            "source": "Shoulhan Aroukh, Orah Haïm 1:1 ; Tanya, Hayom Yom"
+          },
+          {
+            "nom": "Psaume de Tikkoun",
+            "psaume": "100",
+            "verset_cle": "100:4 - 'Entrez dans ses portes avec une action de grâces, dans ses parvis avec des louanges'",
+            "kavanah": "La gratitude est la porte d'entrée de la conscience spirituelle. Réciter lentement, en cherchant trois choses concrètes pour lesquelles être reconnaissant avant de commencer la récitation.",
+            "source": "Shimmush Tehillim ; tradition du Mizmor LeTodah, Pessah"
+          }
+        ],
+        "acte_concret": "Tenir pendant 21 jours un journal de gratitude de 3 items par soir. Non des grandes choses mais des détails précis de la journée. La précision est le langage de Hod.",
+        "duree_recommandee": "21 jours",
+        "duree_type": "cycle_deverrouillage",
+        "duree_valeur_jours": 21,
+        "duree_explication": "21 jours : durée classique de formation d'une habitude mentale. Suffisant pour que la gratitude quotidienne commence à reconfigurer le mental en boucle.",
+        "duree_type_label": "Durée focalisée pour déverrouiller une résistance spécifique. Intensité plus haute sur une période plus courte."
+      }
+    },
+    "Yesod": {
+      "essence": "Fondation, connexion, transmission, alliance, inconscient, rêve, intégrité",
+      "qliphah_associee": {
+        "nom": "Gamaliel",
+        "traduction": "Les Impurs / Les Obscènes",
+        "nature_juive": "Pervertissent la connexion juste (Brit, Alliance) en connexion compulsive ou polluée. La transmission sans discernement. Les liens qui drainent plutôt que nourrissent. L'inconscient qui produit des cauchemars plutôt que des révélations.",
+        "source": "Zohar, Parashat Bereshit (Lilith associée à Gamaliel comme face obscure de Yesod) ; Etz Haïm"
+      },
+      "symptomes_du_blocage": [
+        "Angoisse flottante sans objet identifiable",
+        "Intuition brouillée ou absente",
+        "Cauchemars répétitifs ou sommeil non réparateur",
+        "Connexions relationnelles qui drainent ou se rompent inexplicablement",
+        "Incapacité à transmettre : ce qu'on porte ne passe pas aux autres"
+      ],
+      "mecanisme_du_blocage": "Yesod est le Tsaddik Yesod Olam (le juste qui est fondation du monde), incarné par Yosef dans la tradition. Son blocage vient d'une rupture du Brit (alliance, intégrité). Chaque manquement à sa parole, chaque connexion non honorée, affaiblit Yesod.",
+      "tikkoun": {
+        "principe": "Le Tikkoun de Yesod est la Shmirat HaBrit (garde de l'alliance). Dans son sens le plus large : honorer tous ses engagements, maintenir l'intégrité entre parole et acte, choisir les connexions avec discernement et les honorer pleinement.",
+        "pratiques": [
+          {
+            "nom": "Tikkoun HaKlali de Rabbi Nachman",
+            "description": "Les dix Psaumes spécifiques que Rabbi Nachman a désignés comme Tikkoun général pour Yesod. À réciter comme unité complète, particulièrement pour les blocages de transmission et d'intégrité. Psaumes : 16, 32, 41, 42, 59, 77, 90, 105, 137, 150.",
+            "source": "Likutey Moharan II, Torah 92 ; Sihot HaRan §141"
+          },
+          {
+            "nom": "Audit des engagements (Heshbon Brit)",
+            "description": "Lister tous les engagements pris et non tenus au cours du dernier mois. Pour chacun : soit le tenir maintenant soit libérer explicitement l'autre partie. Yesod se construit engagement tenu après engagement tenu.",
+            "source": "Tanya, Iggeret HaTshouva ; Pirké Avot 1:15 'Que ta maison soit ouverte en largeur, traite les pauvres comme membres de ta famille et ne bavarde pas avec la femme'"
+          },
+          {
+            "nom": "Psaume central de Tikkoun",
+            "psaume": "16",
+            "verset_cle": "16:8 - 'Je place l'Éternel constamment devant moi'",
+            "kavanah": "La constance (Tamid) est la qualité de Yesod. Réciter en imaginant une ligne droite reliant ton engagement passé à ta parole présente.",
+            "source": "Shimmush Tehillim ; Tikkoun HaKlali, premier Psaume"
+          }
+        ],
+        "acte_concret": "Identifier trois personnes à qui tu as transmis quelque chose d'important (enseignement, ressource, connexion). Les recontacter cette semaine pour vérifier si la transmission a porté ses fruits. C'est activer Yesod par le retour de la Lumière.",
+        "duree_recommandee": "49 jours (Sefirat HaOmer) avec focus Yesod la 6e semaine",
+        "duree_type": "cycle_omer",
+        "duree_valeur_jours": 49,
+        "duree_explication": "49 jours : cycle complet du Sefirat HaOmer. La 6e semaine (jours 36-42) est le focus Yesod ShebeYesod — la fondation dans la fondation. Moment de travail le plus intense sur cette Séfira.",
+        "duree_type_label": "Cycle structuré par la tradition du Sefirat HaOmer. Chaque semaine travaille un aspect différent de la même Séfira selon la grille 7x7."
+      }
+    },
+    "Malkhout": {
+      "essence": "Royaume, manifestation physique, présence, incarnation, réalité concrète, ici et maintenant",
+      "qliphah_associee": {
+        "nom": "Lilith",
+        "traduction": "La Nuit / L'Étrangère",
+        "nature_juive": "Dans son sens kabbalistique précis (pas populaire) : Lilith représente le désir de Malkhout de recevoir pour elle-même seule, sans transmettre vers le bas (il n'y a rien en dessous de Malkhout). C'est le blocage final : tout arrive jusqu'à la manifestation mais rien ne s'incarne réellement.",
+        "note_textuelle": "Lilith dans le Zohar (Parashat Bereshit) est la première femme d'Adam qui refuse la relation et s'enfuit. Métaphore de Malkhout qui refuse sa fonction réceptrice et transmettrice.",
+        "source": "Zohar, Parashat Bereshit I:19b ; Alphabet de Ben Sira ; Etz Haïm, Shaar HaMalkhout"
+      },
+      "symptomes_du_blocage": [
+        "Les projets n'arrivent jamais à leur terme concret",
+        "Fatigue chronique, épuisement avant l'achèvement",
+        "Sentiment de ne pas avoir sa place dans le monde physique",
+        "Éparpillement : beaucoup de début, peu de fin"
+      ],
+      "mecanisme_du_blocage": "Malkhout est la Shekhinah, la présence divine dans le monde. Son exil (Galout HaShekhinah) est le thème central du Zohar. Son blocage personnel signifie que la personne est en exil de sa propre présence au monde. Elle est partout sauf là où elle est.",
+      "tikkoun": {
+        "principe": "Le Tikkoun de Malkhout est l'incarnation radicale. Être pleinement là où on est, finir ce qu'on commence, honorer la réalité physique comme lieu de la présence divine.",
+        "pratiques": [
+          {
+            "nom": "Kavanah d'Atah (Toi, ici, maintenant)",
+            "description": "Pratique issue de la tradition Loubavitch : avant chaque action, même la plus banale, une seconde de conscience : 'Atah' (Toi). La reconnaissance que le Créateur est présent dans cet acte précis. Manger, marcher, travailler : tout devient lieu de la Shekhinah.",
+            "source": "Tanya, Shaar HaYihoud VeHaEmounah, Chapitre 6 ; Hayom Yom"
+          },
+          {
+            "nom": "Achèvement délibéré (Gmar Melakhah)",
+            "description": "Choisir UN projet non terminé parmi tous. Le terminer entièrement avant d'en commencer un nouveau. Rien d'autre. L'achèvement est le Tikkoun de Malkhout.",
+            "source": "Pirké Avot 4:17 ; tradition de 'finir ce qu'on commence' comme service divin"
+          },
+          {
+            "nom": "Psaume de Tikkoun",
+            "psaume": "145",
+            "verset_cle": "145:16 - 'Tu ouvres ta main et rassasies tout être vivant selon son bon plaisir'",
+            "kavanah": "La Shekhinah nourrit toute créature. Réciter en ayant conscience d'être à la fois receveur et canal de cette abondance dans le monde physique.",
+            "source": "Shimmush Tehillim ; Talmud, Berakhot 4b : 'Quiconque récite Ashrei (Ps.145) trois fois par jour est assuré du monde à venir'"
+          }
+        ],
+        "acte_concret": "Pendant 7 jours : chaque soir, identifier UNE chose concrète et tangible achevée dans la journée. Pas planifiée, pas commencée. Achevée. La noter. C'est le journal de Malkhout.",
+        "duree_recommandee": "Cycle continu par séquences de 7 jours"
+      }
+    }
+  },
+  "processus_tikkoun_global": {
+    "principe_de_base": {
+      "description": "Le Tikkoun ne se fait jamais Séfira par Séfira de façon isolée. Chaque correction d'une Séfira affecte tout l'Arbre. Le travail commence toujours par Malkhout (le plus accessible) et remonte.",
+      "source": "Baal HaSoulam, Introduction au Zohar §66-71 ; Etz Haïm, ordre du Tikkoun"
+    },
+    "ordre_du_travail": [
+      "Malkhout : incarnation et achèvement",
+      "Yesod : intégrité et transmission",
+      "Hod : gratitude et communication juste",
+      "Netsah : réhabilitation du désir",
+      "Tiferet : vérité et joie",
+      "Guevourah : limite juste et colère sainte",
+      "Hessed : recevoir et donner librement",
+      "Binah : compréhension profonde",
+      "Hokhma : inspiration incarnée",
+      "Kether : volonté unifiée"
+    ],
+    "duree_globale": {
+      "cycle_minimal": "49 jours (Sefirat HaOmer, structure talmudique de transformation)",
+      "cycle_complet": "Un an (cycle des fêtes juives comme structure de Tikkoun cosmique)",
+      "source": "Talmud, Megillah 16b ; tradition du Omer comme Tikkoun des 49 aspects des Séfirot"
+    },
+    "outils_transversaux": {
+      "Torah": "L'étude de la Torah est en elle-même un Tikkoun car elle est la structure de la Lumière. Source : Baal HaSoulam, Introduction à l'étude des dix Séfirot",
+      "Tefillah": "La prière (Tefillah) est le travail du cœur (Avodah SheBalev). Elle aligne le désir vers le Créateur. Source : Talmud, Taanit 2a",
+      "Tsédaka": "La charité ouvre les canaux de Hessed et active la transmission de Yesod vers Malkhout. Source : Talmud, Bava Batra 10a",
+      "Hitbodédout": "La retraite personnelle et la parole au Créateur est le chemin de Tiferet vers Kether. Source : Likutey Moharan, Torah 52",
+      "Nigoun": "Le chant sans paroles atteint les niveaux que les mots ne peuvent pas atteindre. Source : Tanya, Iggeret HaKodesh 27"
+    }
+  },
+  "note_finale": {
+    "avertissement_epistemologique": "Ce JSON est une synthèse structurée de la tradition juive primaire, non une transmission initiatique. La connaissance des Qliphoth et du Tikkoun dans la tradition authentique se reçoit d'un maître vivant (Rav Muvhak). Les pratiques ici décrites sont des entrées accessibles, non des substituts à une transmission directe.",
+    "sources_complement": [
+      "Gershom Scholem, Les Origines de la Kabbale (académique, rigoureux)",
+      "Moshe Idel, Kabbalah : New Perspectives (académique)",
+      "Adin Steinsaltz, The Thirteen Petalled Rose (accessible, tradition)",
+      "Chaim Miller, Turning Judaism Outward (Baal HaSoulam en contexte)"
+    ]
+  },
+  "structure_du_travail": {
+    "principe_cle": "La durée indiquée pour chaque Séfira désigne la durée de la pratique quotidienne spécifique — pas une période d'exclusivité. On ne 'bloque' pas sur une Séfira pendant 40 jours. On y consacre une pratique ciblée pendant ce cycle, tout en maintenant le travail de fond sur les autres niveaux.",
+    "source": "Baal HaSoulam, Introduction au Zohar §66-71 ; structure du Sefirat HaOmer",
+    "trois_niveaux_simultanees": {
+      "niveau_1_intensif": {
+        "nom": "Pratique principale (intensive)",
+        "description": "Une Séfira prioritaire choisie selon le blocage le plus actif dans ta vie maintenant. Sa pratique spécifique est appliquée quotidiennement pendant la durée indiquée.",
+        "comment_choisir": "Identifier la Séfira dont les symptômes de blocage correspondent le plus précisément à ta situation actuelle. En cas de doute, commencer toujours par Malkhout (le plus bas, le plus accessible)."
+      },
+      "niveau_2_fond_permanent": {
+        "nom": "Fond permanent (les trois piliers)",
+        "description": "Trois pratiques transversales qui nourrissent tout l'Arbre simultanément, sans interruption.",
+        "piliers": [
+          {
+            "nom": "Torah / Étude",
+            "effet": "Nourrit toutes les Séfirot en même temps. La Lumière de la Torah agit sur le Kli indépendamment du niveau de compréhension.",
+            "source": "Baal HaSoulam, Introduction à l'étude des dix Séfirot"
+          },
+          {
+            "nom": "Tefillah / Prière intentionnelle",
+            "effet": "Aligne le désir vers le Créateur. Travail du cœur (Avodah SheBalev) qui maintient la direction de tout le travail.",
+            "source": "Talmud, Taanit 2a"
+          },
+          {
+            "nom": "Tsédaka / Don concret",
+            "effet": "Active Hessed et Yesod simultanément. Ouvre les canaux de réception et de transmission.",
+            "source": "Talmud, Bava Batra 10a"
+          }
+        ]
+      },
+      "niveau_3_observation": {
+        "nom": "Observation en parallèle",
+        "description": "Pendant le travail intensif sur une Séfira, observer simplement les autres sans y intervenir. L'observation seule a un effet. Ce qui remonte concernant les autres Séfirot est une information, pas un appel à changer de focus.",
+        "regle": "Une seule Séfira intensive à la fois. Les autres en observation ou en fond permanent."
+      }
+    },
+    "ordre_recommande": {
+      "principe": "Le travail commence toujours par le bas (Malkhout) et remonte. On ne peut pas travailler Kether si Malkhout n'est pas ancrée.",
+      "source": "Etz Haïm, ordre du Tikkoun ; Baal HaSoulam, Introduction au Zohar",
+      "sequence": [
+        {
+          "sephirah": "Malkuth",
+          "question_diagnostic": "Est-ce que je termine ce que je commence ?"
+        },
+        {
+          "sephirah": "Yesod",
+          "question_diagnostic": "Est-ce que je tiens mes engagements ?"
+        },
+        {
+          "sephirah": "Hod",
+          "question_diagnostic": "Est-ce que je suis reconnaissant et précis dans ma communication ?"
+        },
+        {
+          "sephirah": "Netzach",
+          "question_diagnostic": "Est-ce que j'autorise mes désirs et leur donne une direction juste ?"
+        },
+        {
+          "sephirah": "Tiphareth",
+          "question_diagnostic": "Est-ce que je vis depuis ma vérité intérieure ?"
+        },
+        {
+          "sephirah": "Geburah",
+          "question_diagnostic": "Est-ce que je sais limiter et dire non avec justesse ?"
+        },
+        {
+          "sephirah": "Chesed",
+          "question_diagnostic": "Est-ce que je sais recevoir autant que donner ?"
+        },
+        {
+          "sephirah": "Binah",
+          "question_diagnostic": "Est-ce que je comprends en profondeur ou en surface ?"
+        },
+        {
+          "sephirah": "Hokhma",
+          "question_diagnostic": "Est-ce que j'engage mes inspirations dans des structures concrètes ?"
+        },
+        {
+          "sephirah": "Kether",
+          "question_diagnostic": "Est-ce que ma volonté est unifiée vers un seul but ?"
+        }
+      ]
+    },
+    "bilan_cycle": {
+      "description": "À la fin de chaque cycle de pratique, faire un bilan honnête selon trois questions :",
+      "questions": [
+        "Qu'est-ce qui a bougé concrètement dans ma vie pendant ce cycle ?",
+        "Qu'est-ce qui résiste encore et quel est le pattern de cette résistance ?",
+        "Quelle est la prochaine Séfira prioritaire selon l'ordre recommandé ?"
+      ],
+      "avertissement": "Le bilan n'est pas une évaluation de performance. La Lumière agit selon ses propres lois, pas selon notre calendrier. Les 40 jours créent les conditions de la transformation, ils ne la programment pas. Source : Baal HaSoulam, Préface à la Sagesse de la Kabbale."
+    }
+  }
+}

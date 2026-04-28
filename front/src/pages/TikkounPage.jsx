@@ -2,7 +2,7 @@
 import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import pathsData from '../data/pathsData.json';
-import rawTikkounData from '../../../tikkounData.json';
+import rawTikkounData from '../data/tikkounData.json';
 import '../components/PathDetail.css';
 import './TikkounPage.css';
 

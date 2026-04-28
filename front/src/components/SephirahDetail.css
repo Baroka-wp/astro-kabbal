@@ -103,7 +103,7 @@
 
 .sephirah-detail .section h3 {
   color: #0f172a;
-  font-size: 15px;
+  font-size: 29px;
   margin-bottom: 10px;
   font-weight: 800;
 }
@@ -612,9 +612,9 @@
 }
 
 .kabbalistic-markdown p {
-  font-size: 0.92rem;
+  font-size: 1.45rem;
   color: #1e293b;
-  line-height: 1.55;
+  line-height: 1.7;
   margin-bottom: 8px;
 }
 
@@ -636,9 +636,9 @@
 }
 
 .kabbalistic-markdown li {
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   color: #334155;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .aspect-rich-block {

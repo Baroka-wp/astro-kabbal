@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './SephirahDetail.css';
 import './PathDetail.css';
 import SimpleMarkdown from './SimpleMarkdown';
@@ -42,11 +42,6 @@ const ASPECT_GLYPHS = {
   quincunx: '⚻',
 };
 
-const DIRECTION_BADGE = {
-  descending: 'Aller',
-  ascending: 'Retour',
-};
-
 const pickDirectional = (value, mode) => {
   if (value == null) return '';
   if (typeof value === 'string') return value;
@@ -61,37 +56,6 @@ const stripCitations = (text) => {
   return String(text).replace(/\[citation:[^\]]+\]/g, '').trim();
 };
 
-const SephirahDirectionSwitch = ({ direction, onChange, sephirahName }) => {
-  const fromNode = 'Source';
-  const toNode = sephirahName || 'Sephirah';
-  return (
-    <div className="direction-switch" role="group" aria-label="Lecture aller ou retour sur cette sphère">
-      <button
-        type="button"
-        className={`direction-chip ${direction === 'descending' ? 'active' : ''}`}
-        onClick={() => onChange?.('descending')}
-        aria-pressed={direction === 'descending'}
-      >
-        <span className="direction-chip-label">Aller</span>
-        <span className="direction-chip-route">
-          {fromNode} → {toNode}
-        </span>
-      </button>
-      <button
-        type="button"
-        className={`direction-chip ${direction === 'ascending' ? 'active' : ''}`}
-        onClick={() => onChange?.('ascending')}
-        aria-pressed={direction === 'ascending'}
-      >
-        <span className="direction-chip-label">Retour</span>
-        <span className="direction-chip-route">
-          {toNode} → {fromNode}
-        </span>
-      </button>
-    </div>
-  );
-};
-
 const SephirahDetail = ({
   sephirah,
   selectedDirection = 'descending',
@@ -100,31 +64,34 @@ const SephirahDetail = ({
   astroSephirahData,
   astroPlanetData,
 }) => {
-  const [activeTab, setActiveTab] = useState('overview');
   if (!sephirah) return null;
 
   const qliphothMeaning = sephirah?.qliphoth?.meaning || sephirah?.qliphoth?.meaing;
+  const fromNode = 'Source';
+  const toNode = sephirah.name;
 
-  const showDirectionBar = ['direction', 'message', 'integration', 'qliphoth'].includes(activeTab);
-
-  const meditationText = stripCitations(pickDirectional(sephirah?.meditation, selectedDirection));
-  const messageText = stripCitations(pickDirectional(sephirah?.angel_message, selectedDirection));
-  const integrationText = stripCitations(pickDirectional(sephirah?.integration, selectedDirection));
-  const qliphCorrectiveText = stripCitations(
-    pickDirectional(sephirah?.qliphoth_work?.corrective_meditation, selectedDirection)
-  );
-  const qliphRitualText = stripCitations(
-    pickDirectional(sephirah?.qliphoth_work?.ritual_action, selectedDirection)
-  );
+  const handlePrintCurrentPage = () => {
+    if (typeof window === 'undefined' || typeof document === 'undefined') return;
+    document.body.classList.add('print-path-detail');
+    window.print();
+    window.setTimeout(() => {
+      document.body.classList.remove('print-path-detail');
+    }, 200);
+  };
 
   return (
-    <div className="sephirah-detail">
-      <button className="back-btn" onClick={onBack}>
-        ← Retour
-      </button>
+    <div className="path-detail sephirah-detail">
+      <div className="path-detail-toolbar path-detail-print-hide">
+        <button className="back-btn back-btn-close" onClick={onBack} aria-label="Fermer la fiche">
+          ×
+        </button>
+        <button type="button" className="path-print-btn" onClick={handlePrintCurrentPage}>
+          Telecharger cette fiche (PDF)
+        </button>
+      </div>
 
-      <header className="sephirah-detail-header">
-        <div className="sephirah-main-symbol">
+      <header className="path-detail-header">
+        <div className="path-main-symbol">
           <div className="big-hebrew">{sephirah.hebrew}</div>
           <div>
             <div className="big-name">
@@ -133,208 +100,110 @@ const SephirahDetail = ({
             <div className="big-meaning">{sephirah.meaning}</div>
           </div>
         </div>
-
-        <div className="sephirah-main-info">
-          <div className="info-card">
-            <span className="info-label">Pilier</span>
-            <span className="info-value">{sephirah.pillar}</span>
-          </div>
-          <div className="info-card">
-            <span className="info-label">Position</span>
-            <span className="info-value">Sephirah {sephirah.id} / 10</span>
-          </div>
-          <div className="info-card">
-            <span className="info-label">Ange</span>
-            <span className="info-value">{sephirah?.angel?.name}</span>
-            {sephirah?.angel?.alternate_names?.length > 0 && (
-              <span className="info-sub">{sephirah.angel.alternate_names.join(', ')}</span>
-            )}
-          </div>
-        </div>
+        <p className="path-intro-paragraph">
+          La sephirah <strong>{sephirah.name}</strong> ({sephirah.hebrew}) se situe sur le pilier{' '}
+          <strong>{sephirah.pillar}</strong>, a la position <strong>{sephirah.id} / 10</strong>. Elle est associee
+          a l'ange <strong>{sephirah?.angel?.name}</strong>
+          {sephirah?.angel?.function ? `, ${sephirah.angel.function}` : '.'}
+        </p>
       </header>
 
-      <div className="path-detail-tabs">
-        <button
-          className={`tab-btn ${activeTab === 'overview' ? 'active' : ''}`}
-          onClick={() => setActiveTab('overview')}
-        >
-          Aperçu
-        </button>
-        <button
-          className={`tab-btn ${activeTab === 'direction' ? 'active' : ''}`}
-          onClick={() => setActiveTab('direction')}
-        >
-          Direction
-        </button>
-        <button
-          className={`tab-btn ${activeTab === 'message' ? 'active' : ''}`}
-          onClick={() => setActiveTab('message')}
-        >
-          Message
-        </button>
-        <button
-          className={`tab-btn ${activeTab === 'integration' ? 'active' : ''}`}
-          onClick={() => setActiveTab('integration')}
-        >
-          Intégration
-        </button>
-        <button
-          className={`tab-btn ${activeTab === 'qliphoth' ? 'active' : ''}`}
-          onClick={() => setActiveTab('qliphoth')}
-        >
-          Qliphoth
-        </button>
-        <button
-          className={`tab-btn ${activeTab === 'astro' ? 'active' : ''}`}
-          onClick={() => setActiveTab('astro')}
-        >
-          Astro-Kabbale
-        </button>
-      </div>
-
-      {showDirectionBar && (
-        <SephirahDirectionSwitch
-          direction={selectedDirection}
-          onChange={onDirectionChange}
-          sephirahName={sephirah.name}
-        />
-      )}
-
-      {activeTab === 'overview' && (
-        <>
-          <section className="section">
-            <h3>Titres</h3>
-            <div className="attributes-grid">
-              <div>
-                <strong>Sefer Yetzirah</strong>
-                {sephirah?.titles?.sefer_yetzirah}
-              </div>
-              <div>
-                <strong>Godwin</strong>
-                {sephirah?.titles?.godwin}
-              </div>
-            </div>
-          </section>
-          <section className="section">
-            <h3>Mots-clés</h3>
-            <div className="keywords-list">
-              {(sephirah?.keywords || []).map((keyword) => (
-                <span key={keyword} className="keyword-badge">
-                  {keyword}
-                </span>
-              ))}
-            </div>
-          </section>
-          <section className="section">
-            <h3>Ange tutélaire</h3>
-            <div className="angel-card">
-              <div className="angel-name">{sephirah?.angel?.name}</div>
-              {sephirah?.angel?.alternate_names?.length > 0 && (
-                <div className="angel-alternates">Aussi appelé : {sephirah.angel.alternate_names.join(', ')}</div>
-              )}
-              <div className="angel-function">{sephirah?.angel?.function}</div>
-            </div>
-          </section>
-        </>
-      )}
-
-      {activeTab === 'direction' && (
+      <div className="path-detail-content">
         <section className="section">
-          <h3>Direction de lecture</h3>
-          <div className="direction-card sephirah-direction-card">
-            <div className="direction-label">
-              {selectedDirection === 'descending' ? 'Expérience descendante' : 'Expérience ascendante'}
+          <h2>Apercu de la sephirah</h2>
+          <h3>Titres</h3>
+          <div className="attributes-grid">
+            <div>
+              <strong>Sefer Yetzirah</strong>
+              {sephirah?.titles?.sefer_yetzirah}
             </div>
-            <p>{sephirah?.direction_experience?.[selectedDirection]}</p>
-          </div>
-          <div className="meditation-text-sephirah">
-            <h4>
-              Méditation
-              <span className="direction-badge">{DIRECTION_BADGE[selectedDirection]}</span>
-            </h4>
-            <div className="meditation-frame">
-              <p>{meditationText || 'Méditation non renseignée pour cette direction.'}</p>
+            <div>
+              <strong>Godwin</strong>
+              {sephirah?.titles?.godwin}
             </div>
           </div>
+          <h3>Mots-cles</h3>
+          <div className="keywords-list">
+            {(sephirah?.keywords || []).map((keyword) => (
+              <span key={keyword} className="keyword-badge">
+                {keyword}
+              </span>
+            ))}
+          </div>
+          <h3>Ange tutelaire</h3>
+          <p>
+            <strong>{sephirah?.angel?.name}</strong>
+            {sephirah?.angel?.alternate_names?.length > 0
+              ? ` (aussi appele ${sephirah.angel.alternate_names.join(', ')})`
+              : ''}
+            . {sephirah?.angel?.function}
+          </p>
         </section>
-      )}
 
-      {activeTab === 'message' && (
-        <section className="section sephirah-tab-panel">
-          <h3>
-            Message angélique
-            <span className="direction-badge">{DIRECTION_BADGE[selectedDirection]}</span>
-          </h3>
-          <div className="message-quote">
-            <span className="quote-mark">“</span>
-            {messageText || 'Message non renseigné pour cette direction.'}
-            <span className="quote-mark">”</span>
-            <div className="angel-signature">— {sephirah?.angel?.name}</div>
-          </div>
-        </section>
-      )}
-
-      {activeTab === 'integration' && (
-        <section className="section sephirah-tab-panel">
-          <h3>
-            Intégration quotidienne
-            <span className="direction-badge">{DIRECTION_BADGE[selectedDirection]}</span>
-          </h3>
-          <div className="integration-card">
-            <p>{integrationText || 'Intégration non renseignée pour cette direction.'}</p>
-          </div>
-        </section>
-      )}
-
-      {activeTab === 'qliphoth' && (
-        <section className="section sephirah-tab-panel">
-          <h3>Travail d&apos;ombre (Qliphoth)</h3>
-          <div className="warning qliphoth-card">
-            <p>
-              <strong>Démon : </strong>
-              {sephirah?.qliphoth?.demon}
-            </p>
-            <p>
-              <strong>Signification : </strong>
-              {qliphothMeaning}
-            </p>
-            <p>
-              <strong>Fonction : </strong>
-              {sephirah?.qliphoth?.function}
-            </p>
-            <p>
-              <strong>Ombre : </strong>
-              {stripCitations(sephirah?.qliphoth?.shadow || '')}
-            </p>
-          </div>
-          <div className="corrective-card">
-            <h4>
-              <span className="direction-label">Méditation corrective</span>
-              <span className="direction-badge direction-badge-qliph">{DIRECTION_BADGE[selectedDirection]}</span>
-            </h4>
-            <p>{qliphCorrectiveText || '—'}</p>
-          </div>
-          <div className="ritual-card">
-            <h4>
-              <span className="direction-label">Action rituelle</span>
-              <span className="direction-badge direction-badge-qliph">{DIRECTION_BADGE[selectedDirection]}</span>
-            </h4>
-            <p>{qliphRitualText || '—'}</p>
-          </div>
-        </section>
-      )}
-
-      {activeTab === 'astro' && (
         <section className="section">
-          <h3>Lecture Astro-Kabbale</h3>
+          <h2>I - Aller, de {fromNode} vers {toNode}</h2>
+          <p className="direction-reading-subtitle">Expérience descendante</p>
+          <h3>Direction</h3>
+          <p>{stripCitations(sephirah?.direction_experience?.descending || '') || 'Direction non renseignee.'}</p>
+          <h3>Meditation aller</h3>
+          <p>{stripCitations(pickDirectional(sephirah?.meditation, 'descending')) || 'Meditation non renseignee.'}</p>
+          <h3>Message aller</h3>
+          <p>{stripCitations(pickDirectional(sephirah?.angel_message, 'descending')) || 'Message non renseigne.'}</p>
+          <h3>Integration aller</h3>
+          <p>{stripCitations(pickDirectional(sephirah?.integration, 'descending')) || 'Integration non renseignee.'}</p>
+          <h3>Mediation corrective aller</h3>
+          <p>
+            {stripCitations(pickDirectional(sephirah?.qliphoth_work?.corrective_meditation, 'descending')) || '—'}
+          </p>
+          <h3>Action rituelle aller</h3>
+          <p>{stripCitations(pickDirectional(sephirah?.qliphoth_work?.ritual_action, 'descending')) || '—'}</p>
+        </section>
+
+        <section className="section">
+          <h2>II - Retour, de {toNode} vers {fromNode}</h2>
+          <p className="direction-reading-subtitle">Expérience ascendante</p>
+          <h3>Direction</h3>
+          <p>{stripCitations(sephirah?.direction_experience?.ascending || '') || 'Direction non renseignee.'}</p>
+          <h3>Meditation retour</h3>
+          <p>{stripCitations(pickDirectional(sephirah?.meditation, 'ascending')) || 'Meditation non renseignee.'}</p>
+          <h3>Message retour</h3>
+          <p>{stripCitations(pickDirectional(sephirah?.angel_message, 'ascending')) || 'Message non renseigne.'}</p>
+          <h3>Integration retour</h3>
+          <p>{stripCitations(pickDirectional(sephirah?.integration, 'ascending')) || 'Integration non renseignee.'}</p>
+          <h3>Mediation corrective retour</h3>
+          <p>
+            {stripCitations(pickDirectional(sephirah?.qliphoth_work?.corrective_meditation, 'ascending')) || '—'}
+          </p>
+          <h3>Action rituelle retour</h3>
+          <p>{stripCitations(pickDirectional(sephirah?.qliphoth_work?.ritual_action, 'ascending')) || '—'}</p>
+        </section>
+
+        <section className="section">
+          <h2>Qliphoth</h2>
+          <p>
+            <strong>Demon :</strong> {sephirah?.qliphoth?.demon}
+          </p>
+          <p>
+            <strong>Signification :</strong> {qliphothMeaning}
+          </p>
+          <p>
+            <strong>Fonction :</strong> {sephirah?.qliphoth?.function}
+          </p>
+          <p>
+            <strong>Ombre :</strong> {stripCitations(sephirah?.qliphoth?.shadow || '')}
+          </p>
+        </section>
+
+        <section className="section">
+          <h2>Astro-Kabbale</h2>
           {(() => {
             const richSephirah = getRichSephirahData(sephirah.name);
             if (!richSephirah?.signification) return null;
             return (
-              <div className="kabbalistic-signification">
-                <span className="kabbalistic-tag">Signification kabbalistique</span>
+              <>
+                <h3>Signification kabbalistique</h3>
                 <SimpleMarkdown source={richSephirah.signification} className="kabbalistic-markdown" />
-              </div>
+              </>
             );
           })()}
           {astroSephirahData ? (
@@ -348,154 +217,90 @@ const SephirahDetail = ({
                 if (!blockedMeaning || !isBlocked) return null;
                 const angelBlocage = getSephirahAngelBlocage(sephirah.name);
                 return (
-                  <div className="kabbalistic-blocked-card">
-                    <span className="kabbalistic-tag">Symptome actuel ({sephirah.name} bloquee)</span>
+                  <>
+                    <h3>Symptome actuel ({sephirah.name} bloquee)</h3>
                     <p>{blockedMeaning}</p>
-                    {angelBlocage && (
-                      <p className="kabbalistic-angel-blocage">
-                        <span className="kabbalistic-tag kabbalistic-tag-inline">Lecture 72 anges (sphère)</span>
-                        {angelBlocage}
-                      </p>
-                    )}
-                  </div>
+                    {angelBlocage && <p>Lecture 72 anges (sphere): {angelBlocage}</p>}
+                  </>
                 );
               })()}
-              <div className="astro-sephirah-summary">
-                <div className="astro-sephirah-cell">
-                  <span className="astro-cell-label">Planète principale</span>
-                  <span className="astro-cell-value">
-                    {astroSephirahData.planet_symbol || '·'} {astroSephirahData.primary_planet}
-                  </span>
-                </div>
-                {astroSephirahData.secondary_planet && (
-                  <div className="astro-sephirah-cell">
-                    <span className="astro-cell-label">Attribution secondaire</span>
-                    <span className="astro-cell-value">{astroSephirahData.secondary_planet}</span>
-                  </div>
-                )}
-                <div className={`astro-sephirah-cell level-${astroSephirahData.level}`}>
-                  <span className="astro-cell-label">Score de blocage</span>
-                  <span className="astro-cell-value">
-                    {astroSephirahData.score} / 100 — {astroSephirahData.level}
-                  </span>
-                </div>
-              </div>
+              <h3>Synthese planetaire</h3>
+              <p>
+                Planete principale: {astroSephirahData.planet_symbol || '·'} {astroSephirahData.primary_planet}
+                {astroSephirahData.secondary_planet
+                  ? ` · Attribution secondaire: ${astroSephirahData.secondary_planet}`
+                  : ''}
+                {` · Score de blocage: ${astroSephirahData.score} / 100 (${astroSephirahData.level})`}
+              </p>
 
               {astroPlanetData ? (
-                <div className="planet-state-card">
-                  <h4>État de la planète {astroPlanetData.name}</h4>
-                  <div className="planet-state-grid">
-                    <div>
-                      <span className="astro-cell-label">Signe</span>
-                      <span className="astro-cell-value">
-                        {SIGN_LABELS[astroPlanetData.sign] || astroPlanetData.sign || '—'}
-                      </span>
-                    </div>
-                    <div>
-                      <span className="astro-cell-label">Maison</span>
-                      <span className="astro-cell-value">{astroPlanetData.house || '—'}</span>
-                    </div>
-                    <div>
-                      <span className="astro-cell-label">Dignité</span>
-                      <span className="astro-cell-value">
-                        {DIGNITY_LABELS[astroPlanetData.dignity_status] ||
-                          astroPlanetData.dignity_status ||
-                          'Neutre'}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="planet-factor-list">
-                    <div className={`planet-factor ${astroPlanetData?.factors?.aspect_hard?.active ? 'active' : ''}`}>
-                      <span className="planet-factor-label">A · Aspects difficiles</span>
-                      <span className="planet-factor-detail">{astroPlanetData?.factors?.aspect_hard?.detail}</span>
-                    </div>
-                    <div className={`planet-factor ${astroPlanetData?.factors?.weak_dignity?.active ? 'active' : ''}`}>
-                      <span className="planet-factor-label">B · Dignité faible</span>
-                      <span className="planet-factor-detail">{astroPlanetData?.factors?.weak_dignity?.detail}</span>
-                    </div>
-                    <div className={`planet-factor ${astroPlanetData?.factors?.difficult_house?.active ? 'active' : ''}`}>
-                      <span className="planet-factor-label">C · Maison difficile</span>
-                      <span className="planet-factor-detail">{astroPlanetData?.factors?.difficult_house?.detail}</span>
-                    </div>
-                  </div>
+                <>
+                  <h3>Etat de la planete {astroPlanetData.name}</h3>
+                  <p>
+                    Signe: {SIGN_LABELS[astroPlanetData.sign] || astroPlanetData.sign || '—'} · Maison:{' '}
+                    {astroPlanetData.house || '—'} · Dignite:{' '}
+                    {DIGNITY_LABELS[astroPlanetData.dignity_status] || astroPlanetData.dignity_status || 'Neutre'}
+                  </p>
+                  <p>A · Aspects difficiles: {astroPlanetData?.factors?.aspect_hard?.detail}</p>
+                  <p>B · Dignite faible: {astroPlanetData?.factors?.weak_dignity?.detail}</p>
+                  <p>C · Maison difficile: {astroPlanetData?.factors?.difficult_house?.detail}</p>
 
                   {(astroPlanetData?.hard_aspect_links || []).length > 0 && (
-                    <div className="planet-aspects-list">
-                      <h5>Aspects difficiles actifs</h5>
-                      <ul>
-                        {astroPlanetData.hard_aspect_links.map((link, idx) => {
-                          const rich = getRichAspectInterpretation({
-                            sephirahName: sephirah.name,
-                            aspect: link.aspect,
-                            otherPlanet: link.target_planet,
-                          });
-                          const fallback = getAspectInterpretation({
-                            sephirahName: sephirah.name,
-                            aspect: link.aspect,
-                            otherPlanet: link.target_planet,
-                          });
-                          const planetMeaning = getPlanetMeaning(link.target_planet);
-                          const angelEntry = getAngelRemedeEntry({
-                            sephirahName: sephirah.name,
-                            aspect: link.aspect,
-                            otherPlanet: link.target_planet,
-                          });
-                          return (
-                            <li key={`${link.aspect}-${link.target_planet}-${idx}`} className="aspect-row">
-                              <div className="aspect-row-head">
-                                <span className={`aspect-pill aspect-${link.aspect}`}>
-                                  {ASPECT_GLYPHS[link.aspect] || '·'} {getAspectPretty(link.aspect)}
-                                </span>
-                                avec <strong>{link.target_planet}</strong>
-                                {planetMeaning && <em className="planet-keyword"> · {planetMeaning}</em>}
-                              </div>
-                              {rich ? (
-                                <div className="aspect-rich-block">
-                                  <div className="aspect-rich-titre">{rich.titre}</div>
-                                  <div className="aspect-rich-row">
-                                    <span className="aspect-rich-label">Probleme</span>
-                                    <SimpleMarkdown source={rich.probleme} />
-                                  </div>
-                                  <div className="aspect-rich-row">
-                                    <span className="aspect-rich-label">Resultat</span>
-                                    <SimpleMarkdown source={rich.resultat_kabalistique} />
-                                  </div>
-                                  <div className="aspect-rich-row">
-                                    <span className="aspect-rich-label">Symptomes</span>
-                                    <SimpleMarkdown source={rich.symptomes} />
-                                  </div>
-                                  <div className="aspect-rich-row aspect-rich-pathology">
-                                    <span className="aspect-rich-label">Pathologie</span>
-                                    <SimpleMarkdown source={rich.pathologie} />
-                                  </div>
-                                </div>
-                              ) : (
-                                <div className={`aspect-interpretation ${fallback.source}`}>
-                                  {fallback.text}
-                                </div>
-                              )}
-                              <AngelRemedeBlock entry={angelEntry} />
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </div>
+                    <>
+                      <h3>Aspects difficiles actifs</h3>
+                      {(astroPlanetData.hard_aspect_links || []).map((link, idx) => {
+                        const rich = getRichAspectInterpretation({
+                          sephirahName: sephirah.name,
+                          aspect: link.aspect,
+                          otherPlanet: link.target_planet,
+                        });
+                        const fallback = getAspectInterpretation({
+                          sephirahName: sephirah.name,
+                          aspect: link.aspect,
+                          otherPlanet: link.target_planet,
+                        });
+                        const planetMeaning = getPlanetMeaning(link.target_planet);
+                        const angelEntry = getAngelRemedeEntry({
+                          sephirahName: sephirah.name,
+                          aspect: link.aspect,
+                          otherPlanet: link.target_planet,
+                        });
+                        return (
+                          <div key={`${link.aspect}-${link.target_planet}-${idx}`}>
+                            <p>
+                              {ASPECT_GLYPHS[link.aspect] || '·'} {getAspectPretty(link.aspect)} avec{' '}
+                              <strong>{link.target_planet}</strong>
+                              {planetMeaning ? ` · ${planetMeaning}` : ''}
+                            </p>
+                            {rich ? (
+                              <>
+                                <p>
+                                  <strong>{rich.titre}</strong>
+                                </p>
+                                <SimpleMarkdown source={rich.probleme} />
+                                <SimpleMarkdown source={rich.resultat_kabalistique} />
+                                <SimpleMarkdown source={rich.symptomes} />
+                                <SimpleMarkdown source={rich.pathologie} />
+                              </>
+                            ) : (
+                              <p>{fallback.text}</p>
+                            )}
+                            <AngelRemedeBlock entry={angelEntry} />
+                          </div>
+                        );
+                      })}
+                    </>
                   )}
-                </div>
+                </>
               ) : (
-                <div className="integration-card">
-                  <p>Aucune donnée natale détaillée pour cette planète.</p>
-                </div>
+                <p>Aucune donnee natale detaillee pour cette planete.</p>
               )}
             </>
           ) : (
-            <div className="integration-card">
-              <p>Generez d'abord votre carte natale pour afficher les correspondances astro.</p>
-            </div>
+            <p>Generez d'abord votre carte natale pour afficher les correspondances astro.</p>
           )}
         </section>
-      )}
+      </div>
     </div>
   );
 };

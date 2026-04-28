@@ -131,9 +131,14 @@ function LandingPage() {
 
       <header className="landing-nav">
         <span className="brand">22 Sentiers</span>
-        <Link to="/explorer" className="nav-link">
-          Entrer dans l'Arbre →
-        </Link>
+        <div className="landing-nav-links">
+          <Link to="/explorer" className="nav-link">
+            Astro-Kabbale →
+          </Link>
+          <Link to="/tikkoun" className="nav-link nav-link-secondary">
+            Tikkoun juif →
+          </Link>
+        </div>
       </header>
 
       <section className="landing-hero">
@@ -153,6 +158,9 @@ function LandingPage() {
             <Link to="/explorer" className="cta-primary">
               Explorer l'Arbre
               <span className="cta-arrow">→</span>
+            </Link>
+            <Link to="/tikkoun" className="cta-secondary">
+              Ouvrir le module Tikkoun
             </Link>
             <a href="#how" className="cta-secondary">
               Comment ça marche
@@ -213,6 +221,9 @@ function LandingPage() {
           <Link to="/explorer" className="cta-primary cta-primary-large">
             Commencer ma lecture astro-kabbalistique
             <span className="cta-arrow">→</span>
+          </Link>
+          <Link to="/tikkoun" className="cta-secondary">
+            Explorer le Tikkoun (tradition juive)
           </Link>
         </div>
       </section>

@@ -306,46 +306,26 @@ body {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(15, 23, 42, 0.45);
-  display: grid;
-  place-items: end center;
+  background: rgba(15, 23, 42, 0.52);
+  display: block;
   z-index: 50;
-  padding: max(16px, env(safe-area-inset-top)) max(0px, env(safe-area-inset-right))
-    max(0px, env(safe-area-inset-bottom)) max(0px, env(safe-area-inset-left));
-}
-
-@media (min-width: 640px) {
-  .modal-overlay {
-    place-items: center;
-    padding: 24px;
-    padding: max(24px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right))
-      max(24px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left));
-  }
+  padding: 0;
 }
 
 .modal-content {
-  width: 100%;
-  max-width: 880px;
-  max-height: min(92dvh, 92vh);
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
   background: #ffffff;
-  border-radius: 20px 20px 0 0;
-  border: 1px solid #dbe4ef;
-  border-bottom: none;
-  box-shadow: 0 28px 80px rgba(15, 23, 42, 0.35);
-  padding: 18px;
-  padding-bottom: max(18px, env(safe-area-inset-bottom));
-}
-
-@media (min-width: 640px) {
-  .modal-content {
-    width: min(880px, 100%);
-    border-radius: 20px;
-    border-bottom: 1px solid #dbe4ef;
-    max-height: min(calc(100dvh - 48px), calc(100vh - 48px));
-  }
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: max(20px, env(safe-area-inset-top)) max(18px, env(safe-area-inset-right))
+    max(24px, env(safe-area-inset-bottom)) max(18px, env(safe-area-inset-left));
 }
 
 ::-webkit-scrollbar {
@@ -393,5 +373,102 @@ body {
 
   .app-header h1 {
     line-height: 1.1;
+  }
+}
+
+@media print {
+  body.print-path-detail .app-header,
+  body.print-path-detail .app-content {
+    display: none !important;
+  }
+
+  body.print-path-detail .modal-overlay {
+    position: static !important;
+    background: transparent !important;
+    inset: auto !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+
+  body.print-path-detail .modal-content {
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+  }
+
+  body.print-path-detail .path-detail-print-hide {
+    display: none !important;
+  }
+
+  body.print-path-detail .path-detail {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 13pt !important;
+    color: #111827 !important;
+  }
+
+  body.print-path-detail .path-detail-header,
+  body.print-path-detail .path-detail-content {
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  body.print-path-detail .path-detail .section {
+    break-inside: auto;
+    page-break-inside: auto;
+    border-bottom: 1px solid #d1d5db !important;
+    padding-bottom: 12pt !important;
+    margin-bottom: 10pt !important;
+  }
+
+  body.print-path-detail .path-detail .section h2 {
+    font-size: 22pt !important;
+    margin: 0 0 8pt !important;
+    line-height: 1.2 !important;
+  }
+
+  body.print-path-detail .path-detail .section h3 {
+    font-size: 16pt !important;
+    margin: 10pt 0 4pt !important;
+    line-height: 1.25 !important;
+  }
+
+  body.print-path-detail .path-detail .section p,
+  body.print-path-detail .path-intro-paragraph {
+    font-size: 12.5pt !important;
+    line-height: 1.55 !important;
+    margin-bottom: 8pt !important;
+    text-align: justify !important;
+  }
+
+  body.print-path-detail .path-detail .big-hebrew {
+    width: 72pt !important;
+    height: 72pt !important;
+    font-size: 54pt !important;
+  }
+
+  body.print-path-detail .path-detail .big-name {
+    font-size: 34pt !important;
+  }
+
+  body.print-path-detail .path-detail .big-meaning {
+    font-size: 15pt !important;
+  }
+
+  body.print-path-detail .path-detail .direction-reading-subtitle,
+  body.print-path-detail .path-detail .direction-kind-badge,
+  body.print-path-detail .path-detail .keyword-badge,
+  body.print-path-detail .path-detail .direction-badge {
+    font-size: 10pt !important;
   }
 }

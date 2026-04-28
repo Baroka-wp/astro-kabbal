@@ -7,6 +7,7 @@ body.landing-body {
 .landing {
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
   background:
     radial-gradient(ellipse at 20% 10%, rgba(124, 58, 237, 0.18) 0%, transparent 55%),
     radial-gradient(ellipse at 85% 25%, rgba(245, 158, 11, 0.12) 0%, transparent 50%),
@@ -45,9 +46,13 @@ body.landing-body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 28px 32px;
+  padding: max(24px, env(safe-area-inset-top)) max(32px, env(safe-area-inset-right))
+    max(16px, env(safe-area-inset-bottom)) max(32px, env(safe-area-inset-left));
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .brand {
@@ -65,7 +70,11 @@ body.landing-body {
   font-family: 'Cormorant Garamond', serif;
   font-size: 17px;
   letter-spacing: 0.05em;
+  min-height: 44px;
   padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(251, 191, 36, 0.35);
   border-radius: 999px;
   transition: all 0.25s ease;
@@ -514,7 +523,7 @@ body.landing-body {
 
 @media (max-width: 560px) {
   .landing-nav {
-    padding: 20px 18px;
+    padding: max(20px, env(safe-area-inset-top)) 18px max(12px, env(safe-area-inset-bottom)) 18px;
   }
 
   .brand {

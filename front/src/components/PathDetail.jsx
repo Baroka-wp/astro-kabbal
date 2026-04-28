@@ -10,11 +10,6 @@ const pickDirectional = (value, mode) => {
   return String(value);
 };
 
-const DIRECTION_LABELS = {
-  descending: 'Aller (descendant)',
-  ascending: 'Retour (ascendant)',
-};
-
 const DIRECTION_BADGE = {
   descending: 'Aller',
   ascending: 'Retour',
@@ -29,7 +24,7 @@ const DirectionSwitch = ({ direction, onChange, fromNode, toNode }) => (
     >
       <span className="direction-chip-label">Aller</span>
       <span className="direction-chip-route">
-        {fromNode} → {toNode}
+        de {fromNode} vers {toNode}
       </span>
     </button>
     <button
@@ -39,7 +34,7 @@ const DirectionSwitch = ({ direction, onChange, fromNode, toNode }) => (
     >
       <span className="direction-chip-label">Retour</span>
       <span className="direction-chip-route">
-        {toNode} → {fromNode}
+        de {toNode} vers {fromNode}
       </span>
     </button>
   </div>
@@ -113,14 +108,12 @@ const PathDetail = ({ path, selectedDirection = 'descending', onDirectionChange,
       </div>
 
       <div className="path-detail-content">
-        {activeTab !== 'overview' && (
-          <DirectionSwitch
-            direction={directionMode}
-            onChange={onDirectionChange}
-            fromNode={fromNode}
-            toNode={toNode}
-          />
-        )}
+        <DirectionSwitch
+          direction={directionMode}
+          onChange={onDirectionChange}
+          fromNode={fromNode}
+          toNode={toNode}
+        />
 
         {activeTab === 'overview' && (
           <div className="tab-overview">
@@ -158,40 +151,6 @@ const PathDetail = ({ path, selectedDirection = 'descending', onDirectionChange,
 
             <div className="section">
               <h3>Chemin aller / retour</h3>
-              <div className="direction-arrows" aria-label="Schema du trajet aller-retour">
-                <div
-                  className={`direction-arrow-row ${directionMode === 'descending' ? 'active' : ''}`}
-                >
-                  <span className="direction-arrow-label">Aller</span>
-                  <span className="direction-arrow-line">{fromNode}</span>
-                  <span className="direction-arrow-icon">→</span>
-                  <span className="direction-arrow-line">{toNode}</span>
-                </div>
-                <div
-                  className={`direction-arrow-row ${directionMode === 'ascending' ? 'active' : ''}`}
-                >
-                  <span className="direction-arrow-label">Retour</span>
-                  <span className="direction-arrow-line">{toNode}</span>
-                  <span className="direction-arrow-icon">→</span>
-                  <span className="direction-arrow-line">{fromNode}</span>
-                </div>
-              </div>
-
-              <div className="direction-toggle">
-                <button
-                  className={`direction-btn ${directionMode === 'descending' ? 'active' : ''}`}
-                  onClick={() => onDirectionChange('descending')}
-                >
-                  {DIRECTION_LABELS.descending}
-                </button>
-                <button
-                  className={`direction-btn ${directionMode === 'ascending' ? 'active' : ''}`}
-                  onClick={() => onDirectionChange('ascending')}
-                >
-                  {DIRECTION_LABELS.ascending}
-                </button>
-              </div>
-
               <div className="direction-card">
                 <div className="direction-label">
                   {directionMode === 'descending'

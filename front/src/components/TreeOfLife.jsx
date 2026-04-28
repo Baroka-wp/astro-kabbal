@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import './TreeOfLife.css';
 
 const SPHERE_RADIUS = 28;
-const PARALLEL_OFFSET = 11;
 
 const TreeOfLife = ({
   paths,
   selectedPathId,
-  selectedDirection,
   onSelectPath,
   selectedSephirahId,
   onSelectSephirah,
@@ -18,6 +16,25 @@ const TreeOfLife = ({
 }) => {
   const [hoveredEdge, setHoveredEdge] = useState(null);
   const [hoveredSephirah, setHoveredSephirah] = useState(null);
+  const [pathsMenuOpen, setPathsMenuOpen] = useState(false);
+
+  const sortedPaths = useMemo(() => {
+    return [...(paths || [])].filter(Boolean).sort((a, b) => (a.id || 0) - (b.id || 0));
+  }, [paths]);
+
+  useEffect(() => {
+    if (!pathsMenuOpen) return undefined;
+    const onKey = (e) => {
+      if (e.key === 'Escape') setPathsMenuOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [pathsMenuOpen]);
 
   const sephirothPositions = {
     1: { x: 220, y: 34, name: 'Keter' },
@@ -51,13 +68,12 @@ const TreeOfLife = ({
     };
   };
 
-  const getEdgeClass = (pathId, direction) => {
-    const isSelected = selectedPathId === pathId && selectedDirection === direction;
-    const isPathSelected = selectedPathId === pathId;
-    const isHovered = hoveredEdge?.pathId === pathId && hoveredEdge?.direction === direction;
+  const getEdgeClass = (pathId) => {
+    const isSelected = selectedPathId === pathId;
+    const isHovered = hoveredEdge?.pathId === pathId;
     return [
       isSelected ? 'selected-edge' : '',
-      isPathSelected ? 'selected-path' : '',
+      isSelected ? 'selected-path' : '',
       isHovered ? 'hovered-edge' : '',
     ]
       .filter(Boolean)
@@ -140,6 +156,38 @@ const TreeOfLife = ({
     return flows;
   })();
 
+  const pathByPair = useMemo(() => {
+    const map = new Map();
+    (paths || []).forEach((path) => {
+      const fromId = path?.connections?.from_number;
+      const toId = path?.connections?.to_number;
+      if (!fromId || !toId) return;
+      const pairKey = [fromId, toId].sort((a, b) => a - b).join('-');
+      map.set(pairKey, path);
+    });
+    return map;
+  }, [paths]);
+
+  const ASPECT_PRIORITY = {
+    square: 3,
+    opposition: 2,
+    quincunx: 1,
+  };
+
+  const pathAspectById = useMemo(() => {
+    const map = new Map();
+    hardAspectFlows.forEach((flow) => {
+      const pairKey = [flow.fromId, flow.toId].sort((a, b) => a - b).join('-');
+      const matchedPath = pathByPair.get(pairKey);
+      if (!matchedPath?.id) return;
+      const current = map.get(matchedPath.id);
+      if (!current || (ASPECT_PRIORITY[flow.aspect] || 0) > (ASPECT_PRIORITY[current.aspect] || 0)) {
+        map.set(matchedPath.id, flow);
+      }
+    });
+    return map;
+  }, [hardAspectFlows, pathByPair]);
+
   const buildFlowGeometry = (flow) => {
     const from = sephirothPositions[flow.fromId];
     const to = sephirothPositions[flow.toId];
@@ -166,91 +214,138 @@ const TreeOfLife = ({
     };
   };
 
+  const handlePickPathFromMenu = (pathId) => {
+    onSelectPath(pathId);
+    setPathsMenuOpen(false);
+  };
+
   return (
     <div className="tree-of-life-container">
       <div className="tree-copy">
-        <h3>Arbre de Vie</h3>
-        <p>Cliquez directement sur un sentier. Chaque connexion montre l'aller et le retour.</p>
+        <div className="tree-copy-head">
+          <h3>Arbre de Vie</h3>
+          <button
+            type="button"
+            className="tree-paths-menu-trigger"
+            aria-expanded={pathsMenuOpen}
+            aria-controls="tree-paths-menu-panel"
+            onClick={() => setPathsMenuOpen((open) => !open)}
+            title="Ouvrir la liste des 22 sentiers (pratique sur mobile)"
+          >
+            <span className="tree-paths-menu-icon" aria-hidden>
+              <span />
+              <span />
+              <span />
+            </span>
+            <span className="tree-paths-menu-label">Sentiers</span>
+          </button>
+        </div>
+        <p>
+          Cliquez sur un sentier ou utilisez le bouton Sentiers pour choisir parmi les 22 chemins. Le sens
+          aller/retour se choisit ensuite dans la fiche detail.
+        </p>
       </div>
 
-      <svg viewBox="0 0 440 750" className="tree-svg" role="img" aria-label="Arbre de Vie interactif">
-        <defs>
-          <marker id="arrow-desc" markerWidth="9" markerHeight="9" refX="9" refY="4.5" orient="auto" markerUnits="userSpaceOnUse">
-            <path d="M0,0 L9,4.5 L0,9 Z" fill="#2563eb" />
-          </marker>
-          <marker id="arrow-asc" markerWidth="9" markerHeight="9" refX="9" refY="4.5" orient="auto" markerUnits="userSpaceOnUse">
-            <path d="M0,0 L9,4.5 L0,9 Z" fill="#0f766e" />
-          </marker>
-          <marker id="arrow-desc-selected" markerWidth="9" markerHeight="9" refX="9" refY="4.5" orient="auto" markerUnits="userSpaceOnUse">
-            <path d="M0,0 L9,4.5 L0,9 Z" fill="#f59e0b" />
-          </marker>
-          <marker id="arrow-asc-selected" markerWidth="9" markerHeight="9" refX="9" refY="4.5" orient="auto" markerUnits="userSpaceOnUse">
-            <path d="M0,0 L9,4.5 L0,9 Z" fill="#dc2626" />
-          </marker>
-        </defs>
+      {pathsMenuOpen && (
+        <>
+          <button
+            type="button"
+            className="tree-paths-menu-backdrop"
+            aria-label="Fermer le menu des sentiers"
+            onClick={() => setPathsMenuOpen(false)}
+          />
+          <div
+            id="tree-paths-menu-panel"
+            className="tree-paths-menu-panel"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="tree-paths-menu-title"
+          >
+            <div className="tree-paths-menu-panel-inner">
+              <div className="tree-paths-menu-header">
+                <h4 id="tree-paths-menu-title">Les 22 sentiers</h4>
+                <button
+                  type="button"
+                  className="tree-paths-menu-close"
+                  onClick={() => setPathsMenuOpen(false)}
+                  aria-label="Fermer"
+                >
+                  ×
+                </button>
+              </div>
+              <p className="tree-paths-menu-hint">
+                Choisissez un chemin. Le sens aller/retour se regle dans la fiche detail.
+              </p>
+              <ul className="tree-paths-menu-list">
+                {sortedPaths.map((path) => {
+                  const from = path?.connections?.from || '';
+                  const to = path?.connections?.to || '';
+                  const letter = path?.letter?.transliteration || '—';
+                  const hebrew = path?.letter?.hebrew || '';
+                  return (
+                    <li key={path.id}>
+                      <div
+                        className="tree-paths-menu-row"
+                        role="button"
+                        tabIndex={0}
+                        onClick={() => handlePickPathFromMenu(path.id)}
+                        onKeyDown={(event) => {
+                          if (event.key === 'Enter' || event.key === ' ') {
+                            event.preventDefault();
+                            handlePickPathFromMenu(path.id);
+                          }
+                        }}
+                      >
+                        <span className="tree-paths-menu-letter-big">{hebrew || letter}</span>
+                        <div className="tree-paths-menu-row-main">
+                          <span className="tree-paths-menu-route">
+                            {from} → {to}
+                          </span>
+                          <span className="tree-paths-menu-letter-name">{letter}</span>
+                        </div>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
+        </>
+      )}
 
+      <svg viewBox="0 0 440 750" className="tree-svg" role="img" aria-label="Arbre de Vie interactif">
         {paths.map((path) => {
           const from = sephirothPositions[path?.connections?.from_number];
           const to = sephirothPositions[path?.connections?.to_number];
           if (!from || !to) return null;
 
-          const isVertical = from.x === to.x;
-          const forwardXShift = isVertical ? 10 : 0;
-          const forward = getEdgeLine(from, to, PARALLEL_OFFSET, false, -5, forwardXShift);
-          const backward = getEdgeLine(from, to, -PARALLEL_OFFSET, true, 5);
-          const forwardClass = getEdgeClass(path.id, 'descending');
-          const backwardClass = getEdgeClass(path.id, 'ascending');
-          const isForwardSelected = selectedPathId === path.id && selectedDirection === 'descending';
-          const isBackwardSelected = selectedPathId === path.id && selectedDirection === 'ascending';
-          const showTag = selectedPathId === path.id || hoveredEdge?.pathId === path.id;
+          const edge = getEdgeLine(from, to, 0, false);
+          const edgeClass = getEdgeClass(path.id);
+          const matchedAspectFlow = pathAspectById.get(path.id);
+          const aspectClass = matchedAspectFlow ? `path-edge-aspect-${matchedAspectFlow.aspect}` : '';
+          const pathGroupClass = matchedAspectFlow ? 'tree-path-group has-aspect' : 'tree-path-group';
 
           return (
-            <g key={path.id} className="tree-path-group">
+            <g key={path.id} className={pathGroupClass}>
               <line
-                {...forward}
+                {...edge}
                 className="path-hitbox"
-                onClick={() => onSelectPath(path.id, 'descending')}
-                onMouseEnter={() => setHoveredEdge({ pathId: path.id, direction: 'descending' })}
+                onClick={() => onSelectPath(path.id)}
+                onMouseEnter={() => setHoveredEdge({ pathId: path.id })}
                 onMouseLeave={() => setHoveredEdge(null)}
               />
-              <line
-                {...backward}
-                className="path-hitbox"
-                onClick={() => onSelectPath(path.id, 'ascending')}
-                onMouseEnter={() => setHoveredEdge({ pathId: path.id, direction: 'ascending' })}
-                onMouseLeave={() => setHoveredEdge(null)}
-              />
-              <line
-                {...forward}
-                className={`path-edge path-edge-desc ${forwardClass}`}
-                markerEnd={isForwardSelected ? 'url(#arrow-desc-selected)' : 'url(#arrow-desc)'}
-                pointerEvents="none"
-              />
-              <line
-                {...backward}
-                className={`path-edge path-edge-asc ${backwardClass}`}
-                markerEnd={isBackwardSelected ? 'url(#arrow-asc-selected)' : 'url(#arrow-asc)'}
-                pointerEvents="none"
-              />
-              {showTag && (
-                <g className="path-tag">
-                  <rect
-                    x={(from.x + to.x) / 2 - 34}
-                    y={(from.y + to.y) / 2 - 12}
-                    width="68"
-                    height="24"
-                    rx="12"
-                  />
-                  <text x={(from.x + to.x) / 2} y={(from.y + to.y) / 2 + 4} textAnchor="middle">
-                    {path?.letter?.transliteration}
-                  </text>
-                </g>
-              )}
+              <line {...edge} className="path-edge-outline" pointerEvents="none" />
+              <line {...edge} className={`path-edge ${edgeClass} ${aspectClass}`} pointerEvents="none" />
             </g>
           );
         })}
 
-        {hardAspectFlows.map((flow) => {
+        {hardAspectFlows
+          .filter((flow) => {
+            const pairKey = [flow.fromId, flow.toId].sort((a, b) => a - b).join('-');
+            return !pathByPair.has(pairKey);
+          })
+          .map((flow) => {
           const geo = buildFlowGeometry(flow);
           if (!geo) return null;
           const handleClick = () => onSelectAspectFlow?.(flow);
@@ -282,6 +377,42 @@ const TreeOfLife = ({
               >
                 {ASPECT_GLYPHS[flow.aspect] || '·'}
               </text>
+            </g>
+          );
+        })}
+
+        {paths.map((path) => {
+          const from = sephirothPositions[path?.connections?.from_number];
+          const to = sephirothPositions[path?.connections?.to_number];
+          if (!from || !to) return null;
+
+          const pathLetter = path?.letter?.hebrew || path?.letter?.transliteration || '—';
+          const isTiferetYesodPath =
+            (path?.connections?.from_number === 6 && path?.connections?.to_number === 9) ||
+            (path?.connections?.from_number === 9 && path?.connections?.to_number === 6);
+          const tagCenterX = (from.x + to.x) / 2;
+          const tagCenterY = (from.y + to.y) / 2 + (isTiferetYesodPath ? -24 : 0);
+          const matchedAspectFlow = pathAspectById.get(path.id);
+          const aspectGlyph = matchedAspectFlow ? ASPECT_GLYPHS[matchedAspectFlow.aspect] || '·' : null;
+          const aspectClass = matchedAspectFlow ? `path-tag-aspect-${matchedAspectFlow.aspect}` : '';
+
+          return (
+            <g key={`${path.id}-tag`} className={`path-tag ${aspectClass}`}>
+              <rect
+                x={tagCenterX - 34}
+                y={tagCenterY - 12}
+                width="68"
+                height="24"
+                rx="12"
+              />
+              <text x={tagCenterX} y={tagCenterY + 4} textAnchor="middle">
+                {pathLetter}
+              </text>
+              {aspectGlyph ? (
+                <text x={tagCenterX + 23} y={tagCenterY - 5} textAnchor="middle" className="path-tag-aspect-symbol">
+                  {aspectGlyph}
+                </text>
+              ) : null}
             </g>
           );
         })}
@@ -338,12 +469,8 @@ const TreeOfLife = ({
 
       <div className="legend">
         <span className="legend-item">
-          <span className="legend-line desc" />
-          Aller
-        </span>
-        <span className="legend-item">
-          <span className="legend-line asc" />
-          Retour
+          <span className="legend-line path" />
+          Sentier
         </span>
         <span className="legend-item">
           <span className="legend-dot" />

@@ -6,10 +6,11 @@
   background: #fff7ed;
   border: 1px solid #fed7aa;
   color: #b45309;
-  padding: 8px 12px;
+  min-height: 44px;
+  padding: 10px 14px;
   border-radius: 12px;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 14px;
   margin-bottom: 16px;
 }
 

@@ -32,6 +32,8 @@ function ExplorerPage() {
   const [sessionSavedAt, setSessionSavedAt] = useState(null);
   const [sessionLoaded, setSessionLoaded] = useState(false);
   const [formResetKey, setFormResetKey] = useState(0);
+  /** Faux = formulaire replié quand un thème est déjà chargé */
+  const [editBirthDataOpen, setEditBirthDataOpen] = useState(false);
 
   useEffect(() => {
     const session = loadAstroSession();
@@ -40,6 +42,7 @@ function ExplorerPage() {
       if (session.analysis) setAstroAnalysis(session.analysis);
       if (session.savedAt) setSessionSavedAt(session.savedAt);
     }
+    setEditBirthDataOpen(!session?.analysis);
     setSessionLoaded(true);
   }, []);
 
@@ -83,6 +86,7 @@ function ExplorerPage() {
       setInitialFormValues(formData);
       saveAstroSession({ form: formData, analysis: result });
       setSessionSavedAt(new Date().toISOString());
+      setEditBirthDataOpen(false);
       clearSelection();
     } catch (error) {
       setAstroError(error.message);
@@ -104,6 +108,7 @@ function ExplorerPage() {
     setInitialFormValues(null);
     setSessionSavedAt(null);
     setAstroError('');
+    setEditBirthDataOpen(true);
     clearSelection();
     setFormResetKey((k) => k + 1);
   };
@@ -115,6 +120,17 @@ function ExplorerPage() {
   const astroPlanetData = astroSephirahData
     ? (astroAnalysis?.planets || []).find((planet) => planet.name === astroSephirahData.primary_planet)
     : null;
+
+  const birthSummary = astroAnalysis?.profile || initialFormValues || {};
+  const birthSummaryLine = [
+    birthSummary.birth_date,
+    birthSummary.birth_time,
+    [birthSummary.city, birthSummary.country].filter(Boolean).join(', '),
+  ]
+    .filter(Boolean)
+    .join(' · ');
+
+  const showAstroForm = !astroAnalysis || editBirthDataOpen;
 
   return (
     <div className="app">
@@ -151,7 +167,11 @@ function ExplorerPage() {
         <aside className="info-panel">
           <div className="info-panel-header">
             <h2>Astro-Kabbale</h2>
-            <p>Renseignez vos donnees natales pour generer votre carte du ciel et activer la lecture sur l'Arbre de Vie.</p>
+            <p>
+              {astroAnalysis
+                ? 'Votre theme est actif sur l\'Arbre de Vie. Utilisez la synthese ci-dessous ou modifiez vos donnees si besoin.'
+                : 'Renseignez vos donnees natales pour generer votre carte du ciel et activer la lecture sur l\'Arbre de Vie.'}
+            </p>
             {sessionSavedAt && (
               <div className="session-status">
                 <span className="session-status-dot" aria-hidden />
@@ -170,13 +190,45 @@ function ExplorerPage() {
             )}
           </div>
 
-          <AstroInputForm
-            key={formResetKey}
-            onSubmit={handleAnalyzeChart}
-            loading={astroLoading}
-            error={astroError}
-            initialValues={sessionLoaded ? initialFormValues : null}
-          />
+          {astroAnalysis && !editBirthDataOpen && (
+            <div className="astro-birth-compact">
+              <div className="astro-birth-compact-text">
+                <span className="astro-birth-compact-label">Donnees de naissance</span>
+                <p className="astro-birth-compact-line">{birthSummaryLine || '—'}</p>
+              </div>
+              <button
+                type="button"
+                className="astro-birth-edit-btn"
+                onClick={() => setEditBirthDataOpen(true)}
+              >
+                Modifier
+              </button>
+            </div>
+          )}
+
+          {showAstroForm && (
+            <div className="astro-form-section">
+              {astroAnalysis && editBirthDataOpen && (
+                <div className="astro-form-section-header">
+                  <span className="astro-form-section-title">Modifier les donnees</span>
+                  <button
+                    type="button"
+                    className="astro-form-collapse-btn"
+                    onClick={() => setEditBirthDataOpen(false)}
+                  >
+                    Fermer
+                  </button>
+                </div>
+              )}
+              <AstroInputForm
+                key={formResetKey}
+                onSubmit={handleAnalyzeChart}
+                loading={astroLoading}
+                error={astroError}
+                initialValues={sessionLoaded ? initialFormValues : null}
+              />
+            </div>
+          )}
           <AstroKabbalahPanel analysis={astroAnalysis} />
           {astroAnalysis && (
             <Suspense fallback={<div className="pdf-export-loading">Chargement de l'export PDF…</div>}>

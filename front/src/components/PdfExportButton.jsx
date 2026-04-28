@@ -93,7 +93,7 @@ const PdfExportButton = ({ analysis }) => {
   };
 
   const labelByStatus = {
-    idle: 'Télécharger ma lecture (PDF)',
+    idle: 'Télécharger mon dossier astral',
     capturing: 'Capture des visuels…',
     generating: 'Génération du PDF…',
     done: 'PDF téléchargé ✓',

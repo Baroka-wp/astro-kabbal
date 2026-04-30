@@ -62,6 +62,41 @@ def _parse_house_number(raw_house) -> int:
   return 0
 
 
+def _safe_float(value) -> Optional[float]:
+  try:
+    if value is None:
+      return None
+    return float(value)
+  except (TypeError, ValueError):
+    return None
+
+
+def _extract_planet_degrees(planet) -> tuple[Optional[float], Optional[float]]:
+  """
+  Retourne (degree_in_sign, absolute_degree) en essayant plusieurs attributs
+  selon la version de Kerykeion.
+  """
+  degree_in_sign = _safe_float(getattr(planet, "position", None))
+  absolute_degree = _safe_float(getattr(planet, "abs_pos", None))
+
+  if degree_in_sign is None:
+    for attr in ("position_in_sign", "degree", "deg"):
+      degree_in_sign = _safe_float(getattr(planet, attr, None))
+      if degree_in_sign is not None:
+        break
+
+  if absolute_degree is None:
+    for attr in ("absolute_position", "longitude", "lon"):
+      absolute_degree = _safe_float(getattr(planet, attr, None))
+      if absolute_degree is not None:
+        break
+
+  if absolute_degree is not None:
+    absolute_degree = absolute_degree % 360
+
+  return degree_in_sign, absolute_degree
+
+
 def _mock_planets() -> List[Dict]:
   base = [
     ("Soleil", "Belier", 6),
@@ -242,10 +277,13 @@ def build_natal_payload(
       continue
 
     normalized_name = normalize_planet_name(key)
+    degree_in_sign, absolute_degree = _extract_planet_degrees(planet)
     results.append(
       {
         "name": normalized_name,
         "sign": getattr(planet, "sign", None),
+        "position": degree_in_sign,
+        "absolute_degree": absolute_degree,
         "house": _parse_house_number(getattr(planet, "house", 0)),
         "dignity_status": str(getattr(planet, "dignity", "neutral") or "neutral").lower(),
         "hard_aspects": difficult_aspects_by_planet.get(normalized_name, []),

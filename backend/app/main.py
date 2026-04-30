@@ -94,6 +94,8 @@ def analyze_natal(request: NatalAnalyzeRequest):
     planet_model = PlanetScore(
       name=planet.get("name", "Inconnue"),
       sign=planet.get("sign"),
+      position=planet.get("position"),
+      absolute_degree=planet.get("absolute_degree"),
       house=house_number,
       dignity_status=planet.get("dignity_status", "neutral"),
       blocked_score=score,

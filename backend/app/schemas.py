@@ -31,6 +31,8 @@ class PlanetScore(BaseModel):
 
   name: str
   sign: Optional[str] = None
+  position: Optional[float] = None
+  absolute_degree: Optional[float] = None
   house: Optional[int] = None
   dignity_status: str = "neutral"
   blocked_score: int

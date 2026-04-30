@@ -59,26 +59,28 @@
   color: #0f172a;
 }
 
-.astro-table {
+.astro-angels {
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   overflow: hidden;
 }
 
-.astro-row {
+.astro-angel-row,
+.astro-angel-head {
   display: grid;
-  grid-template-columns: 1.1fr 0.7fr 1fr 0.5fr;
+  grid-template-columns: 1.05fr 0.9fr 0.7fr 0.9fr 1.25fr 1.25fr;
   gap: 8px;
   padding: 8px 10px;
   font-size: 12px;
   border-top: 1px solid #e2e8f0;
 }
 
-.astro-row:first-child {
+.astro-angel-row:first-child,
+.astro-angel-head:first-child {
   border-top: none;
 }
 
-.astro-head {
+.astro-angel-head {
   background: #eff6ff;
   color: #1d4ed8;
   font-weight: 700;

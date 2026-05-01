@@ -97,6 +97,48 @@ def _extract_planet_degrees(planet) -> tuple[Optional[float], Optional[float]]:
   return degree_in_sign, absolute_degree
 
 
+def _extract_ascendant(subject) -> Optional[Dict]:
+  """
+  Extrait l'Ascendant depuis différentes structures possibles de Kerykeion.
+  """
+  candidates = []
+  for attr in ("ascendant", "asc", "first_house", "house_1"):
+    value = getattr(subject, attr, None)
+    if value is not None:
+      candidates.append(value)
+
+  for item in candidates:
+    if isinstance(item, dict):
+      sign = item.get("sign")
+      degree_in_sign = _safe_float(item.get("position"))
+      absolute_degree = _safe_float(item.get("abs_pos"))
+      if degree_in_sign is None:
+        degree_in_sign = _safe_float(item.get("degree"))
+      if absolute_degree is None:
+        absolute_degree = _safe_float(item.get("absolute_position"))
+      if absolute_degree is not None:
+        absolute_degree = absolute_degree % 360
+    else:
+      sign = getattr(item, "sign", None)
+      degree_in_sign, absolute_degree = _extract_planet_degrees(item)
+
+    if sign is None and degree_in_sign is None and absolute_degree is None:
+      continue
+
+    return {
+      "name": "Ascendant",
+      "sign": sign,
+      "position": degree_in_sign,
+      "absolute_degree": absolute_degree,
+      "house": 1,
+      "dignity_status": "neutral",
+      "hard_aspects": [],
+      "hard_aspect_links": [],
+    }
+
+  return None
+
+
 def _mock_planets() -> List[Dict]:
   base = [
     ("Soleil", "Belier", 6),
@@ -312,4 +354,9 @@ def build_natal_payload(
 
   if not results:
     raise RuntimeError("Aucune position planetaire calculee.")
+
+  ascendant = _extract_ascendant(subject)
+  if ascendant:
+    results.append(ascendant)
+
   return {"planets": results, "chart_svg": chart_svg, "analysis_mode": "live"}

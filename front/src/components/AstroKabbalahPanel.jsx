@@ -13,6 +13,7 @@ const SYMBOLS = {
   Neptune: '♆',
   Pluton: '♇',
   Terre: '⊕',
+  Ascendant: 'Asc',
 };
 
 const SIGN_BASE = {

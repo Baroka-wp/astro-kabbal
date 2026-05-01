@@ -185,7 +185,10 @@ export default function TikkounPage() {
     <div className="app tikkoun-page">
       <header className="app-header">
         <div className="app-header-title">
-          <Link to="/" className="app-header-home" aria-label="Retour a l'accueil">← Accueil</Link>
+          <nav className="app-top-menu" aria-label="Navigation principale">
+            <Link to="/" className="app-header-home" aria-label="Retour a l'accueil">← Accueil</Link>
+            <Link to="/?edit=1" className="app-header-home" aria-label="Modifier mes informations natales">Mes infos</Link>
+          </nav>
           <h1>{rawTikkounData?.titre || 'Tikkoun des Qliphoth'}</h1>
         </div>
         <p>{rawTikkounData?.description}</p>

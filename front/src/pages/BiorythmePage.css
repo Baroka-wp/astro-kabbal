@@ -1,0 +1,89 @@
+.bio-page {
+  padding-bottom: 20px;
+}
+
+.bio-controls {
+  margin: 14px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #fff;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.bio-controls label {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  color: #475569;
+}
+
+.bio-controls input,
+.bio-controls select {
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 8px 10px;
+}
+
+.bio-natal-preview {
+  border: 1px dashed #94a3b8;
+  border-radius: 10px;
+  padding: 8px 10px;
+  display: grid;
+  align-content: center;
+  background: #f8fafc;
+}
+
+.bio-natal-preview span {
+  font-size: 11px;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.bio-natal-preview strong {
+  font-size: 15px;
+  color: #0f172a;
+}
+
+.bio-natal-preview em {
+  font-size: 12px;
+  color: #64748b;
+  font-style: italic;
+}
+
+.bio-setup {
+  margin: 14px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #fff;
+  padding: 12px;
+}
+
+.bio-setup h2 {
+  margin: 0 0 8px;
+  color: #0f172a;
+}
+
+.bio-setup p {
+  margin: 0 0 10px;
+  color: #475569;
+}
+
+.bio-setup-warning {
+  margin: 0 0 10px;
+  border: 1px solid #fecaca;
+  background: #fff1f2;
+  color: #9f1239;
+  border-radius: 10px;
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+@media (max-width: 920px) {
+  .bio-controls {
+    grid-template-columns: 1fr;
+  }
+}

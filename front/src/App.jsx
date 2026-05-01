@@ -4,6 +4,7 @@ import './App.css';
 import LandingPage from './pages/LandingPage';
 import ExplorerPage from './pages/ExplorerPage';
 import TikkounPage from './pages/TikkounPage';
+import BiorythmePage from './pages/BiorythmePage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/explorer" element={<ExplorerPage />} />
         <Route path="/tikkoun" element={<TikkounPage />} />
+        <Route path="/biorythme" element={<BiorythmePage />} />
         <Route path="*" element={<LandingPage />} />
       </Routes>
     </BrowserRouter>

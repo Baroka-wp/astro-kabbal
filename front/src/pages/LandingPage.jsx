@@ -1,5 +1,8 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useMemo, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import AstroInputForm from '../components/AstroInputForm';
+import { analyzeNatalChart } from '../lib/apiClient';
+import { loadAstroSession, patchAstroSession, saveAstroSession } from '../lib/persistentStore';
 import './LandingPage.css';
 
 const SEPHIROTH = [
@@ -48,9 +51,9 @@ function MiniTree() {
     <svg viewBox="0 0 440 800" className="mini-tree" role="img" aria-label="Arbre de Vie kabbalistique">
       <defs>
         <radialGradient id="sephGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#fde68a" stopOpacity="1" />
-          <stop offset="55%" stopColor="#f59e0b" stopOpacity="0.95" />
-          <stop offset="100%" stopColor="#7c2d12" stopOpacity="0.85" />
+          <stop offset="0%" stopColor="#fef3c7" stopOpacity="1" />
+          <stop offset="55%" stopColor="#facc15" stopOpacity="0.95" />
+          <stop offset="100%" stopColor="#f59e0b" stopOpacity="0.85" />
         </radialGradient>
         <filter id="goldGlow" x="-50%" y="-50%" width="200%" height="200%">
           <feGaussianBlur stdDeviation="4" result="blur" />
@@ -90,7 +93,7 @@ function MiniTree() {
         {SEPHIROTH.map((s, idx) => (
           <g key={s.id} className="mini-sphere" style={{ animationDelay: `${idx * 0.12}s` }}>
             <circle cx={s.x} cy={s.y} r={32} fill="url(#sephGlow)" filter="url(#goldGlow)" opacity={0.9} />
-            <circle cx={s.x} cy={s.y} r={26} fill="#1a0f2e" stroke="#fbbf24" strokeWidth={1.2} />
+            <circle cx={s.x} cy={s.y} r={26} fill="#fffdf4" stroke="#f59e0b" strokeWidth={1.2} />
             <text x={s.x} y={s.y - 2} textAnchor="middle" className="mini-sphere-name">
               {s.name}
             </text>
@@ -105,10 +108,50 @@ function MiniTree() {
 }
 
 function LandingPage() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [astroAnalysis, setAstroAnalysis] = useState(null);
+  const [initialFormValues, setInitialFormValues] = useState(null);
+  const [sessionLoaded, setSessionLoaded] = useState(false);
+  const [astroLoading, setAstroLoading] = useState(false);
+  const [astroError, setAstroError] = useState('');
+
   useEffect(() => {
     document.body.classList.add('landing-body');
     return () => document.body.classList.remove('landing-body');
   }, []);
+
+  useEffect(() => {
+    const session = loadAstroSession();
+    if (session?.analysis) setAstroAnalysis(session.analysis);
+    if (session?.form) setInitialFormValues(session.form);
+    setSessionLoaded(true);
+  }, []);
+
+  const isEditMode = useMemo(() => {
+    const params = new URLSearchParams(location.search);
+    return params.get('edit') === '1';
+  }, [location.search]);
+
+  const hasSession = Boolean(astroAnalysis?.planets?.length);
+  const mustOnboard = !hasSession || isEditMode;
+
+  const handleAnalyzeChart = async (formData) => {
+    setAstroLoading(true);
+    setAstroError('');
+    try {
+      const result = await analyzeNatalChart(formData);
+      setAstroAnalysis(result);
+      setInitialFormValues(formData);
+      saveAstroSession({ form: formData, analysis: result });
+      navigate('/', { replace: true });
+    } catch (error) {
+      setAstroError(error.message);
+      patchAstroSession({ form: formData });
+    } finally {
+      setAstroLoading(false);
+    }
+  };
 
   return (
     <div className="landing">
@@ -132,47 +175,59 @@ function LandingPage() {
       <header className="landing-nav">
         <span className="brand">22 Sentiers</span>
         <div className="landing-nav-links">
-          <Link to="/explorer" className="nav-link">
-            Astro-Kabbale →
-          </Link>
-          <Link to="/tikkoun" className="nav-link nav-link-secondary">
-            Tikkoun juif →
-          </Link>
+          {hasSession ? (
+            <>
+              <Link to="/explorer" className="nav-link">
+                Astro-Kabbale →
+              </Link>
+              <Link to="/biorythme" className="nav-link">
+                Biorythme →
+              </Link>
+              <Link to="/tikkoun" className="nav-link nav-link-secondary">
+                Tikkoun juif →
+              </Link>
+            </>
+          ) : (
+            <span className="landing-nav-hint">Première visite : renseignez vos données natales</span>
+          )}
         </div>
       </header>
 
-      <section className="landing-hero">
-        <div className="hero-text">
-          <span className="eyebrow">Kabbale · Astrologie · Méditation</span>
-          <h1>
-            L'Arbre de Vie,<br />
-            <em>vivant et lisible.</em>
-          </h1>
-          <p className="lead">
-            Explorez les <strong>10 Sephiroth</strong> et les <strong>22 sentiers</strong> de la
-            tradition kabbalistique, projetez votre <strong>thème natal</strong> sur l'Arbre, et
-            recevez une lecture qui marie astrologie, anges, qliphoth et travail intérieur.
-          </p>
-
-          <div className="hero-cta-group">
-            <Link to="/explorer" className="cta-primary">
-              Explorer l'Arbre
-              <span className="cta-arrow">→</span>
-            </Link>
-            <Link to="/tikkoun" className="cta-secondary">
-              Ouvrir le module Tikkoun
-            </Link>
-            <a href="#how" className="cta-secondary">
-              Comment ça marche
-            </a>
-          </div>
-        </div>
-
-        <div className="hero-visual">
-          <div className="tree-frame">
-            <MiniTree />
-          </div>
-        </div>
+      <section className="landing-entry-card">
+        {mustOnboard ? (
+          <>
+            <h2>{hasSession ? 'Modifier mes informations natales' : 'Commencer par vos informations natales'}</h2>
+            <p>
+              Vos données sont enregistrées localement et réutilisées dans Astro-Kabbale et Biorythme.
+            </p>
+            <AstroInputForm
+              onSubmit={handleAnalyzeChart}
+              loading={astroLoading}
+              error={astroError}
+              initialValues={sessionLoaded ? initialFormValues : null}
+            />
+          </>
+        ) : (
+          <>
+            <h2>Où souhaitez-vous aller ?</h2>
+            <p>Vos données natales sont déjà prêtes. Choisissez votre module.</p>
+            <div className="landing-entry-actions">
+              <Link to="/explorer" className="cta-primary">
+                Astro-Kabbale
+                <span className="cta-arrow">→</span>
+              </Link>
+              <Link to="/biorythme" className="nav-link">
+                Biorythme →
+              </Link>
+              <Link to="/tikkoun" className="nav-link nav-link-secondary">
+                Tikkoun juif →
+              </Link>
+              <Link to="/?edit=1" className="cta-secondary">
+                Modifier mes informations
+              </Link>
+            </div>
+          </>
+        )}
       </section>
 
       <section id="how" className="landing-how">
@@ -210,22 +265,6 @@ function LandingPage() {
             </p>
           </li>
         </ol>
-      </section>
-
-      <section className="landing-cta-final">
-        <div className="cta-final-card">
-          <h2>Votre Arbre vous attend.</h2>
-          <p>
-            Aucune inscription. Aucun envoi de données. Tout se calcule pour vous, en silence.
-          </p>
-          <Link to="/explorer" className="cta-primary cta-primary-large">
-            Commencer ma lecture astro-kabbalistique
-            <span className="cta-arrow">→</span>
-          </Link>
-          <Link to="/tikkoun" className="cta-secondary">
-            Explorer le Tikkoun (tradition juive)
-          </Link>
-        </div>
       </section>
 
       <footer className="landing-footer">

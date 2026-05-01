@@ -136,9 +136,14 @@ function ExplorerPage() {
     <div className="app">
       <header className="app-header">
         <div className="app-header-title">
-          <Link to="/" className="app-header-home" aria-label="Retour à l'accueil">
-            ← Accueil
-          </Link>
+          <nav className="app-top-menu" aria-label="Navigation principale">
+            <Link to="/" className="app-header-home" aria-label="Retour à l'accueil">
+              ← Accueil
+            </Link>
+            <Link to="/?edit=1" className="app-header-home" aria-label="Modifier mes informations natales">
+              Mes infos
+            </Link>
+          </nav>
           <h1>Les 22 Chemins de l'Arbre de Vie</h1>
         </div>
         <p>Explorez les 10 Sephiroth, les 22 sentiers et votre lecture Astro-Kabbale.</p>

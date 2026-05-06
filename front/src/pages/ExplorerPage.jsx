@@ -146,7 +146,16 @@ function ExplorerPage() {
           </nav>
           <h1>Les 22 Chemins de l'Arbre de Vie</h1>
         </div>
-        <p>Explorez les 10 Sephiroth, les 22 sentiers et votre lecture Astro-Kabbale.</p>
+        <div className="explorer-header-actions">
+          <p>Explorez les 10 Sephiroth, les 22 sentiers et votre lecture Astro-Kabbale.</p>
+          {astroAnalysis && (
+            <Suspense fallback={<div className="pdf-export-loading">Chargement de l'export PDF…</div>}>
+              <div className="pdf-export-top-nav">
+                <PdfExportButton analysis={astroAnalysis} />
+              </div>
+            </Suspense>
+          )}
+        </div>
       </header>
 
       <div className="app-content">
@@ -235,12 +244,6 @@ function ExplorerPage() {
             </div>
           )}
           <AstroKabbalahPanel analysis={astroAnalysis} />
-          {astroAnalysis && (
-            <Suspense fallback={<div className="pdf-export-loading">Chargement de l'export PDF…</div>}>
-              <PdfExportButton analysis={astroAnalysis} />
-            </Suspense>
-          )}
-
           <main className="main-content">
             <AstroChartView chartSvg={astroAnalysis?.chart_svg} />
           </main>

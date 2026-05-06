@@ -1,10 +1,12 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { Suspense, lazy, useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AstroInputForm from '../components/AstroInputForm';
 import BiorythmeTable from '../components/BiorythmeTable';
 import { analyzeNatalChart } from '../lib/apiClient';
 import { loadAstroSession, saveAstroSession, patchAstroSession } from '../lib/persistentStore';
 import './BiorythmePage.css';
+
+const PdfExportButton = lazy(() => import('../components/PdfExportButton'));
 
 const SIGNS = [
   { glyph: '♈', name: 'Bélier' },
@@ -186,6 +188,7 @@ export default function BiorythmePage() {
     const sign = SIGNS[sunNatal.signIdx] || SIGNS[0];
     return `${sign.glyph} ${sign.name} ${sunNatal.degree}°`;
   }, [sunNatal]);
+  const birthDate = initialFormValues?.birth_date || astroAnalysis?.profile?.birth_date || '';
 
   return (
     <div className="app bio-page">
@@ -201,6 +204,15 @@ export default function BiorythmePage() {
           </nav>
           <h1>Biorythme Kabalistique</h1>
         </div>
+        {astroAnalysis && (
+          <div className="app-header-actions">
+            <Suspense fallback={<div className="pdf-export-loading">Chargement de l'export PDF…</div>}>
+              <div className="pdf-export-top-nav">
+                <PdfExportButton analysis={astroAnalysis} />
+              </div>
+            </Suspense>
+          </div>
+        )}
       </header>
 
       <BiorythmeErrorBoundary>
@@ -235,6 +247,7 @@ export default function BiorythmePage() {
             <BiorythmeTable
               natalSignIdx={sunNatal.signIdx}
               natalDegree={sunNatal.degree}
+              birthDate={birthDate}
               transitAbsIdx={transitAbsIdx}
               transitDate={transitDate}
               onTransitDateChange={(value) => {

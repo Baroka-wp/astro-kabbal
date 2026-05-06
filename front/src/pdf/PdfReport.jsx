@@ -55,6 +55,165 @@ const LEVEL_LABELS = {
   eleve: 'Eleve',
 };
 
+const SIGN_BASE = {
+  Ari: 0,
+  Tau: 30,
+  Gem: 60,
+  Can: 90,
+  Leo: 120,
+  Vir: 150,
+  Lib: 180,
+  Sco: 210,
+  Sag: 240,
+  Cap: 270,
+  Aqu: 300,
+  Pis: 330,
+};
+
+const ANGELS = [
+  'Vehuiah', 'Yeliel', 'Sitael', 'Elemiah', 'Mahasiah', 'Lelahel', 'Achaiah', 'Cahethel', 'Haziel',
+  'Aladiah', 'Lauviah', 'Hahaiah', 'Yezalel', 'Mebahel', 'Hariel', 'Hakamiah', 'Lauviah (2)', 'Caliel',
+  'Leuviah', 'Pahaliah', 'Nelchael', 'Yeiayel', 'Melahel', 'Haheuiah', 'Nith-Haiah', 'Haaiah', 'Yerathel',
+  'Seheiah', 'Reiyel', 'Omael', 'Lecabel', 'Vasariah', 'Yehuiah', 'Lehahiah', 'Chavakhiah', 'Menadel',
+  'Aniel', 'Haamiah', 'Rehael', 'Ieiazel', 'Hahahel', 'Mikael', 'Veuliah', 'Yelahiah', 'Sealiah', 'Ariel',
+  'Asaliah', 'Mihael', 'Vehuel', 'Daniel', 'Hahasiah', 'Imamiah', 'Nanael', 'Nithael', 'Mebahiah', 'Poyel',
+  'Nemamiah', 'Yeialel', 'Harahel', 'Mitzrael', 'Umabel', 'Iah-Hel', 'Anauel', 'Mehiel', 'Damabiah',
+  'Manakel', 'Eyael', 'Habuhiah', 'Rochel', 'Jabamiah', 'Haiyael', 'Mumiah',
+];
+
+const toFiniteNumber = (value) => {
+  const n = typeof value === 'number' ? value : Number(value);
+  return Number.isFinite(n) ? n : null;
+};
+
+const getAbsoluteDegree = (planet) => {
+  const absFromApi = toFiniteNumber(planet?.absolute_degree);
+  if (absFromApi !== null) return ((absFromApi % 360) + 360) % 360;
+  const signBase = SIGN_BASE[planet?.sign];
+  const inSign = toFiniteNumber(planet?.position);
+  if (signBase === undefined || inSign === null) return null;
+  return ((signBase + inSign) % 360 + 360) % 360;
+};
+
+const getAngel5 = (planet) => {
+  const abs = getAbsoluteDegree(planet);
+  if (abs === null) return null;
+  const angelNumber = Math.floor(abs / 5) + 1;
+  return { angelNumber, angelName: ANGELS[angelNumber - 1] || '—' };
+};
+
+const getAngelDay = (planet) => {
+  const abs = getAbsoluteDegree(planet);
+  if (abs === null) return null;
+  const angelNumber = Math.floor(abs % 72) + 1;
+  return { angelNumber, angelName: ANGELS[angelNumber - 1] || '—' };
+};
+
+const BIORYTHM_ANGELS = [
+  'Vehuiah', 'Yeliel', 'Sitael', 'Elemiah', 'Mahasiah', 'Lelahel', 'Achaiah', 'Cahetel',
+  'Haziel', 'Aladiah', 'Lauviah', 'Hahaiah', 'Iezalel', 'Mebahel', 'Hariel', 'Hakamiah',
+  'Lauviah II', 'Caliel', 'Leuviah', 'Pahaliah', 'Nelchael', 'Yeiayel', 'Melahel', 'Haheuiah',
+  'Nith-haiah', 'Haaiah', 'Yerathel', 'Seheiah', 'Reiyel', 'Omael', 'Lecabel', 'Vasariah',
+  'Yehuiah', 'Lehahiah', 'Chavakiah', 'Menadel', 'Aniel', 'Haamiah', 'Rehael', 'Ieiazel',
+  'Hahahel', 'Mikael', 'Veuliah', 'Yelahiah', 'Sehaliah', 'Ariel', 'Asaliah', 'Mihael',
+  'Vehuel', 'Daniel', 'Hahasiah', 'Imamiah', 'Nanael', 'Nithael', 'Mebahiah', 'Poyel',
+  'Nemamiah', 'Yeialel', 'Harahel', 'Mitzrael', 'Umabel', 'Iah-hel', 'Anauel', 'Mehiel',
+  'Damabiah', 'Manakel', 'Eyael', 'Habuhiah', 'Rochel', 'Jabamiah', 'Haiaiel', 'Mumiah',
+];
+
+const BIORYTHM_RONDES = ['Feu', 'Eau', 'Air', 'Terre', 'Quintes'];
+
+const BIORYTHM_SIGNS = [
+  { code: 'Ari', name: 'Bélier', base: 0 },
+  { code: 'Tau', name: 'Taureau', base: 30 },
+  { code: 'Gem', name: 'Gémeaux', base: 60 },
+  { code: 'Can', name: 'Cancer', base: 90 },
+  { code: 'Leo', name: 'Lion', base: 120 },
+  { code: 'Vir', name: 'Vierge', base: 150 },
+  { code: 'Lib', name: 'Balance', base: 180 },
+  { code: 'Sco', name: 'Scorpion', base: 210 },
+  { code: 'Sag', name: 'Sagittaire', base: 240 },
+  { code: 'Cap', name: 'Capricorne', base: 270 },
+  { code: 'Aqu', name: 'Verseau', base: 300 },
+  { code: 'Pis', name: 'Poissons', base: 330 },
+];
+
+const BIORYTHM_EXACT_BY_COL72 = {
+  0: { sephirah: 'Keter', aspect: 'Conjonction', symbol: '☌' },
+  6: { sephirah: 'Hochmah', aspect: 'Semi-Sextile', symbol: '⌄' },
+  9: { sephirah: 'Binah', aspect: 'Semi-Carré', symbol: '∠' },
+  12: { sephirah: 'Hesed', aspect: 'Sextile', symbol: '✶' },
+  18: { sephirah: 'Gueburah', aspect: 'Carré', symbol: '□' },
+  21: { sephirah: 'Tiphereth', aspect: 'Cuadri-Trigone', symbol: '△▽' },
+  24: { sephirah: 'Netzah', aspect: 'Trigone', symbol: '△' },
+  27: { sephirah: 'Hod', aspect: 'Sesqui-Carré', symbol: '□∠' },
+  30: { sephirah: 'Yesod', aspect: 'Quinconce', symbol: '⌶' },
+  35: { sephirah: 'Malkuth', aspect: 'Opposition', symbol: '☍' },
+  41: { sephirah: 'Yesod', aspect: 'Quinconce', symbol: '⌶' },
+  44: { sephirah: 'Hod', aspect: 'Sesqui-Carré', symbol: '□∠' },
+  47: { sephirah: 'Netzah', aspect: 'Trigone', symbol: '△' },
+  50: { sephirah: 'Tiphereth', aspect: 'Cuadri-Trigone', symbol: '△▽' },
+  53: { sephirah: 'Gueburah', aspect: 'Carré', symbol: '□' },
+  59: { sephirah: 'Hesed', aspect: 'Sextile', symbol: '✶' },
+  62: { sephirah: 'Binah', aspect: 'Semi-Carré', symbol: '∠' },
+  65: { sephirah: 'Hochmah', aspect: 'Semi-Sextile', symbol: '⌄' },
+  71: { sephirah: 'Keter', aspect: 'Conjonction', symbol: '☌' },
+};
+
+const BIORYTHM_ROWS_PER_PAGE = 42;
+const BIORYTHM_TOTAL_DAYS = 365;
+
+const chunk = (arr, size) => {
+  const out = [];
+  for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size));
+  return out;
+};
+
+const parseIsoDate = (iso) => {
+  if (!iso || !/^\d{4}-\d{2}-\d{2}$/.test(iso)) return null;
+  const [y, m, d] = iso.split('-').map((v) => parseInt(v, 10));
+  const dt = new Date(y, m - 1, d);
+  if (dt.getFullYear() !== y || dt.getMonth() !== m - 1 || dt.getDate() !== d) return null;
+  return dt;
+};
+
+const formatDateFr = (dateObj) => {
+  const dd = String(dateObj.getDate()).padStart(2, '0');
+  const mm = String(dateObj.getMonth() + 1).padStart(2, '0');
+  return `${dd}/${mm}`;
+};
+
+const buildBiorythmRows = (analysis) => {
+  const sun = (analysis?.planets || []).find((planet) => planet?.name === 'Soleil');
+  if (!sun) return [];
+  const signIdx = BIORYTHM_SIGNS.findIndex((s) => s.code === sun.sign);
+  if (signIdx < 0) return [];
+  const birthDate = parseIsoDate(analysis?.profile?.birth_date) || new Date();
+  const safeNatalDegree = Math.min(30, Math.max(1, Math.round(Number(sun.position) || 1)));
+  const natalAbsIdx = BIORYTHM_SIGNS[signIdx].base + (safeNatalDegree - 1);
+  return Array.from({ length: BIORYTHM_TOTAL_DAYS }, (_, i) => {
+    const rowDate = new Date(birthDate);
+    rowDate.setDate(birthDate.getDate() + i);
+    const col72 = i % 72;
+    const absReal = (natalAbsIdx + i) % 360;
+    const rowSignIdx = Math.floor(absReal / 30);
+    const degInSign = (absReal % 30) + 1;
+    const rondeIdx = Math.floor(i / 72);
+    const exact = BIORYTHM_EXACT_BY_COL72[col72];
+    const cosmicIdx = col72;
+    return {
+      dayIndex: i + 1,
+      dateLabel: formatDateFr(rowDate),
+      ronde: BIORYTHM_RONDES[rondeIdx],
+      angel: `${cosmicIdx + 1}. ${BIORYTHM_ANGELS[cosmicIdx]}`,
+      sign: BIORYTHM_SIGNS[rowSignIdx]?.name || '—',
+      degree: `${degInSign}°`,
+      sephirah: exact?.sephirah || '—',
+      aspect: exact?.aspect || '—',
+    };
+  });
+};
+
 const formatDate = (date = new Date()) => {
   return date.toLocaleDateString('fr-FR', {
     day: 'numeric',
@@ -219,6 +378,40 @@ const SynthesisPage = ({ analysis, profile }) => {
 
       <Text style={styles.h3}>Méthode des 72 anges (Shem ha-Mephorash)</Text>
       <Text style={styles.paragraph}>{getRegleGeneraleAngeRemede()}</Text>
+
+      <Text style={styles.h2} minPresenceAhead={120}>
+        Synthèse Astro-Kabbale · Tableau des anges
+      </Text>
+      <View style={styles.table}>
+        <View style={[styles.tableRow, styles.tableHead]}>
+          <Text style={[styles.tableCell, { flex: 1.2, fontWeight: 600 }]}>Planète</Text>
+          <Text style={[styles.tableCell, { flex: 1.1, fontWeight: 600 }]}>Signe</Text>
+          <Text style={[styles.tableCell, { flex: 0.8, fontWeight: 600 }]}>Degré</Text>
+          <Text style={[styles.tableCell, { flex: 1.1, fontWeight: 600 }]}>Position absolue</Text>
+          <Text style={[styles.tableCell, { flex: 1.5, fontWeight: 600 }]}>Ange des 5.</Text>
+          <Text style={[styles.tableCell, { flex: 1.6, fontWeight: 600 }]}>Ange du jour (1°)</Text>
+        </View>
+        {(analysis?.planets || []).map((planet) => {
+          const degree = toFiniteNumber(planet?.position);
+          const abs = getAbsoluteDegree(planet);
+          const angel5 = getAngel5(planet);
+          const angelDay = getAngelDay(planet);
+          return (
+            <View key={`angel-${planet.name}`} style={styles.tableRow}>
+              <Text style={[styles.tableCell, { flex: 1.2 }]}>{planet.name || '—'}</Text>
+              <Text style={[styles.tableCell, { flex: 1.1 }]}>{SIGN_LABELS[planet.sign] || planet.sign || '—'}</Text>
+              <Text style={[styles.tableCell, { flex: 0.8 }]}>{degree !== null ? `${degree.toFixed(2)}°` : '—'}</Text>
+              <Text style={[styles.tableCell, { flex: 1.1 }]}>{abs !== null ? `${abs.toFixed(2)}°` : '—'}</Text>
+              <Text style={[styles.tableCell, { flex: 1.5 }]}>
+                {angel5 ? `${angel5.angelNumber} ${angel5.angelName}` : '—'}
+              </Text>
+              <Text style={[styles.tableCell, { flex: 1.6 }]}>
+                {angelDay ? `${angelDay.angelNumber} ${angelDay.angelName}` : '—'}
+              </Text>
+            </View>
+          );
+        })}
+      </View>
 
       <Text style={styles.h2} minPresenceAhead={120}>
         État des Sephiroth
@@ -796,6 +989,54 @@ const AspectsPage = ({ aspectFlows, profile }) => {
   );
 };
 
+const Biorythm360Pages = ({ rows, profile }) => {
+  if (!rows?.length) return null;
+  const pages = chunk(rows, BIORYTHM_ROWS_PER_PAGE);
+  return (
+    <>
+      {pages.map((rowsChunk, pageIdx) => (
+        <ReportPage key={`bio360-${pageIdx}`} profile={profile}>
+          {pageIdx === 0 ? (
+            <>
+              <Text style={styles.partLabel}>III · Biorythme</Text>
+              <Text style={styles.h1}>Biorythme Kabalistique · 365 jours</Text>
+              <Text style={styles.intro}>
+                Tableau journalier construit à partir de la date de naissance (jour 1), sur
+                365 jours. Le cycle biorythmique conserve ses correspondances d&apos;anges, rondes,
+                signes, Sephiroth et aspects.
+              </Text>
+            </>
+          ) : (
+            <Text style={styles.h2}>Biorythme 365 jours — suite ({pageIdx + 1}/{pages.length})</Text>
+          )}
+          <View style={styles.table}>
+            <View style={[styles.tableRow, styles.tableHead]}>
+              <Text style={[styles.tableCell, { flex: 1.2, fontWeight: 600 }]}>Date</Text>
+              <Text style={[styles.tableCell, { flex: 0.9, fontWeight: 600 }]}>Ronde</Text>
+              <Text style={[styles.tableCell, { flex: 1.8, fontWeight: 600 }]}>Ange Biorythm</Text>
+              <Text style={[styles.tableCell, { flex: 1.2, fontWeight: 600 }]}>Signe</Text>
+              <Text style={[styles.tableCell, { flex: 0.8, fontWeight: 600 }]}>Degré</Text>
+              <Text style={[styles.tableCell, { flex: 1, fontWeight: 600 }]}>Sephirah</Text>
+              <Text style={[styles.tableCell, { flex: 1.5, fontWeight: 600 }]}>Aspect</Text>
+            </View>
+            {rowsChunk.map((row) => (
+              <View key={`bio-row-${row.dayIndex}`} style={styles.tableRow}>
+                <Text style={[styles.tableCell, { flex: 1.2 }]}>{row.dateLabel}</Text>
+                <Text style={[styles.tableCell, { flex: 0.9 }]}>{row.ronde}</Text>
+                <Text style={[styles.tableCell, { flex: 1.8 }]}>{row.angel}</Text>
+                <Text style={[styles.tableCell, { flex: 1.2 }]}>{row.sign}</Text>
+                <Text style={[styles.tableCell, { flex: 0.8 }]}>{row.degree}</Text>
+                <Text style={[styles.tableCell, { flex: 1 }]}>{row.sephirah}</Text>
+                <Text style={[styles.tableCell, { flex: 1.5 }]}>{row.aspect}</Text>
+              </View>
+            ))}
+          </View>
+        </ReportPage>
+      ))}
+    </>
+  );
+};
+
 // =========================
 // MAIN DOCUMENT
 // =========================
@@ -812,6 +1053,8 @@ const PdfReport = ({
   const sephiroth = sephirothData?.sephiroth || [];
   const sephirothScores = analysis?.sephiroth_scores || [];
   const planets = analysis?.planets || [];
+  const biorythmRows = buildBiorythmRows(analysis);
+  const biorythmPagesCount = biorythmRows.length ? chunk(biorythmRows, BIORYTHM_ROWS_PER_PAGE).length : 0;
 
   const scoreById = Object.fromEntries(sephirothScores.map((s) => [s.sephirah_id, s]));
   const planetByName = Object.fromEntries(planets.map((p) => [p.name, p]));
@@ -840,6 +1083,15 @@ const PdfReport = ({
     tocEntries.push({ id: 'aspects', label: 'Aspects difficiles', page: currentPage++ });
   }
 
+  if (biorythmPagesCount > 0) {
+    tocEntries.push({
+      id: 'biorythm360',
+      label: 'Biorythme Kabalistique · 365 jours',
+      page: currentPage,
+    });
+    currentPage += biorythmPagesCount;
+  }
+
   sortedSephiroth.forEach((sephirah) => {
     tocEntries.push({
       id: `sephirah-${sephirah.id}`,
@@ -861,6 +1113,9 @@ const PdfReport = ({
       {treeImage && <TreePage treeImage={treeImage} profile={profile} />}
       {aspectFlows?.length > 0 && (
         <AspectsPage aspectFlows={aspectFlows} profile={profile} />
+      )}
+      {biorythmRows.length > 0 && (
+        <Biorythm360Pages rows={biorythmRows} profile={profile} />
       )}
       {sortedSephiroth.map((sephirah) => {
         const score = scoreById[sephirah.id];

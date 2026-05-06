@@ -85,9 +85,21 @@ function getAspectPhase(col72) {
   };
 }
 
+const DAY_MS = 24 * 60 * 60 * 1000;
+
+function buildAnniversaryDate(year, monthIndex, day) {
+  const safeDay = monthIndex === 1 ? Math.min(day, 28) : day;
+  return new Date(year, monthIndex, safeDay);
+}
+
+function diffDays(a, b) {
+  return Math.floor((a.getTime() - b.getTime()) / DAY_MS);
+}
+
 export default function BiorythmeTable({
   natalSignIdx,
   natalDegree,
+  birthDate,
   transitAbsIdx,
   transitDate,
   onTransitDateChange,
@@ -109,27 +121,52 @@ export default function BiorythmeTable({
   const safeNatalSignIdx = Number.isFinite(natalSignIdx) ? natalSignIdx : 0;
   const safeNatalDegree = Math.min(30, Math.max(1, Math.round(Number(natalDegree) || 1)));
   const safeTransit = Math.min(359, Math.max(0, Number(transitAbsIdx) || 0));
+  const safeBirthDate = /^\d{4}-\d{2}-\d{2}$/.test(String(birthDate || ''))
+    ? String(birthDate)
+    : null;
+  const safeTransitDate = /^\d{4}-\d{2}-\d{2}$/.test(String(transitDate || ''))
+    ? String(transitDate)
+    : null;
 
   const computed = useMemo(() => {
     const natalAbsIdx = SIGNS[safeNatalSignIdx].base + (safeNatalDegree - 1);
     const natalEmotifIdx = natalAbsIdx % 72;
     const natalEmotifAngel = ANGELS[natalEmotifIdx];
-    const colToday = ((safeTransit - natalAbsIdx + 360) % 360);
+    const birthRefDate = safeBirthDate ? new Date(`${safeBirthDate}T00:00:00`) : null;
+    const selectedDate = safeTransitDate ? new Date(`${safeTransitDate}T00:00:00`) : null;
+    let colToday = ((safeTransit - natalAbsIdx + 360) % 360);
+    let cycleStart = null;
+    if (birthRefDate && selectedDate && Number.isFinite(birthRefDate.getTime()) && Number.isFinite(selectedDate.getTime())) {
+      const birthMonth = birthRefDate.getMonth();
+      const birthDay = birthRefDate.getDate();
+      const thisYearAnniv = buildAnniversaryDate(selectedDate.getFullYear(), birthMonth, birthDay);
+      cycleStart = selectedDate < thisYearAnniv
+        ? buildAnniversaryDate(selectedDate.getFullYear() - 1, birthMonth, birthDay)
+        : thisYearAnniv;
+      const delta = diffDays(selectedDate, cycleStart);
+      const mod365 = ((delta % 365) + 365) % 365;
+      colToday = mod365;
+    }
 
-    const rows = Array.from({ length: 360 }, (_, i) => {
-      const col = i + 1;
+    const rows = Array.from({ length: 365 }, (_, i) => {
       const col72 = i % 72;
       const absReal = (natalAbsIdx + i) % 360;
       const signIdx = Math.floor(absReal / 30);
       const degInSign = (absReal % 30) + 1;
       const rondeIdx = Math.floor(i / 72);
       const exact = EXACT_BY_COL72[col72];
+      const rowDate = cycleStart && Number.isFinite(cycleStart.getTime())
+        ? new Date(cycleStart.getFullYear(), cycleStart.getMonth(), cycleStart.getDate() + i)
+        : null;
+      const rowDateLabel = rowDate
+        ? `${String(rowDate.getDate()).padStart(2, '0')}/${String(rowDate.getMonth() + 1).padStart(2, '0')}`
+        : '—';
 
       const cosmicIdx = col72;
 
       return {
         idx: i,
-        col,
+        rowDateLabel,
         ronde: RONDES[rondeIdx],
         rondeIdx,
         cosmicIdx,
@@ -154,7 +191,7 @@ export default function BiorythmeTable({
       todayRow,
       phase,
     };
-  }, [safeNatalSignIdx, safeNatalDegree, safeTransit]);
+  }, [safeNatalSignIdx, safeNatalDegree, safeTransit, safeBirthDate, safeTransitDate]);
 
   useEffect(() => {
     const row = todayRowRef.current;
@@ -178,7 +215,7 @@ export default function BiorythmeTable({
     <section className="bio-module">
       <div className="bio-today-widget">
         <div className="bio-summary-header">
-          <h3>📅 Résumé du jour · Soleil du jour (auto) · {safeTransit}° absolu</h3>
+          <h3>📅 Résumé du jour · Soleil du jour (auto) · {safeTransit}° absolu · cycle 365 j</h3>
           <label className="bio-summary-date-control">
             <span>Date</span>
             <input
@@ -204,10 +241,10 @@ export default function BiorythmeTable({
       </div>
 
       <div ref={tableWrapRef} className="bio-table-wrap">
-        <table className="bio-table" aria-label="Tableau des 360 colonnes du biorythme kabalistique">
+        <table className="bio-table" aria-label="Tableau des 365 jours du biorythme kabalistique">
           <thead>
             <tr>
-              <th>Col.</th>
+              <th>Date</th>
               <th>Ronde</th>
               <th>Ange Biorythm</th>
               <th>Signe</th>
@@ -229,12 +266,12 @@ export default function BiorythmeTable({
               const rowProps = (isToday || isNatal) ? { role: 'row' } : {};
               return (
                 <tr
-                  key={row.col}
+                  key={`${row.idx}-${row.rowDateLabel}`}
                   className={classNames}
                   {...rowProps}
                   ref={isToday ? todayRowRef : null}
                 >
-                  <td className="mono">{row.col}</td>
+                  <td className="mono">{row.rowDateLabel}</td>
                   <td>{row.ronde}</td>
                   <td className="font-serif">{row.cosmicIdx + 1}. {row.cosmicAngel}</td>
                   <td>{row.sign.glyph} {row.sign.name}</td>

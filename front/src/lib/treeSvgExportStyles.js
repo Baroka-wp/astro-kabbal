@@ -7,14 +7,14 @@
 export const TREE_SVG_EXPORT_INLINE_CSS = `
 .tree-svg { font-family: system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Symbol", sans-serif; }
 .path-hitbox { fill: none; stroke: transparent; stroke-width: 14; pointer-events: none; }
-.path-edge { fill: none; stroke-linecap: round; stroke-width: 3; stroke-linejoin: round; pointer-events: none; }
-.path-edge-desc { stroke: #2563eb; }
-.path-edge-asc { stroke: #0f766e; }
+.path-edge { fill: none; stroke-linecap: round; stroke-width: 16; stroke-linejoin: round; pointer-events: none; stroke: #f8fafc; }
+.path-edge-outline { fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: #cbd5e1; stroke-width: 18; pointer-events: none; opacity: 1; }
 .tree-path-group .path-edge { opacity: 0.62; }
-.path-edge.hovered-edge, .path-edge.selected-edge { stroke-width: 6; opacity: 1; }
-.path-edge.selected-path { opacity: 0.92; }
-.path-edge-desc.selected-edge { stroke: #f59e0b; }
-.path-edge-asc.selected-edge { stroke: #dc2626; }
+.path-edge.hovered-edge, .path-edge.selected-edge { stroke-width: 20; opacity: 1; }
+.path-edge.selected-path { stroke: #fef3c7; opacity: 1; }
+.path-edge.path-edge-aspect-square { stroke: #ef4444; opacity: 0.95; }
+.path-edge.path-edge-aspect-opposition { stroke: #f97316; opacity: 0.95; }
+.path-edge.path-edge-aspect-quincunx { stroke: #a855f7; opacity: 0.95; }
 .astro-flow { fill: none; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; opacity: 0.9; pointer-events: none; }
 .astro-flow-hitbox { fill: none; stroke: transparent; stroke-width: 18; pointer-events: none; }
 .astro-flow-square { stroke: #ef4444; stroke-dasharray: 9 6; }
@@ -40,6 +40,13 @@ export const TREE_SVG_EXPORT_INLINE_CSS = `
 .sephirah-node.astro-high circle { stroke: #dc2626; fill: #fff1f2; }
 .sephirah-node.astro-blocked circle { stroke: #dc2626; stroke-width: 4; fill: #fee2e2; }
 .astro-planet-badge { font-size: 18px; font-weight: 800; fill: #0f172a; paint-order: stroke fill; stroke: #ffffff; stroke-width: 2.8; }
-.path-tag rect { fill: #0f172a; opacity: 0.92; }
-.path-tag text { fill: #ffffff; font-size: 10px; font-weight: 700; }
+.path-tag rect { fill: #ffffff; opacity: 0.96; stroke: #d1d5db; stroke-width: 1; }
+.path-tag text { fill: #111827; font-size: 18px; font-weight: 800; }
+.path-tag .path-tag-aspect-symbol { font-size: 11px; font-weight: 900; }
+.path-tag.path-tag-aspect-square rect { stroke: #ef4444; }
+.path-tag.path-tag-aspect-opposition rect { stroke: #f97316; }
+.path-tag.path-tag-aspect-quincunx rect { stroke: #a855f7; }
+.path-tag.path-tag-aspect-square .path-tag-aspect-symbol { fill: #ef4444; }
+.path-tag.path-tag-aspect-opposition .path-tag-aspect-symbol { fill: #f97316; }
+.path-tag.path-tag-aspect-quincunx .path-tag-aspect-symbol { fill: #a855f7; }
 `;

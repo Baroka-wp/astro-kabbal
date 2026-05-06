@@ -26,6 +26,13 @@
   font-weight: 600;
 }
 
+.astro-form-hint {
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
 .astro-form input {
   border: 1px solid #cbd5e1;
   border-radius: 10px;

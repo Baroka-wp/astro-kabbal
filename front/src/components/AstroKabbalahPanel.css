@@ -62,7 +62,9 @@
 .astro-angels {
   border: 1px solid #e2e8f0;
   border-radius: 12px;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .astro-angel-row,
@@ -73,6 +75,7 @@
   padding: 8px 10px;
   font-size: 12px;
   border-top: 1px solid #e2e8f0;
+  min-width: 860px;
 }
 
 .astro-angel-row:first-child,
@@ -113,6 +116,11 @@
 @media (max-width: 600px) {
   .astro-panel-cards {
     grid-template-columns: 1fr;
+  }
+
+  .astro-angel-row,
+  .astro-angel-head {
+    font-size: 13px;
   }
 }
 

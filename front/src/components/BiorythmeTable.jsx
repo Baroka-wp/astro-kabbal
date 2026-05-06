@@ -112,7 +112,8 @@ export default function BiorythmeTable({
 
   const computed = useMemo(() => {
     const natalAbsIdx = SIGNS[safeNatalSignIdx].base + (safeNatalDegree - 1);
-    const natalAngelIdx = natalAbsIdx % 72;
+    const natalEmotifIdx = natalAbsIdx % 72;
+    const natalEmotifAngel = ANGELS[natalEmotifIdx];
     const colToday = ((safeTransit - natalAbsIdx + 360) % 360);
 
     const rows = Array.from({ length: 360 }, (_, i) => {
@@ -125,7 +126,6 @@ export default function BiorythmeTable({
       const exact = EXACT_BY_COL72[col72];
 
       const cosmicIdx = col72;
-      const emotifIdx = (natalAngelIdx + i) % 72;
 
       return {
         idx: i,
@@ -134,9 +134,6 @@ export default function BiorythmeTable({
         rondeIdx,
         cosmicIdx,
         cosmicAngel: ANGELS[cosmicIdx],
-        emotifIdx,
-        emotifAngel: ANGELS[emotifIdx],
-        shemNumber: ((emotifIdx + 1)),
         sign: SIGNS[signIdx],
         degInSign,
         sephirah: exact?.sephirah || '',
@@ -150,6 +147,8 @@ export default function BiorythmeTable({
 
     return {
       natalAbsIdx,
+      natalEmotifIdx,
+      natalEmotifAngel,
       colToday,
       rows,
       todayRow,
@@ -191,8 +190,13 @@ export default function BiorythmeTable({
         </div>
         <div className="bio-today-grid">
           <div><strong>Soleil du jour</strong><span className="mono">{safeTransit}° absolu</span></div>
-          <div><strong>Ange cosmique</strong><span className="font-serif">{computed.todayRow.cosmicIdx + 1}. {computed.todayRow.cosmicAngel}</span></div>
-          <div><strong>Ange émotif</strong><span className="font-serif">{computed.todayRow.emotifIdx + 1}. {computed.todayRow.emotifAngel}</span></div>
+          <div><strong>Ange du Biorythm</strong><span className="font-serif">{computed.todayRow.cosmicIdx + 1}. {computed.todayRow.cosmicAngel}</span></div>
+          <div>
+            <strong>Ange émotif</strong>
+            <span className="font-serif">
+              {computed.natalEmotifIdx + 1}. {computed.natalEmotifAngel}
+            </span>
+          </div>
           <div><strong>Ronde</strong><span>{computed.todayRow.ronde}</span></div>
           <div><strong>Signe actuel</strong><span>{computed.todayRow.sign.glyph} {computed.todayRow.sign.name} {computed.todayRow.degInSign}°</span></div>
           <div><strong>Aspect en cours</strong><span className="bio-aspect">{computed.phase.symbol} {computed.phase.label}</span></div>
@@ -206,7 +210,6 @@ export default function BiorythmeTable({
               <th>Col.</th>
               <th>Ronde</th>
               <th>Ange Biorythm</th>
-              <th>Ange émotif</th>
               <th>Signe</th>
               <th>Degré</th>
               <th>Sephirah</th>
@@ -234,7 +237,6 @@ export default function BiorythmeTable({
                   <td className="mono">{row.col}</td>
                   <td>{row.ronde}</td>
                   <td className="font-serif">{row.cosmicIdx + 1}. {row.cosmicAngel}</td>
-                  <td className="font-serif">{row.emotifIdx + 1}. {row.emotifAngel}</td>
                   <td>{row.sign.glyph} {row.sign.name}</td>
                   <td className="mono">{row.degInSign}</td>
                   <td>{row.sephirah || '—'}</td>

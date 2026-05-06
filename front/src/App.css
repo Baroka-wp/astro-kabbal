@@ -30,8 +30,8 @@ body {
   width: min(1800px, 100%);
   margin: 0 auto;
   padding: 16px 24px;
-  padding: max(16px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right))
-    max(16px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left));
+  padding: max(16px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right))
+    max(16px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
@@ -368,9 +368,9 @@ body {
 
 @media (max-width: 760px) {
   .app {
-    padding: 12px 14px;
-    padding: max(12px, env(safe-area-inset-top)) max(14px, env(safe-area-inset-right))
-      max(12px, env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));
+    padding: 12px 20px;
+    padding: max(12px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right))
+      max(12px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
   }
 
   .app-header {

@@ -16,6 +16,8 @@ body.landing-body {
   color: #0f172a;
   font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 80px;
 }
 

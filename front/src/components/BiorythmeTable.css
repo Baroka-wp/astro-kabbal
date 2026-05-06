@@ -70,6 +70,7 @@
 .bio-table-wrap {
   max-height: 620px;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   border-radius: 14px;
   border: 1px solid #cbd5e1;
   background: #ffffff;
@@ -78,7 +79,7 @@
 .bio-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 980px;
+  min-width: 860px;
   color: #0f172a;
 }
 
@@ -156,5 +157,19 @@
 
   .bio-today-grid {
     grid-template-columns: 1fr;
+  }
+
+  .bio-table {
+    min-width: 840px;
+  }
+
+  .bio-table thead th {
+    font-size: 13px;
+    padding: 10px 9px;
+  }
+
+  .bio-table td {
+    font-size: 14px;
+    padding: 8px 9px;
   }
 }
